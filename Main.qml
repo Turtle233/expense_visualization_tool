@@ -5,12 +5,11 @@ import QtQuick.Controls
 import QtQuick.Controls.Material
 
 ApplicationWindow {
-    // ---------------------------------------homepage window---------------------------------------
     id: mainWindow
     visible: true
     width: 360
     height: 740
-    title: qsTr("See Expense")
+    title: qsTr("See your Cost")
 
     // Material Design initialization
     Material.theme: Material.Light
