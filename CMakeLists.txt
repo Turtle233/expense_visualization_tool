@@ -13,37 +13,39 @@ find_package(Qt6 REQUIRED COMPONENTS
 qt_standard_project_setup(REQUIRES 6.8)
 
 qt_add_executable(appexpense_visualization_tool_v03
-    main.cpp
+    src/main.cpp
 )
 
 qt_add_qml_module(appexpense_visualization_tool_v03
     URI expense_visualization_tool_v03
-    QML_FILES Main.qml
-        QML_FILES qml/Home_HeaderBar.qml
-        QML_FILES qml/Home_NaviBar.qml
-        QML_FILES qml/Home_AddItemDialog.qml
-        QML_FILES qml/Home_ItemList.qml
-        QML_FILES qml/Detail_Page.qml
-        QML_FILES qml/Detail_EditDialog.qml
-        QML_FILES qml/DateTimePicker.qml
-        QML_FILES qml/Example_Item.qml
-        QML_FILES qml/Home_Page.qml
-        QML_FILES qml/Settings_Page.qml
-    SOURCES calculation/calculation.h
-    SOURCES calculation/calculation.cpp
-    SOURCES items/item.h
-    SOURCES items/item.cpp
-    SOURCES graph/graph.h
-    SOURCES graph/graph.cpp
-    SOURCES sorting/sorting.h
-    SOURCES sorting/sorting.cpp
-    SOURCES currency/currency.h currency/currency.cpp
-    SOURCES language/language_manager.h language/language_manager.cpp
+    QML_FILES ui/Main.qml
+        QML_FILES ui/Home_HeaderBar.qml
+        QML_FILES ui/Home_NaviBar.qml
+        QML_FILES ui/Home_AddItemDialog.qml
+        QML_FILES ui/Home_ItemList.qml
+        QML_FILES ui/Detail_Page.qml
+        QML_FILES ui/Detail_EditDialog.qml
+        QML_FILES ui/DateTimePicker.qml
+        QML_FILES ui/Example_Item.qml
+        QML_FILES ui/Home_Page.qml
+        QML_FILES ui/Settings_Page.qml
+    SOURCES src/calculation/calculation.h
+    SOURCES src/calculation/calculation.cpp
+    SOURCES src/items/item.h
+    SOURCES src/items/item.cpp
+    SOURCES src/graph/graph.h
+    SOURCES src/graph/graph.cpp
+    SOURCES src/sorting/sorting.h
+    SOURCES src/sorting/sorting.cpp
+    SOURCES src/currency/currency.h 
+    SOURCES src/currency/currency.cpp
+    SOURCES src/language/language_manager.h 
+    SOURCES src/language/language_manager.cpp
 )
 
 set(APP_TS_FILES
-    translations/zh_CN.ts
-    translations/ja_JP.ts
+    src/translations/zh_CN.ts
+    src/translations/ja_JP.ts
 )
 
 qt_add_translations(appexpense_visualization_tool_v03
@@ -74,11 +76,14 @@ target_link_libraries(appexpense_visualization_tool_v03
 
 # Explicitly tell the builder which folders should be include
 target_include_directories(appexpense_visualization_tool_v03
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/calculation
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/items
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/graph
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/currency
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/language
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/calculation
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/currency
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/graph
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/items
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/language
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/sorting
 )
 
 
