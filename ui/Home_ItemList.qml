@@ -118,18 +118,6 @@ Item {
             // scale: 0.9 // set default scale to 0.9
 
             //——————————————————当有新项目添加时，自动滚动到当前项目位置并居中，并播放红色边框动画——————————————————
-            // // 为防止item数量溢出屏幕而自动切换到new item时丢失item的添加动画，手写一个Timer强制等待
-            // Timer {
-            //     id: itemLoadTimer
-            //     interval: 380
-            //     running: true
-            //     repeat: false
-
-            //     onTriggered: {
-            //            itemListView.positionViewAtIndex(index, ListView.Center)
-            //     }
-            // }
-
             ListView.onAdd: {
                 // 延迟加载（亲测直接加载有bug）
                 // itemLoadTimer.start()
@@ -143,13 +131,6 @@ Item {
             }
 
             // ———————————————————光标按下时变浅, 退出时再闪消失(white transparent mask)———————————————————
-            // property real returnMaskOpacity: 0.0
-
-            // function triggerReturnFlash() {
-            //     returnMaskOpacity = 0.5
-            //     returnMaskAnim.restart()
-            // }
-
             Rectangle {
                 id: pressMask
                 anchors.fill: parent
@@ -161,15 +142,6 @@ Item {
                 z: 2
                 Behavior on opacity { NumberAnimation { duration: 80 } }
             }
-
-            // NumberAnimation {
-            //     id: returnMaskAnim
-            //     target: rootItemRect
-            //     property: "returnMaskOpacity"
-            //     from: 0.5
-            //     to: 0.0
-            //     duration: 120
-            // }
 
             // ————————————————red border highlight for newly added item————————————————
             // draw a rectangle bordering new item rectangle

@@ -14,6 +14,7 @@ int LanguageManager::currentLanguageIndex() const
     return languageCodeToIndex(m_currentLanguageCode);
 }
 
+// choose current language
 void LanguageManager::setCurrentLanguageIndex(int index)
 {
     const QString nextLanguageCode = indexToLanguageCode(index);
@@ -39,14 +40,16 @@ QString LanguageManager::currentLanguageCode() const
     return m_currentLanguageCode;
 }
 
+// drop down menu
 QStringList LanguageManager::languageOptions() const
 {
     return {
-        QStringLiteral("English"),
-        QStringLiteral("Chinese"),
-        QStringLiteral("Japanese")};
+        QStringLiteral("English / 英文 / 英語"),
+        QStringLiteral("Chinese (Simplified) / 简体中文 / 中国語"),
+        QStringLiteral("Japanese / 日语 / 日本語")};
 }
 
+// language code index to much .qm file
 QString LanguageManager::indexToLanguageCode(int index)
 {
     if (index == 1)
@@ -73,13 +76,9 @@ int LanguageManager::languageCodeToIndex(const QString &languageCode)
     return 0;
 }
 
+// translation hot apply
 bool LanguageManager::applyLanguage(const QString &languageCode)
 {
-    if (!m_app)
-    {
-        return false;
-    }
-
     m_app->removeTranslator(&m_translator);
     if (languageCode == QStringLiteral("en_US"))
     {

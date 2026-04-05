@@ -26,7 +26,6 @@ qt_add_qml_module(appexpense_visualization_tool_v03
         QML_FILES ui/Detail_Page.qml
         QML_FILES ui/Detail_EditDialog.qml
         QML_FILES ui/DateTimePicker.qml
-        QML_FILES ui/Example_Item.qml
         QML_FILES ui/Home_Page.qml
         QML_FILES ui/Settings_Page.qml
     SOURCES src/calculation/calculation.h
@@ -43,14 +42,21 @@ qt_add_qml_module(appexpense_visualization_tool_v03
     SOURCES src/language/language_manager.cpp
 )
 
+# Translation files add as application resource
 set(APP_TS_FILES
-    src/translations/zh_CN.ts
-    src/translations/ja_JP.ts
+    translations/zh_CN.ts
+    translations/ja_JP.ts
 )
 
 qt_add_translations(appexpense_visualization_tool_v03
     TS_FILES ${APP_TS_FILES}
     QM_FILES_OUTPUT_VARIABLE APP_QM_FILES
+)
+
+qt_add_resources(appexpense_visualization_tool_v03 "app_i18n_translations"
+    PREFIX "/i18n"
+    BASE "${CMAKE_CURRENT_BINARY_DIR}"
+    FILES ${APP_QM_FILES}
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

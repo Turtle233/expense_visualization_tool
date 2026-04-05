@@ -11,7 +11,7 @@ void Cal::calculateExpense()
     sl.expensePerDay = totalExpense / (totalDays * 1.00);
     sl.expensePerWeek = 7.00 * sl.expensePerDay;
 
-    // 目前的月和年都是近似模糊计算。
+    // 月和年都是近似模糊计算。
     sl.expensePerMonth = 30.4375 * sl.expensePerDay;
     sl.expensePerYear = 365.2425 * sl.expensePerDay;
 }

@@ -6,6 +6,7 @@ import QtQuick.Controls.Material
 
 Item {
     id: settingsRoot
+    property string projectLink: "https://github.com/Turtle233/expense_visualization_tool"
 
     ColumnLayout {
         anchors.fill: parent
@@ -109,6 +110,7 @@ Item {
             // 项目链接栏
             Text {
                 Layout.fillWidth: true
+                Layout.topMargin: -4
                 text: qsTr("Project Link")
                 horizontalAlignment: Text.AlignHCenter
                 color: "#1E88E5"
@@ -118,6 +120,7 @@ Item {
                     anchors.fill: parent
                     cursorShape: Qt.PointingHandCursor
                     onClicked: {
+                        Qt.openUrlExternally(settingsRoot.projectLink);
                     }
                 }
             }

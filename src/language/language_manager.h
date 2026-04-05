@@ -9,12 +9,20 @@ class QGuiApplication;
 class LanguageManager : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int currentLanguageIndex READ currentLanguageIndex WRITE setCurrentLanguageIndex NOTIFY currentLanguageChanged FINAL)
-    Q_PROPERTY(QString currentLanguageCode READ currentLanguageCode NOTIFY currentLanguageChanged FINAL)
+    Q_PROPERTY(int currentLanguageIndex
+                   READ currentLanguageIndex
+                       WRITE setCurrentLanguageIndex
+                           NOTIFY currentLanguageChanged
+                               FINAL)
+    Q_PROPERTY(QString currentLanguageCode
+                   READ currentLanguageCode
+                       NOTIFY currentLanguageChanged
+                           FINAL)
 
 public:
     explicit LanguageManager(QGuiApplication *app, QObject *parent = nullptr);
 
+    // getter and setter
     int currentLanguageIndex() const;
     void setCurrentLanguageIndex(int index);
 
@@ -25,11 +33,12 @@ signals:
     void currentLanguageChanged();
 
 private:
+    // language operation functions
     static QString indexToLanguageCode(int index);
     static int languageCodeToIndex(const QString &languageCode);
     bool applyLanguage(const QString &languageCode);
 
     QGuiApplication *m_app = nullptr;
     QTranslator m_translator;
-    QString m_currentLanguageCode = QStringLiteral("en_US");
+    QString m_currentLanguageCode = QStringLiteral("en_US"); // default language code
 };

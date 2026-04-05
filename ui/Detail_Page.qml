@@ -93,9 +93,6 @@ Page {
 
                         // 在此页面新建object，仍然名为stackViewPass
                         // 然后方法里面传进来从Main.qml传了三层的stackViewPass，然后一口气popout
-                        // if (detailPage.itemDelegateRef && detailPage.itemDelegateRef.triggerReturnFlash) {
-                        //     detailPage.itemDelegateRef.triggerReturnFlash(); // 返回时闪烁一下
-                        // }
                         detailPage.stackViewPass.pop(stackViewPass.initialItem); // back to homepage
                     }
                 }
