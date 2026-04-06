@@ -60,7 +60,7 @@ Page {
             onAddItemRequested: function (itemName, itemExpense, purchaseDateText) {
                 const expenseInUsd = currencyManager.parseAmountToUSD(itemExpense);
                 if (expenseInUsd <= 0
-                        || !itemListModel.addItem(itemName, expenseInUsd.toFixed(2), purchaseDateText)) {
+                        || !itemListModel.addItem(itemName, expenseInUsd.toFixed(6), purchaseDateText)) {
                     console.log("[Error] Failed to add item from AddItemDialog");
 
                     // msgbox indicating error input

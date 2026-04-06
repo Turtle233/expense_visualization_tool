@@ -30,7 +30,7 @@ Page {
         const updatedExpense = currencyManager.parseAmountToUSD(expenseText);
         const updatedPurchaseDate = new Date(purchaseDateText + "T00:00:00");
 
-        if (!itemListModel.updateItem(detailPage.itemIndex, normalizedItemName, updatedExpense.toFixed(2), purchaseDateText)) {
+        if (!itemListModel.updateItem(detailPage.itemIndex, normalizedItemName, updatedExpense.toFixed(6), purchaseDateText)) {
             console.log("[Error] Failed to update item");
             return;
         }
