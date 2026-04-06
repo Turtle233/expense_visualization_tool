@@ -12,11 +12,13 @@ find_package(Qt6 REQUIRED COMPONENTS
 )
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_executable(appexpense_visualization_tool_v03
+set(APP_TARGET SeeyourCost)
+
+qt_add_executable(${APP_TARGET}
     src/main.cpp
 )
 
-qt_add_qml_module(appexpense_visualization_tool_v03
+qt_add_qml_module(${APP_TARGET}
     URI expense_visualization_tool_v03
     QML_FILES ui/Main.qml
         QML_FILES ui/Home_HeaderBar.qml
@@ -49,12 +51,12 @@ set(APP_TS_FILES
     translations/ja_JP.ts
 )
 
-qt_add_translations(appexpense_visualization_tool_v03
+qt_add_translations(${APP_TARGET}
     TS_FILES ${APP_TS_FILES}
     QM_FILES_OUTPUT_VARIABLE APP_QM_FILES
 )
 
-qt_add_resources(appexpense_visualization_tool_v03 "app_i18n_translations"
+qt_add_resources(${APP_TARGET} "app_i18n_translations"
     PREFIX "/i18n"
     BASE "${CMAKE_CURRENT_BINARY_DIR}"
     FILES ${APP_QM_FILES}
@@ -63,8 +65,8 @@ qt_add_resources(appexpense_visualization_tool_v03 "app_i18n_translations"
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
-set_target_properties(appexpense_visualization_tool_v03 PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appexpense_visualization_tool_v03
+set_target_properties(${APP_TARGET} PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.SeeyourCost
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
@@ -72,19 +74,24 @@ set_target_properties(appexpense_visualization_tool_v03 PROPERTIES
 )
 
 # This place was changed and should be replaced with this each time
-target_link_libraries(appexpense_visualization_tool_v03
+target_link_libraries(${APP_TARGET}
    PRIVATE Qt6::Quick
    PRIVATE Qt6::QuickControls2
 )
 
 if(ANDROID)
-    set_property(TARGET appexpense_visualization_tool_v03 PROPERTY
+    set_target_properties(${APP_TARGET} PROPERTIES
+        QT_ANDROID_APP_NAME "SeeyourCost"
+        QT_ANDROID_PACKAGE_NAME "org.qtproject.example.seeyourcost"
+    )
+
+    set_property(TARGET ${APP_TARGET} PROPERTY
         QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
     )
 endif()
 
 # Explicitly tell the builder which folders should be include
-target_include_directories(appexpense_visualization_tool_v03
+target_include_directories(${APP_TARGET}
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
         ${CMAKE_CURRENT_SOURCE_DIR}/src/calculation
@@ -96,7 +103,7 @@ target_include_directories(appexpense_visualization_tool_v03
 )
 
 include(GNUInstallDirs)
-install(TARGETS appexpense_visualization_tool_v03
+install(TARGETS ${APP_TARGET}
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
