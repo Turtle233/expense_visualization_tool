@@ -40,7 +40,7 @@ qt_add_qml_module(appexpense_visualization_tool_v03
     SOURCES src/currency/currency.cpp
     SOURCES src/language/language_manager.h 
     SOURCES src/language/language_manager.cpp
-    RESOURCES ui/resources.qrc
+    RESOURCES ui/icons/resources.qrc
 )
 
 # Translation files add as application resource
@@ -94,7 +94,6 @@ target_include_directories(appexpense_visualization_tool_v03
         ${CMAKE_CURRENT_SOURCE_DIR}/src/language
         ${CMAKE_CURRENT_SOURCE_DIR}/src/sorting
 )
-
 
 include(GNUInstallDirs)
 install(TARGETS appexpense_visualization_tool_v03

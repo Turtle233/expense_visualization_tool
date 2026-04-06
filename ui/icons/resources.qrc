@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon_liquid.png</file>
+        <file>icon_transparent.png</file>
+        <file>icon_no_border.png</file>
+    </qresource>
+</RCC>
