@@ -16,12 +16,15 @@ Dialog {
 
     // two buttons in the footer of the dialog
     footer: DialogButtonBox {
-           standardButtons: DialogButtonBox.Save | DialogButtonBox.Cancel
+        id: box
+        standardButtons: DialogButtonBox.Save | DialogButtonBox.Cancel
+    }
 
-           Component.onCompleted: {
-               standardButton(DialogButtonBox.Save).text = qsTr("Save")
-               standardButton(DialogButtonBox.Cancel).text = qsTr("Cancel")
-           }
+    onVisibleChanged: {
+        if (visible) {
+            box.standardButton(DialogButtonBox.Save).text = qsTr("Save")
+            box.standardButton(DialogButtonBox.Cancel).text = qsTr("Cancel")
+        }
     }
 
     // shared value. when popped up, the default date is set to today
