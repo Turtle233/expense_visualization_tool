@@ -12,7 +12,7 @@ find_package(Qt6 REQUIRED COMPONENTS
 )
 qt_standard_project_setup(REQUIRES 6.8)
 
-set(APP_TARGET SeeyourCost)
+set(APP_TARGET see_your_cost)
 
 qt_add_executable(${APP_TARGET}
     src/main.cpp

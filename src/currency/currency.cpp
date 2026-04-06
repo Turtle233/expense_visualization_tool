@@ -1,22 +1,24 @@
 #include "currency.h"
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QFile>
+#include <QDir>
 
-Currency::Currency(QObject *parent) : QObject(parent) {}
+Currency::Currency(QObject *parent) : QObject(parent) {
+    // 该类的静态成员对象被创建时，读取设置文件
+    readFromFile();
+}
 
 // currency rate converting creteria
 double Currency::rateFromUSD(CurrencyType type)
 {
     if (type == CNY)
-    {
         return 7.00;
-    }
     if (type == JPY)
-    {
         return 160.00;
-    }
     if (type == EUR)
-    {
         return 0.80;
-    }
+
     return 1.00; // USD
 }
 
@@ -32,17 +34,11 @@ void Currency::setCurrentCurrencyIndex(int index)
     CurrencyType nextCurrency = USD;
 
     if (index == CNY)
-    {
         nextCurrency = CNY;
-    }
     else if (index == JPY)
-    {
         nextCurrency = JPY;
-    }
     else if (index == EUR)
-    {
         nextCurrency = EUR;
-    }
 
     // 如果仍然选中当前货币，则直接返回
     if (m_currentCurrency == nextCurrency)
@@ -52,35 +48,32 @@ void Currency::setCurrentCurrencyIndex(int index)
 
     m_currentCurrency = nextCurrency;
     emit currentCurrencyChanged();
+
+    // 在调用set当前货币index的函数中，调用savetoFile，相当于也set进了file
+    saveToFile();
 }
 
+
+// 当前返回的QString值
 QString Currency::currentCurrencyCode() const
 {
     if (m_currentCurrency == CNY)
-    {
         return QStringLiteral("CNY");
-    }
     if (m_currentCurrency == JPY)
-    {
         return QStringLiteral("JPY");
-    }
     if (m_currentCurrency == EUR)
-    {
         return QStringLiteral("EUR");
-    }
+
     return QStringLiteral("USD");
 }
 
+// 当前返回的货币符号
 QString Currency::currentCurrencySymbol() const
 {
     if (m_currentCurrency == EUR)
-    {
         return QStringLiteral("€");
-    }
     if (m_currentCurrency == USD)
-    {
         return QStringLiteral("$");
-    }
 
     // 日元人民币符号一样就直接return
     return QStringLiteral("¥");
@@ -136,4 +129,48 @@ QString Currency::formatFromUSD(double amountUSD) const
     const double converted = convertFromUSD(amountUSD);
     return QStringLiteral("%1%2").arg(currentCurrencySymbol(),
                                       QString::number(converted, 'f', 2));
+}
+
+//--------------------------文件读写-------------------------------
+// keep settings in ./data/settings.json under current project folder
+QString currencySettingFilePath()
+{
+    QDir dir(QDir::currentPath());
+    dir.mkpath(QStringLiteral("data"));
+    return dir.filePath(QStringLiteral("data/currencySetting.json"));
+}
+
+// 将设置保存到json文件
+void Currency::saveToFile(){
+    QFile file(currencySettingFilePath());
+    
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate))
+        return;
+    
+    // store values
+    QJsonObject settingsObj;
+    settingsObj["currency"] = currentCurrencyCode();
+    
+    QJsonDocument settingsDoc(settingsObj);
+    file.write(settingsDoc.toJson());
+}
+
+// 读取设置json文件
+void Currency::readFromFile(){
+    QFile file(currencySettingFilePath());
+    if(!file.open(QIODevice::ReadOnly))
+        return;
+
+    const QJsonDocument settingsDoc  = QJsonDocument::fromJson(file.readAll());
+    const QString currencyCodeRead = settingsDoc.object().value("currency").toString();
+
+    // 读取然后set到上次保存的货币
+    if (currencyCodeRead == "CNY")
+        setCurrentCurrencyIndex(CNY);
+    else if (currencyCodeRead == "JPY")
+        setCurrentCurrencyIndex(JPY);
+    else if (currencyCodeRead == "EUR")
+        setCurrentCurrencyIndex(EUR);
+    else if (currencyCodeRead == "USD")
+        setCurrentCurrencyIndex(USD);
 }

@@ -56,6 +56,11 @@ public:
     Q_INVOKABLE double parseAmountToUSD(const QString &amountText) const; // 从其余货币转入USD计算
     Q_INVOKABLE QString formatFromUSD(double amountUSD) const; // 处理数据格式
 
+    // 写入json文件保存设置
+    void saveToFile();
+    // 读取json设置文件
+    void readFromFile();
+
 signals:
     void currentCurrencyChanged(); // 货币被切换时需要调用什么函数
 

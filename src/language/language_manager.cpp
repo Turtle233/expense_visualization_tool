@@ -3,10 +3,15 @@
 #include <QCoreApplication>
 #include <QDir>
 #include <QGuiApplication>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QFile>
 
 LanguageManager::LanguageManager(QGuiApplication *app, QObject *parent)
     : QObject(parent), m_app(app)
 {
+    // 一旦创建对象就先读取设置
+    readFromFile();
 }
 
 int LanguageManager::currentLanguageIndex() const
@@ -33,6 +38,9 @@ void LanguageManager::setCurrentLanguageIndex(int index)
 
     m_currentLanguageCode = appliedLanguageCode;
     emit currentLanguageChanged();
+
+    // 将当前语言设置存入settings.json
+    saveToFile();
 }
 
 QString LanguageManager::currentLanguageCode() const
@@ -52,28 +60,24 @@ QStringList LanguageManager::languageOptions() const
 // language code index to much .qm file
 QString LanguageManager::indexToLanguageCode(int index)
 {
-    if (index == 1)
-    {
+    if (index == 1) // 1 = Chinese
         return QStringLiteral("zh_CN");
-    }
-    if (index == 2)
-    {
+    if (index == 2) // 2 = Japanese
         return QStringLiteral("ja_JP");
-    }
-    return QStringLiteral("en_US");
+    return QStringLiteral("en_US"); // 0 = English
 }
 
 int LanguageManager::languageCodeToIndex(const QString &languageCode)
 {
     if (languageCode == QStringLiteral("zh_CN"))
     {
-        return 1;
+        return 1; // 1 = Chinese
     }
     if (languageCode == QStringLiteral("ja_JP"))
     {
-        return 2;
+        return 2; // 2 = Japanese
     }
-    return 0;
+    return 0;  // 0 = English
 }
 
 // translation hot apply
@@ -104,4 +108,46 @@ bool LanguageManager::applyLanguage(const QString &languageCode)
     }
 
     return false;
+}
+
+//--------------------------文件读写-------------------------------
+// keep settings in ./data/settings.json under current project folder
+QString languageSettingFilePath()
+{
+    QDir dir(QDir::currentPath());
+    dir.mkpath(QStringLiteral("data"));
+    return dir.filePath(QStringLiteral("data/languageSetting.json"));
+}
+
+// 将设置保存到json文件
+void LanguageManager::saveToFile(){
+    QFile file(languageSettingFilePath());
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate))
+        return;
+
+    // store values
+    QJsonObject settingsObj;
+    settingsObj["language"] = currentLanguageCode();
+
+    QJsonDocument settingsDoc(settingsObj);
+    file.write(settingsDoc.toJson());
+}
+
+// 读取设置json文件
+void LanguageManager::readFromFile(){
+    QFile file(languageSettingFilePath());
+    if(!file.open(QIODevice::ReadOnly))
+        return;
+
+    const QJsonDocument settingsDoc  = QJsonDocument::fromJson(file.readAll());
+    const QString languageCodeRead = settingsDoc.object().value("language").toString();
+
+    // 读取然后set到上次保存的语言
+    if (languageCodeRead == "zh_CN")
+        setCurrentLanguageIndex(1);
+    else if (languageCodeRead == "ja_JP")
+        setCurrentLanguageIndex(2);
+    else if (languageCodeRead == "en_US")
+        setCurrentLanguageIndex(0);
 }

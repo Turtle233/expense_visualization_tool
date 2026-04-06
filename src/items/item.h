@@ -20,7 +20,8 @@ class ItemListModel : public QAbstractListModel
 public:
     explicit ItemListModel(QObject *parent = nullptr);
 
-    enum ItemRoles {
+    enum ItemRoles
+    {
         ItemNameRole = Qt::UserRole + 1,
         TotalExpenseRole,
         TotalExpenseTextRole,

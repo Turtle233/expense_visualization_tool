@@ -331,9 +331,11 @@ void ItemListModel::saveToFile() const
     for (const ItemRecord &record : m_items)
     {
         QJsonObject obj;
+
         obj.insert(QStringLiteral("itemName"), record.itemName);
         obj.insert(QStringLiteral("totalExpense"), record.totalExpense);
         obj.insert(QStringLiteral("purchaseDate"), record.purchaseDate.toString(Qt::ISODate));
+
         items.append(obj);
     }
 
