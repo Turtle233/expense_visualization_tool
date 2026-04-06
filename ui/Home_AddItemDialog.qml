@@ -14,7 +14,15 @@ Dialog {
     anchors.centerIn: Overlay.overlay
     title: qsTr("New Item")
 
-    standardButtons: Dialog.Save | Dialog.Cancel
+    // two buttons in the footer of the dialog
+    footer: DialogButtonBox {
+           standardButtons: DialogButtonBox.Save | DialogButtonBox.Cancel
+
+           Component.onCompleted: {
+               standardButton(DialogButtonBox.Save).text = qsTr("Save")
+               standardButton(DialogButtonBox.Cancel).text = qsTr("Cancel")
+           }
+    }
 
     // shared value. when popped up, the default date is set to today
     property date selectedDate: new Date()

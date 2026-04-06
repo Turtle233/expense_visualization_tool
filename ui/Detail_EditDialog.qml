@@ -13,7 +13,15 @@ Dialog {
 
     title: qsTr("Edit Current Item")
 
-    standardButtons: Dialog.Save | Dialog.Cancel
+    // two buttons in the footer of the dialog
+    footer: DialogButtonBox {
+           standardButtons: DialogButtonBox.Save | DialogButtonBox.Cancel
+
+           Component.onCompleted: {
+               standardButton(DialogButtonBox.Save).text = qsTr("Save")
+               standardButton(DialogButtonBox.Cancel).text = qsTr("Cancel")
+           }
+    }
 
     property date selectedDate: new Date();
 
