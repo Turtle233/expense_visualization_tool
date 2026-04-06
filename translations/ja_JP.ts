@@ -22,27 +22,27 @@
         <translation>現在の項目を編集</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="63"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="50"/>
         <source>Item Name</source>
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="70"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="57"/>
         <source>Total Expense (%1)</source>
         <translation>合計支出（%1）</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="80"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="67"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="90"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="77"/>
         <source>Choose Purchase Date</source>
         <translation>購入日を選択</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="121"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="111"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
@@ -111,27 +111,27 @@
         <translation>新しい項目</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="45"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="32"/>
         <source>Item Name</source>
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="52"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="39"/>
         <source>Total Expense (%1)</source>
         <translation>合計支出（%1）</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="62"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="49"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="71"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="58"/>
         <source>Choose Purchase Date</source>
         <translation>購入日を選択</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="102"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="91"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
@@ -187,12 +187,12 @@
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="210"/>
+        <location filename="../ui/Home_ItemList.qml" line="211"/>
         <source>Passed Days: %1</source>
         <translation>経過日数: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="370"/>
+        <location filename="../ui/Home_ItemList.qml" line="373"/>
         <source>No item yet. Click + to add one</source>
         <translation>まだ項目がありません。+ を押して追加してください</translation>
     </message>
@@ -234,22 +234,27 @@
 <context>
     <name>Settings_Page</name>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="18"/>
+        <location filename="../ui/Settings_Page.qml" line="44"/>
         <source>Settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="40"/>
+        <location filename="../ui/Settings_Page.qml" line="66"/>
         <source>Currency</source>
         <translation>通貨</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="74"/>
+        <location filename="../ui/Settings_Page.qml" line="100"/>
         <source>Language</source>
         <translation>言語</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="104"/>
+        <location filename="../ui/Settings_Page.qml" line="135"/>
+        <source>color?!</source>
+        <translation>なぜ色が変わったのですか？</translation>
+    </message>
+    <message>
+        <location filename="../ui/Settings_Page.qml" line="181"/>
         <source>See your Cost
 NSU CapStone Project App
 Ruixuan Zhang
@@ -260,7 +265,7 @@ NSU CapStone プロジェクトアプリ
 2026/01 - 2026/04</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="114"/>
+        <location filename="../ui/Settings_Page.qml" line="191"/>
         <source>Project Link</source>
         <translation>プロジェクトリンク</translation>
     </message>

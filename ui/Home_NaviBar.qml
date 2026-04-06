@@ -104,7 +104,8 @@ Rectangle {
         width: 50
         height: 50
         radius: width / 2
-        color: "skyblue"
+        color: Window.window ? Window.window.buttonColor : "#87CEEB"
+        // color: "#87CEEB" // default skyblue is #87CEEB, another one is #abdbff
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
 

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.qtproject.example"
     android:installLocation="auto"
-    android:versionCode="03"
-    android:versionName="v0.30 beta">
+    android:versionCode="031"
+    android:versionName="v0.31 beta">
     <!-- %%INSERT_PERMISSIONS -->
     <!-- %%INSERT_FEATURES -->
     <supports-screens

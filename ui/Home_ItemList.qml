@@ -106,7 +106,7 @@ Item {
 
             width: itemListView.width
             radius: 14
-            color: "#E3F2FD"
+            color: Window.window ? Window.window.panelColor : "#E3F2FD"
             border.color: "#CFD8DC"
             border.width: 1
             implicitHeight: 96
@@ -197,19 +197,21 @@ Item {
                         text: itemName
                         font.pointSize: 17
                         font.bold: true
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                     }
 
                     Text {
                         text: qsTr("Purchase Date: %1").arg(purchaseDateText)
                         font.pointSize: 13
-                        color: "#607D8B"
+                        color: Window.window ? Window.window.panelInfoTextColor : "#607D8B"
+                        // color: "#607D8B" // default color
                     }
 
                     Text {
                         text: qsTr("Passed Days: %1").arg(passedDays)
                         font.pointSize: 13
-                        color: "#607D8B"
+                        color: Window.window ? Window.window.panelInfoTextColor : "#607D8B"
+                        // color: "#607D8B" // default color
                     }
                 }
 
@@ -222,7 +224,7 @@ Item {
 
                     font.pointSize: 16
                     font.bold: true
-                    color: Material.foreground
+                    color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                 }
             }
 
@@ -355,7 +357,8 @@ Item {
             contentItem: Rectangle {
                 implicitWidth: 5
                 radius: width / 2
-                color: "skyblue"
+                color: Window.window ? Window.window.buttonColor : "#87CEEB"
+                // color: "#87CEEB" // default skyblue is #87CEEB, another one is #abdbff
             }
 
             background: Rectangle {

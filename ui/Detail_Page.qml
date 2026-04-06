@@ -206,7 +206,7 @@ Page {
             Layout.preferredHeight: cardContnet.implicitHeight + 16 + 16 // content height + (top and bottom) margin
 
             radius: 16
-            color: "#E3F2FD" // light blue
+            color: Window.window ? Window.window.panelColor : "#E3F2FD" // light blue
 
             Column {
                 id: cardContnet
@@ -222,7 +222,7 @@ Page {
                     Text {
                         text: qsTr("Total Price")
                         font.pointSize: 17
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                     }
 
                     Item {
@@ -234,7 +234,7 @@ Page {
                         // 判断当前货币，并调用formatFromUSD 来显示当前的货币符号
                         text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(totalPrice) : "$" + totalPrice
                         font.pointSize: 17
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                         horizontalAlignment: Text.AlignRight
                     }
                 }
@@ -256,7 +256,7 @@ Page {
                     Text {
                         text: qsTr("Purchase Date")
                         font.pointSize: 17
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                     }
 
                     Item {
@@ -267,7 +267,7 @@ Page {
                     Text {
                         text: Qt.formatDate(purchaseDate, "yyyy-MM-dd")
                         font.pointSize: 17
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                         horizontalAlignment: Text.AlignRight
                     }
                 }
@@ -288,7 +288,7 @@ Page {
                     Text {
                         text: qsTr("Passed Days")
                         font.pointSize: 17
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                     }
 
                     Item {
@@ -299,7 +299,7 @@ Page {
                     Text {
                         text: passedDays
                         font.pointSize: 17
-                        color: Material.foreground
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                         horizontalAlignment: Text.AlignRight
                     }
                 }

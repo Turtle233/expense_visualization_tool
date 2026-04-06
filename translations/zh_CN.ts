@@ -24,27 +24,27 @@
         <translation>编辑当前项目</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="63"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="50"/>
         <source>Item Name</source>
         <translation>项目名称</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="70"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="57"/>
         <source>Total Expense (%1)</source>
         <translation>总开支 (%1)</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="80"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="67"/>
         <source>Purchase Date: %1</source>
         <translation>购买日期: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="90"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="77"/>
         <source>Choose Purchase Date</source>
         <translation>选择购买日期</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="121"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="111"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>请输入正确的项目名称、项目开支与购买日期</translation>
     </message>
@@ -113,27 +113,27 @@
         <translation>新建项目</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="45"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="32"/>
         <source>Item Name</source>
         <translation>项目名称</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="52"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="39"/>
         <source>Total Expense (%1)</source>
         <translation>总开支 (%1)</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="62"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="49"/>
         <source>Purchase Date: %1</source>
         <translation>购买日期: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="71"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="58"/>
         <source>Choose Purchase Date</source>
         <translation>选择购买日期</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="102"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="91"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>请输入正确的项目名称、项目开支与购买日期</translation>
     </message>
@@ -189,12 +189,12 @@
         <translation>购买日期: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="210"/>
+        <location filename="../ui/Home_ItemList.qml" line="211"/>
         <source>Passed Days: %1</source>
         <translation>经过天数: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="370"/>
+        <location filename="../ui/Home_ItemList.qml" line="373"/>
         <source>No item yet. Click + to add one</source>
         <translation>什么项目都没添加喵~</translation>
     </message>
@@ -236,22 +236,27 @@
 <context>
     <name>Settings_Page</name>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="18"/>
+        <location filename="../ui/Settings_Page.qml" line="44"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="40"/>
+        <location filename="../ui/Settings_Page.qml" line="66"/>
         <source>Currency</source>
         <translation>货币</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="74"/>
+        <location filename="../ui/Settings_Page.qml" line="100"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="104"/>
+        <location filename="../ui/Settings_Page.qml" line="135"/>
+        <source>color?!</source>
+        <translation>我怎么变色了？</translation>
+    </message>
+    <message>
+        <location filename="../ui/Settings_Page.qml" line="181"/>
         <source>See your Cost
 NSU CapStone Project App
 Ruixuan Zhang
@@ -262,7 +267,7 @@ NSU毕设项目
 2026年1月 - 2026年4月</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="114"/>
+        <location filename="../ui/Settings_Page.qml" line="191"/>
         <source>Project Link</source>
         <translation>项目 Github 链接</translation>
     </message>

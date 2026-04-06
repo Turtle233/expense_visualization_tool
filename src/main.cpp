@@ -23,16 +23,15 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("languageManager", &languageManager);
 
     // translation
-    QObject::connect(&languageManager, &LanguageManager::currentLanguageChanged, &engine, [&engine]() {
-        engine.retranslate();
-    });
-
+    QObject::connect(&languageManager, &LanguageManager::currentLanguageChanged, &engine, [&engine]()
+                     { engine.retranslate(); });
 
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,
         &app,
-        []() { QCoreApplication::exit(-1); },
+        []()
+        { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
     engine.loadFromModule("expense_visualization_tool_v03", "Main");
 
