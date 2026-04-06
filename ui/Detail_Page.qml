@@ -85,7 +85,7 @@ Page {
                     // 强制视觉位移偏左
                     transform: Translate { x: -10 }
 
-                    text: "\u2190 Home"
+                    text: qsTr("\u2190 Home")
                     font.pointSize: 18
 
                     onClicked: {

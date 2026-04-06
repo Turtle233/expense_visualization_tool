@@ -50,6 +50,11 @@
         <translation>項目名</translation>
     </message>
     <message>
+        <location filename="../ui/Detail_Page.qml" line="88"/>
+        <source>← Home</source>
+        <translation>← ホーム</translation>
+    </message>
+    <message>
         <location filename="../ui/Detail_Page.qml" line="119"/>
         <source>Edit</source>
         <translation>編集</translation>
@@ -167,17 +172,17 @@
 <context>
     <name>Home_ItemList</name>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="211"/>
+        <location filename="../ui/Home_ItemList.qml" line="204"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="217"/>
+        <location filename="../ui/Home_ItemList.qml" line="210"/>
         <source>Passed Days: %1</source>
         <translation>経過日数: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="380"/>
+        <location filename="../ui/Home_ItemList.qml" line="370"/>
         <source>No item yet. Click + to add one</source>
         <translation>まだ項目がありません。+ を押して追加してください</translation>
     </message>
@@ -198,12 +203,12 @@
 <context>
     <name>Home_Page</name>
     <message>
-        <location filename="../ui/Home_Page.qml" line="92"/>
+        <location filename="../ui/Home_Page.qml" line="93"/>
         <source>Input Error</source>
         <translation>入力エラー</translation>
     </message>
     <message>
-        <location filename="../ui/Home_Page.qml" line="93"/>
+        <location filename="../ui/Home_Page.qml" line="94"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>有効な項目名、支出金額、購入日を入力してください。</translation>
     </message>
@@ -219,22 +224,22 @@
 <context>
     <name>Settings_Page</name>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="17"/>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
         <source>Settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="39"/>
+        <location filename="../ui/Settings_Page.qml" line="40"/>
         <source>Currency</source>
         <translation>通貨</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="73"/>
+        <location filename="../ui/Settings_Page.qml" line="74"/>
         <source>Language</source>
         <translation>言語</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="103"/>
+        <location filename="../ui/Settings_Page.qml" line="104"/>
         <source>See your Cost
 NSU CapStone Project App
 Ruixuan Zhang
@@ -245,7 +250,7 @@ NSU CapStone プロジェクトアプリ
 2026/01 - 2026/04</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="112"/>
+        <location filename="../ui/Settings_Page.qml" line="114"/>
         <source>Project Link</source>
         <translation>プロジェクトリンク</translation>
     </message>

@@ -92,7 +92,6 @@ Item {
         }
 
         // ———————————————————————————————————————————ListView 矩形与RowLayout—————————————————————————————————————————————————
-
         // set the template rectangle for every item
         delegate: Rectangle {
             id: rootItemRect
@@ -111,11 +110,6 @@ Item {
             border.color: "#CFD8DC"
             border.width: 1
             implicitHeight: 96
-
-            // clip: true
-
-            // opacity: 0 // set default opacity to 0
-            // scale: 0.9 // set default scale to 0.9
 
             //——————————————————当有新项目添加时，自动滚动到当前项目位置并居中，并播放红色边框动画——————————————————
             ListView.onAdd: {
@@ -136,10 +130,9 @@ Item {
                 anchors.fill: parent
                 radius: parent.radius
                 color: "white"
-                opacity: itemMouseArea.pressed ? 0.65 : 0.0
-
-                // opacity: Math.max(itemMouseArea.pressed ? 0.5 : 0.0, returnMaskOpacity)
+                opacity: itemMouseArea.pressed ? 0.5 : 0.0
                 z: 2
+
                 Behavior on opacity { NumberAnimation { duration: 80 } }
             }
 
@@ -257,9 +250,6 @@ Item {
 
                 anchors.topMargin: 4
                 anchors.rightMargin: 4
-
-                // anchors.topMargin: -width/2 // set minus margin, so that the red delete button will show at the corner, half inside, half outside
-                // anchors.rightMargin: -height/2
 
                 visible: homeItemList.editMode
 

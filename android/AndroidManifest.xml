@@ -1,12 +1,11 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.qtproject.example.appexpense_visualization_tool_v03"
+    package="org.qtproject.example"
     android:installLocation="auto"
-    android:versionCode="1"
-    android:versionName="1.0">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    android:versionCode="03"
+    android:versionName="v0.30 beta">
+    <!-- %%INSERT_PERMISSIONS -->
+    <!-- %%INSERT_FEATURES -->
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -15,15 +14,18 @@
     <application
         android:name="org.qtproject.qt.android.bindings.QtApplication"
         android:hardwareAccelerated="true"
-        android:label="appexpense_visualization_tool_v03"
-        android:icon="@drawable/icon"
+        android:label="See your Cost"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/AppNormalTheme"
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:fullBackupOnly="false">
         <activity
             android:name="org.qtproject.qt.android.bindings.QtActivity"
             android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
-            android:label="appexpense_visualization_tool_v03"
+            android:label="See your Cost"
+            android:theme="@style/AppStartTheme"
             android:launchMode="singleTop"
             android:screenOrientation="unspecified"
             android:exported="true">
@@ -32,13 +34,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data
+          <meta-data
                 android:name="android.app.lib_name"
-                android:value="appexpense_visualization_tool_v03" />
+                android:value="-- %%INSERT_APP_LIB_NAME%% --" />
 
-            <meta-data
+          <meta-data
                 android:name="android.app.arguments"
-                android:value="" />
+                android:value="-- %%INSERT_APP_ARGUMENTS%% --" />
         </activity>
 
         <provider
@@ -48,7 +50,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/qtprovider_paths" />
+                android:resource="@xml/qtprovider_paths"/>
         </provider>
     </application>
 </manifest>

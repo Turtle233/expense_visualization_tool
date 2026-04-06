@@ -52,6 +52,11 @@
         <translation>项目名称</translation>
     </message>
     <message>
+        <location filename="../ui/Detail_Page.qml" line="88"/>
+        <source>← Home</source>
+        <translation>← 主页</translation>
+    </message>
+    <message>
         <location filename="../ui/Detail_Page.qml" line="119"/>
         <source>Edit</source>
         <translation>编辑</translation>
@@ -169,17 +174,17 @@
 <context>
     <name>Home_ItemList</name>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="211"/>
+        <location filename="../ui/Home_ItemList.qml" line="204"/>
         <source>Purchase Date: %1</source>
         <translation>购买日期: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="217"/>
+        <location filename="../ui/Home_ItemList.qml" line="210"/>
         <source>Passed Days: %1</source>
         <translation>经过天数: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="380"/>
+        <location filename="../ui/Home_ItemList.qml" line="370"/>
         <source>No item yet. Click + to add one</source>
         <translation>什么项目都没添加喵~</translation>
     </message>
@@ -200,12 +205,12 @@
 <context>
     <name>Home_Page</name>
     <message>
-        <location filename="../ui/Home_Page.qml" line="92"/>
+        <location filename="../ui/Home_Page.qml" line="93"/>
         <source>Input Error</source>
         <translation>输入错误</translation>
     </message>
     <message>
-        <location filename="../ui/Home_Page.qml" line="93"/>
+        <location filename="../ui/Home_Page.qml" line="94"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>请输入正确的项目名称、项目开支与购买日期。</translation>
     </message>
@@ -221,22 +226,22 @@
 <context>
     <name>Settings_Page</name>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="17"/>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="39"/>
+        <location filename="../ui/Settings_Page.qml" line="40"/>
         <source>Currency</source>
         <translation>货币</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="73"/>
+        <location filename="../ui/Settings_Page.qml" line="74"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="103"/>
+        <location filename="../ui/Settings_Page.qml" line="104"/>
         <source>See your Cost
 NSU CapStone Project App
 Ruixuan Zhang
@@ -247,7 +252,7 @@ NSU毕设项目
 2026年1月 - 2026年4月</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="112"/>
+        <location filename="../ui/Settings_Page.qml" line="114"/>
         <source>Project Link</source>
         <translation>项目 Github 链接</translation>
     </message>

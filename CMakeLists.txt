@@ -40,6 +40,7 @@ qt_add_qml_module(appexpense_visualization_tool_v03
     SOURCES src/currency/currency.cpp
     SOURCES src/language/language_manager.h 
     SOURCES src/language/language_manager.cpp
+    RESOURCES ui/resources.qrc
 )
 
 # Translation files add as application resource
@@ -76,9 +77,11 @@ target_link_libraries(appexpense_visualization_tool_v03
    PRIVATE Qt6::QuickControls2
 )
 
-# set_property(TARGET appexpense_visualization_tool_v03 PROPERTY
-#     QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
-# )
+if(ANDROID)
+    set_property(TARGET appexpense_visualization_tool_v03 PROPERTY
+        QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
+    )
+endif()
 
 # Explicitly tell the builder which folders should be include
 target_include_directories(appexpense_visualization_tool_v03
