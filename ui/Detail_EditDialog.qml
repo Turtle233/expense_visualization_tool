@@ -85,7 +85,60 @@ Dialog {
 
     }
 
+    // toast information popup for invalid input
+    Popup {
+        id: invalidInputToast
+        parent: Overlay.overlay
+        modal: false
+        focus: false
+        closePolicy: Popup.NoAutoClose
+
+        // automatic width
+        width: Math.min((parent ? parent.width : detailEditDialog.width) * 0.9, invalidInputToastText.implicitWidth + 32)
+        x: (parent.width - width) / 2
+        y: parent.height - height - 72
+        padding: 12
+        z: 1000
+
+        background: Rectangle {
+            radius: 10
+            color: "#323232"
+            opacity: 0.95
+        }
+
+        contentItem: Text {
+            id: invalidInputToastText
+            text: qsTr("Please type in valid item name, item expense, and purchase date.")
+            color: "white"
+            wrapMode: Text.Wrap
+            horizontalAlignment: Text.AlignHCenter
+        }
+    }
+
+    // timer for auto close toast
+    Timer {
+        id: invalidInputToastTimer
+        interval: 4000
+        repeat: false
+        onTriggered: invalidInputToast.close()
+    }
+
     onAccepted: {
+        // validate name and expense
+        const nameText = itemNameField.text.trim();
+        const expenseText = expenseField.text.trim();
+        const expenseValue = Number(expenseText);
+
+        // validation function, checking if there is empty value, invalid value, or space/tab value
+        if (nameText.length === 0 || !Number.isFinite(expenseValue) || expenseValue <= 0) {
+            Qt.callLater(function () {
+                detailEditDialog.open();
+                invalidInputToast.open();
+                invalidInputToastTimer.restart();
+            });
+            return;
+        }
+
         console.log("[User Input] Item Name:", itemNameField.text)
         console.log("[User Input] Item Expense:", expenseField.text)
 

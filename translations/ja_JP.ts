@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja_JP" sourcelanguage="en">
 <context>
@@ -22,24 +22,29 @@
         <translation>現在の項目を編集</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="50"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="63"/>
         <source>Item Name</source>
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="57"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="70"/>
         <source>Total Expense (%1)</source>
         <translation>合計支出（%1）</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="67"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="80"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="77"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="90"/>
         <source>Choose Purchase Date</source>
         <translation>購入日を選択</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_EditDialog.qml" line="121"/>
+        <source>Please type in valid item name, item expense, and purchase date.</source>
+        <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
 </context>
 <context>
@@ -106,24 +111,29 @@
         <translation>新しい項目</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="32"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="45"/>
         <source>Item Name</source>
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="39"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="52"/>
         <source>Total Expense (%1)</source>
         <translation>合計支出（%1）</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="49"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="62"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="58"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="71"/>
         <source>Choose Purchase Date</source>
         <translation>購入日を選択</translation>
+    </message>
+    <message>
+        <location filename="../ui/Home_AddItemDialog.qml" line="102"/>
+        <source>Please type in valid item name, item expense, and purchase date.</source>
+        <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
 </context>
 <context>
@@ -210,7 +220,7 @@
     <message>
         <location filename="../ui/Home_Page.qml" line="94"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
-        <translation>有効な項目名、支出金額、購入日を入力してください。</translation>
+        <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
 </context>
 <context>
