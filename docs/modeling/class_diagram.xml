@@ -1,122 +1,55 @@
-﻿<mxfile host="app.diagrams.net" modified="2026-04-10T00:00:00.000Z" agent="Codex" version="24.7.17">
-  <diagram name="Class Diagram">
-    <mxGraphModel dx="1800" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram id="cpp-json-class-simple" name="Class Diagram Simple">
+    <mxGraphModel dx="1554" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <mxCell id="c_boot" value="&lt;b&gt;main.cpp&lt;/b&gt;&lt;br&gt;&lt;&lt;bootstrap&gt;&gt;&lt;br&gt;+ create ItemListModel/Currency/LanguageManager&lt;br&gt;+ setContextProperty(...)&lt;br&gt;+ currentLanguageChanged -&gt; engine.retranslate()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="170" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="ItemListModel : QAbstractListModel&#xa;vars:&#xa;- m_dataFilePath&#xa;- m_items&#xa;- ItemRecord.itemName&#xa;- ItemRecord.totalExpense&#xa;- ItemRecord.purchaseDate&#xa;+ addItem()&#xa;+ updateItem()&#xa;+ deleteItem()&#xa;+ sortByDate/Name()" vertex="1">
+          <mxGeometry height="320" width="340" x="40" y="80" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_mainqml" value="&lt;b&gt;Main.qml&lt;/b&gt;&lt;br&gt;&lt;&lt;UI Root&gt;&gt;&lt;br&gt;+ ApplicationWindow&lt;br&gt;+ StackView(initialItem=Home_Page)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="390" y="50" width="250" height="100" as="geometry"/>
+        <mxCell id="c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Cal : QObject&#xa;vars:&#xa;- d.currentDate&#xa;- d.purchaseDate&#xa;- sl.expensePerDay&#xa;- sl.expensePerWeek&#xa;- sl.expensePerMonth&#xa;- sl.expensePerYear&#xa;- vDates&#xa;- vDailyExpense&#xa;- totalExpense&#xa;+ calculateExpense()&#xa;+ calculateDailySeries()&#xa;+ validate()" vertex="1">
+          <mxGeometry height="320" width="300" x="420" y="80" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_home" value="&lt;b&gt;Home_Page.qml&lt;/b&gt;&lt;br&gt;&lt;&lt;controller&gt;&gt;&lt;br&gt;+ editMode, settingsMode&lt;br&gt;+ onSortRequested()&lt;br&gt;+ onAddItemRequested()&lt;br&gt;+ onPageRequested(settings/home)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="680" y="20" width="300" height="190" as="geometry"/>
+        <mxCell id="c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Graph : QQuickPaintedItem&#xa;vars:&#xa;- m_calculation&#xa;- m_passedDays&#xa;- m_currencyCode&#xa;- m_cachedDates&#xa;- m_cachedExpenses&#xa;- m_cachedPoints&#xa;- m_cachedAxisRect&#xa;- m_cachedDataRect&#xa;- m_currentPointIndex&#xa;+ setTotalExpense()&#xa;+ setPassedDays()&#xa;+ setCurrencyCode()&#xa;+ paint()" vertex="1">
+          <mxGeometry height="360" width="420" x="760" y="80" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_detail" value="&lt;b&gt;Detail_Page.qml&lt;/b&gt;&lt;br&gt;&lt;&lt;controller&gt;&gt;&lt;br&gt;+ applyEdit(name, expense, date)&lt;br&gt;+ delete current item&lt;br&gt;+ bind ExpenseGraph(totalExpense,passedDays,currencyCode)&lt;br&gt;+ open Detail_EditDialog" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="20" width="330" height="210" as="geometry"/>
+        <mxCell id="c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#f5f5f5;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Sorting&#xa;vars: none&#xa;+ sortByDateAscending()&#xa;+ sortByDateDescending()&#xa;+ sortByNameAscending()&#xa;+ sortByNameDescending()" vertex="1">
+          <mxGeometry height="200" width="340" x="40" y="450" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_settings" value="&lt;b&gt;Settings_Page.qml&lt;/b&gt;&lt;br&gt;&lt;&lt;controller&gt;&gt;&lt;br&gt;+ currency ComboBox&lt;br&gt;+ language ComboBox&lt;br&gt;+ theme accent randomizer" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1380" y="30" width="300" height="160" as="geometry"/>
+        <mxCell id="c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Currency : QObject&#xa;vars:&#xa;- m_currentCurrency&#xa;+ convertFromUSD()&#xa;+ convertToUSD()&#xa;+ parseAmountToUSD()&#xa;+ formatFromUSD()&#xa;+ saveToFile()/readFromFile()" vertex="1">
+          <mxGeometry height="240" width="300" x="420" y="450" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_item" value="&lt;b&gt;ItemListModel : QAbstractListModel&lt;/b&gt;&lt;br&gt;&lt;&lt;entity&gt;&gt;&lt;br&gt;- m_dataFilePath: QString&lt;br&gt;- m_items: QVector&lt;ItemRecord&gt;&lt;br&gt;+ addItem(...): bool&lt;br&gt;+ updateItem(...): bool&lt;br&gt;+ deleteItem(index): bool&lt;br&gt;+ passedDaysAt(index): int&lt;br&gt;+ sortByDate/Name(Asc/Desc)&lt;br&gt;+ loadFromFile(), saveToFile()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="620" y="290" width="370" height="310" as="geometry"/>
+        <mxCell id="c6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="LanguageManager : QObject&#xa;vars:&#xa;- m_app&#xa;- m_translator&#xa;- m_currentLanguageCode&#xa;+ setCurrentLanguageIndex()&#xa;+ applyLanguage()&#xa;+ saveToFile()/readFromFile()" vertex="1">
+          <mxGeometry height="240" width="420" x="760" y="460" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_cal" value="&lt;b&gt;Cal : QObject&lt;/b&gt;&lt;br&gt;&lt;&lt;service&gt;&gt;&lt;br&gt;- d: {currentDate, purchaseDate}&lt;br&gt;- sl: {day/week/month/year}&lt;br&gt;- totalExpense: double&lt;br&gt;- vDates: QVector&lt;QDate&gt;&lt;br&gt;- vDailyExpense: QVector&lt;double&gt;&lt;br&gt;+ calculateExpense()&lt;br&gt;+ calculateDailySeries()&lt;br&gt;+ validate(): bool" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1030" y="320" width="320" height="240" as="geometry"/>
+        <mxCell id="j1" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="itemData.json" vertex="1">
+          <mxGeometry height="70" width="180" x="110" y="780" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_graph" value="&lt;b&gt;Graph : QQuickPaintedItem&lt;/b&gt;&lt;br&gt;&lt;&lt;view-model&gt;&gt; QML element: ExpenseGraph&lt;br&gt;- m_calculation: Cal&lt;br&gt;- m_passedDays, m_currencyCode&lt;br&gt;+ setTotalExpense(), setPassedDays()&lt;br&gt;+ setCurrencyCode()&lt;br&gt;+ paint(QPainter*)&lt;br&gt;+ updateCurrentPointByPosition()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1380" y="280" width="340" height="300" as="geometry"/>
+        <mxCell id="j2" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="currencySetting.json" vertex="1">
+          <mxGeometry height="70" width="220" x="430" y="780" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_sort" value="&lt;b&gt;Sorting&lt;/b&gt;&lt;br&gt;&lt;&lt;utility&gt;&gt;&lt;br&gt;+ sortByDateAscending/Descending()&lt;br&gt;+ sortByNameAscending/Descending()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="400" y="650" width="260" height="140" as="geometry"/>
+        <mxCell id="j3" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="languageSetting.json" vertex="1">
+          <mxGeometry height="70" width="220" x="840" y="780" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_currency" value="&lt;b&gt;Currency : QObject&lt;/b&gt;&lt;br&gt;&lt;&lt;service&gt;&gt;&lt;br&gt;- m_currentCurrency: CurrencyType&lt;br&gt;+ currentCurrencyIndex/code/symbol&lt;br&gt;+ convertFromUSD(), convertToUSD()&lt;br&gt;+ parseAmountToUSD(text)&lt;br&gt;+ formatFromUSD(value)&lt;br&gt;+ saveToFile(), readFromFile()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1220" y="650" width="350" height="290" as="geometry"/>
+        <mxCell id="e1" edge="1" parent="1" source="c1" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="c4" value="uses">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_language" value="&lt;b&gt;LanguageManager : QObject&lt;/b&gt;&lt;br&gt;&lt;&lt;service&gt;&gt;&lt;br&gt;- m_translator: QTranslator&lt;br&gt;- m_currentLanguageCode&lt;br&gt;+ setCurrentLanguageIndex()&lt;br&gt;+ languageOptions()&lt;br&gt;+ applyLanguage(code): bool&lt;br&gt;+ saveToFile(), readFromFile()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="840" y="670" width="340" height="260" as="geometry"/>
+        <mxCell id="e2" edge="1" parent="1" source="c1" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="c2" value="uses date diff">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="c_json" value="&lt;b&gt;Local JSON Storage&lt;/b&gt;&lt;br&gt;data/itemData.json&lt;br&gt;data/currencySetting.json&lt;br&gt;data/languageSetting.json" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="410" y="1000" width="700" height="110" as="geometry"/>
+        <mxCell id="e3" edge="1" parent="1" source="c3" style="endArrow=diamondThin;html=1;rounded=0;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="c2" value="has Cal">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="e1" value="load Main module" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_boot" target="c_mainqml">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="e4" edge="1" parent="1" source="c1" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="j1" value="read/write">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="inject itemListModel" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_boot" target="c_item">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="e5" edge="1" parent="1" source="c5" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="j2" value="read/write">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="inject currencyManager" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_boot" target="c_currency">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="e6" edge="1" parent="1" source="c6" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="j3" value="read/write">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="inject languageManager" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_boot" target="c_language">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e5" value="initialItem" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_mainqml" target="c_home">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e6" value="CRUD + sort" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_home" target="c_item">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e7" value="parseAmountToUSD()" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_home" target="c_currency">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e8" value="stackView.push(item data)" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_home" target="c_detail">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e9" value="show/hide" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_home" target="c_settings">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e10" value="update/delete/passedDaysAt" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_detail" target="c_item">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e11" value="convert/format" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_detail" target="c_currency">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e12" value="bind graph props" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_detail" target="c_graph">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e13" value="setCurrentCurrencyIndex()" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_settings" target="c_currency">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e14" value="setCurrentLanguageIndex()" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_settings" target="c_language">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e15" value="use comparators" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_item" target="c_sort">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e16" value="reuse date totalDays()" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_item" target="c_cal">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e17" value="calculateDailySeries()" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=10;" edge="1" parent="1" source="c_graph" target="c_cal">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e18" value="read/write item data" style="endArrow=block;html=1;rounded=0;dashed=1;strokeColor=#999999;fontSize=10;" edge="1" parent="1" source="c_item" target="c_json">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e19" value="read/write currency setting" style="endArrow=block;html=1;rounded=0;dashed=1;strokeColor=#999999;fontSize=10;" edge="1" parent="1" source="c_currency" target="c_json">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e20" value="read/write language setting" style="endArrow=block;html=1;rounded=0;dashed=1;strokeColor=#999999;fontSize=10;" edge="1" parent="1" source="c_language" target="c_json">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
       </root>
     </mxGraphModel>
   </diagram>
 </mxfile>
-

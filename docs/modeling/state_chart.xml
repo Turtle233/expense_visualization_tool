@@ -1,60 +1,141 @@
-<mxfile host="app.diagrams.net" modified="2026-04-10T00:00:00.000Z" agent="Codex" version="24.7.17">
-  <diagram name="State Chart">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="State Chart" id="0">
+    <mxGraphModel dx="1195" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <mxCell id="s0" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="70" y="95" width="24" height="24" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s0" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="466" y="114.26" as="geometry" />
         </mxCell>
-
-        <mxCell id="s_home" value="Home.Normal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="70" width="190" height="70" as="geometry"/>
+        <mxCell id="s_home" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Home.NormalMode" vertex="1">
+          <mxGeometry height="70" width="190" x="430" y="173" as="geometry" />
         </mxCell>
-
-        <mxCell id="s_add" value="AddDialog.Open" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="40" width="210" height="70" as="geometry"/>
+        <mxCell id="s_add" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="AddDialog.Open" vertex="1">
+          <mxGeometry height="70" width="210" x="780" y="173" as="geometry" />
         </mxCell>
-
-        <mxCell id="s_edit" value="Home.EditMode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="220" width="190" height="70" as="geometry"/>
+        <mxCell id="s_edit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Home.EditMode" vertex="1">
+          <mxGeometry height="70" width="190" x="140" y="173" as="geometry" />
         </mxCell>
-
-        <mxCell id="s_settings" value="Settings.Mode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="220" width="210" height="70" as="geometry"/>
+        <mxCell id="s_settings" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Settings.Mode" vertex="1">
+          <mxGeometry height="70" width="210" x="780" y="340" as="geometry" />
         </mxCell>
-
-        <mxCell id="s_detail" value="Detail.View" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="370" width="190" height="70" as="geometry"/>
+        <mxCell id="s_detail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Detail.View" vertex="1">
+          <mxGeometry height="70" width="190" x="430" y="475" as="geometry" />
         </mxCell>
-
-        <mxCell id="s_dedit" value="Detail.EditDialog" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="370" width="220" height="70" as="geometry"/>
+        <mxCell id="s_dedit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Detail.EditDialog" vertex="1">
+          <mxGeometry height="70" width="220" x="790" y="475" as="geometry" />
         </mxCell>
-
-        <mxCell id="t1" value="" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s0" target="s_home"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="t2" value="tap '+'" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_home" target="s_add"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t3" value="Save valid / Cancel" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_add" target="s_home"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t4" value="Save invalid - show toast" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_add" target="s_add"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="t5" value="tap Edit" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_home" target="s_edit"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t6" value="tap Done" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_edit" target="s_home"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t7" value="tap red delete (loop)" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_edit" target="s_edit"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="t8" value="tap Settings tab" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_home" target="s_settings"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t9" value="tap Home tab" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_settings" target="s_home"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t10" value="change currency/language/theme" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_settings" target="s_settings"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="t11" value="tap item card" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_home" target="s_detail"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t12" value="tap Back" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_detail" target="s_home"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t13" value="tap Delete Item" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_detail" target="s_home"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="t14" value="tap Edit" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_detail" target="s_dedit"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t15" value="Save valid / Cancel" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_dedit" target="s_detail"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="t16" value="Save invalid - show toast" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="s_dedit" target="s_dedit"><mxGeometry relative="1" as="geometry"/></mxCell>
-
+        <mxCell id="t1" edge="1" parent="1" source="s0" style="endArrow=block;html=1;rounded=0;entryX=0.222;entryY=-0.018;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=elbowEdgeStyle;elbow=vertical;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="478.18000000000006" y="173" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="tap &#39;+&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="216.87" as="sourcePoint" />
+            <mxPoint x="780" y="216.87" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Save valid / Cancel">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="198.87" as="sourcePoint" />
+            <mxPoint x="620" y="198.87" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="s_add" style="endArrow=block;html=1;rounded=0;align=left;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;curved=0;" target="s_add" value="Save invalid - AddDialog.Open">
+          <mxGeometry relative="1" y="10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6" edge="1" parent="1" style="endArrow=block;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;entryX=0;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontColor=default;labelBorderColor=none;textShadow=0;html=1;convertToSvg=0;spacing=2;" target="s_home" value="tap Done">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="230" y="150" />
+              <mxPoint x="430" y="150" />
+            </Array>
+            <mxPoint x="230" y="173" as="sourcePoint" />
+            <mxPoint x="482.1026315789473" y="243" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t7" edge="1" parent="1" source="s_edit" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;curved=0;entryX=0;entryY=0.657;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.001;exitY=0.41;exitDx=0;exitDy=0;exitPerimeter=0;" target="s_edit" value="tap ❌️&amp;nbsp;&lt;div&gt;(loop)&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.0039" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="120" y="200" />
+              <mxPoint x="120" y="220" />
+            </Array>
+            <mxPoint x="140" y="199.73913043478262" as="sourcePoint" />
+            <mxPoint x="140" y="216.26086956521738" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t8" edge="1" parent="1" source="s_home" style="endArrow=block;html=1;rounded=0;curved=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="s_settings" value="tap Settings tab">
+          <mxGeometry relative="1" x="-0.1268" y="4" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="700" y="253" />
+              <mxPoint x="780" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t9" edge="1" parent="1" source="s_settings" style="endArrow=block;html=1;rounded=0;curved=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="s_home" value="tap Home tab">
+          <mxGeometry relative="1" x="0.179" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="690" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t10" edge="1" parent="1" source="s_settings" style="endArrow=block;html=1;rounded=0;align=left;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;curved=0;" target="s_settings" value="change currency/language/theme">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" edge="1" parent="1" source="s_home" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="s_detail" value="tap item card">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" edge="1" parent="1" source="s_detail" style="endArrow=block;html=1;rounded=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;entryX=0.25;entryY=1;entryDx=0;entryDy=0;curved=0;" target="s_home" value="tap Back">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t13" edge="1" parent="1" source="s_detail" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="s_home" value="tap Delete Item">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t14" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="tap Edit">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="520" as="sourcePoint" />
+            <mxPoint x="790" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t15" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Save valid / Cancel">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="500" as="sourcePoint" />
+            <mxPoint x="620" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t16" edge="1" parent="1" source="s_dedit" style="endArrow=block;html=1;rounded=0;align=left;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;curved=0;" target="s_dedit" value="Save invalid - show toast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="s_home" style="endArrow=block;html=1;rounded=0;labelBorderColor=none;labelBackgroundColor=default;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;exitX=-0.021;exitY=0.515;exitDx=0;exitDy=0;exitPerimeter=0;" target="s_edit" value="tap Edit">
+          <mxGeometry relative="1" x="-0.0415" y="-1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="420" y="280" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NBBd_2t2aK238haZMjmX-1" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="560" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="NBBd_2t2aK238haZMjmX-2" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;elbow=vertical;exitX=0.842;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="NBBd_2t2aK238haZMjmX-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="574.89" y="173" as="sourcePoint" />
+            <mxPoint x="575" y="143" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
