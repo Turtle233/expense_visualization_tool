@@ -1,8 +1,6 @@
 # See Your Cost - 支出可視化ツール
 
-### 🌐 README言語を選択
-
-### [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md)
+#### 🌐切り替えて [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md)
 
 ## 1. 概要
 
