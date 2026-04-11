@@ -12,11 +12,11 @@ void Cal::calculateExpense()
     sl.expensePerWeek = 7.00 * sl.expensePerDay;
     sl.expensePerMonth = 30.4375 * sl.expensePerDay;
 
-    // ????????????
+    // 月和年都是近似模糊计算。
     sl.expensePerYear = 365.2425 * sl.expensePerDay;
 }
 
-// ?????????????????
+// 计算日均序列，作为二级图表坐标基础
 void Cal::calculateDailySeries()
 {
     vDates.clear();
