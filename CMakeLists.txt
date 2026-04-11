@@ -43,6 +43,7 @@ qt_add_qml_module(${APP_TARGET}
     SOURCES src/language/language_manager.h 
     SOURCES src/language/language_manager.cpp
     RESOURCES ui/icons/resources.qrc
+    RESOURCES docs/README.CN.md docs/README.JA.md docs/README.md
 )
 
 # Translation files add as application resource
