@@ -54,7 +54,7 @@
 
 - UI 与逻辑分离：QML负责前端UI，C++负责后端逻辑，通过 Signal Slot 连接
 - 隔离的导航机制 (edit mode / setting mode)
-- 高度模块化 UI 设计 (Main -> Page -> Components)
+- 高度模块化 UI 设计 (Main → Page → Components)
 - 核心功能分类 (calculation, currency, graph, items, language, sorting)
 - 配置文件（JSON）独立存储
 
