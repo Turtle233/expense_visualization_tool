@@ -2,6 +2,8 @@
 
 #### 🌐 Switch to | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
+[![User Guide](https://img.shields.io/badge/User%20Guide%20Demo-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+
 ## 1. Overview
 
 This application is a cross-platform expense visualization tool built with the Qt6 framework (QML / Qt Quick Application). It helps users calculate the time-distributed cost of their expenses (e.g., daily cost) and presents the results through dynamic visual charts.
@@ -16,8 +18,6 @@ Compared to traditional expense tracking methods that only record the total cost
 - JSON (configuration and data storage)
 
 ## 3. User Guide Demo
-
-[![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
 
 - <demo video to be added>
 
@@ -69,16 +69,12 @@ This project is designed with low coupling and high cohesion:
 
 ## 6. Project Structure Design (Modeling)
 
-[![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling)
-
 - Class Diagram
 - Use Case Diagram
 - Sequence Diagram
 - State Chart
 
 ## 7. Testing
-
-[![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 This project has been tested through:
 

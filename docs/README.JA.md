@@ -2,6 +2,8 @@
 
 #### 🌐切り替えて | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
+[![User Guide](https://img.shields.io/badge/User%20Guide%20Demo-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+
 ## 1. 概要
 
 本アプリは、Qt6（QML / Qt Quick Application）フレームワークを用いて開発されたクロスプラットフォームの支出可視化ツールです。ユーザーの支出を時間単位（1日あたりのコストなど）で計算し、動的なグラフとして可視化します。
@@ -16,8 +18,6 @@
 - JSON（設定およびデータ保存）
 
 ## 3. ユーザーデモ
-
-[![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
 
 - <デモ動画を後で追加>
 
@@ -69,16 +69,12 @@
 
 ## 6. プロジェクト構造設計（モデリング）
 
-[![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling)
-
 - クラス図
 - ユースケース図
 - シーケンス図
 - ステートチャート
 
 ## 7. テスト
-
-[![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 本プロジェクトでは以下のテストを実施しています：
 

@@ -2,6 +2,8 @@
 
 #### 🌐 切换至 | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
+[![User Guide](https://img.shields.io/badge/User%20Guide%20Demo-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+
 ## 1. 总览
 
 此 app 是一款基于 Qt6 (QML / Qt Quick Application) 框架开发的跨平台费用可视化工具。主要用于帮助用户将其支出按时间维度计算其日均成本，并以动态图表形式将其可视化。
@@ -16,8 +18,6 @@
 - JSON（配置与数据存储）
 
 ## 3. 使用演示
-
-[![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
 
 - <待插入演示视频>
 
@@ -69,16 +69,12 @@
 
 ## 6. 项目结构设计 (Modeling)
 
-[![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling)
-
 - Class Diagram
 - Use Case Diagram
 - Sequence Diagram
 - State Chart
 
 ## 7. 测试
-
-[![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 本项目已通过：
 
