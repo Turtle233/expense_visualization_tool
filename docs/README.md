@@ -15,7 +15,7 @@ Compared to traditional expense tracking methods that only record the total cost
 - C++ (core logic)
 - JSON (configuration and data storage)
 
-## 3. User Demo
+## 3. User Guide Demo
 
 - <demo video to be added>
 
