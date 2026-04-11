@@ -69,7 +69,7 @@ This project is designed with low coupling and high cohesion:
 
 ## 6. Project Structure Design (Modeling)
 
-Recommended to open with "draw.io"
+Recommended to open with draw.io
 
 - [Class Diagram](./modeling/class_diagram.xml)
 - [Use Case Diagram](./modeling/use_case_diagram.xml)
