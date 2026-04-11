@@ -1,4 +1,4 @@
-# See Your Cost - Expense Visualization Tool
+# See your Cost - Expense Visualization Tool
 
 #### 🌐 Switch to | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
