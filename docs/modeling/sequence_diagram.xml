@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" modified="2026-04-10T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram name="Sequence Diagram">
+    <mxGraphModel dx="1800" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="p_user" value="User" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_add" value="Home_AddItemDialog.qml" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_home" value="Home_Page.qml" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_currency" value="Currency" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="20" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_item" value="ItemListModel" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="740" y="20" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_list" value="Home_ItemList.qml" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="940" y="20" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_detail" value="Detail_Page.qml" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="20" width="170" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_graph" value="ExpenseGraph" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="20" width="170" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p_cal" value="Cal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="20" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lf1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="100" y="80" as="sourcePoint"/><mxPoint x="100" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf2" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="80" as="sourcePoint"/><mxPoint x="260" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf3" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="80" as="sourcePoint"/><mxPoint x="450" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf4" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="640" y="80" as="sourcePoint"/><mxPoint x="640" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf5" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="830" y="80" as="sourcePoint"/><mxPoint x="830" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf6" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1020" y="80" as="sourcePoint"/><mxPoint x="1020" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf7" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1210" y="80" as="sourcePoint"/><mxPoint x="1210" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf8" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1400" y="80" as="sourcePoint"/><mxPoint x="1400" y="980" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="lf9" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1570" y="80" as="sourcePoint"/><mxPoint x="1570" y="980" as="targetPoint"/></mxGeometry></mxCell>
+
+        <mxCell id="m1" value="1. Click '+' and save" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="100" y="120" as="sourcePoint"/><mxPoint x="260" y="120" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m2" value="2. addItemRequested(name, expenseText, date)" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="160" as="sourcePoint"/><mxPoint x="450" y="160" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m3" value="3. parseAmountToUSD(expenseText)" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="200" as="sourcePoint"/><mxPoint x="640" y="200" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m4" value="4. expenseUSD" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="640" y="240" as="sourcePoint"/><mxPoint x="450" y="240" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m5" value="5. addItem(name, expenseUSD, date)" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="280" as="sourcePoint"/><mxPoint x="830" y="280" as="targetPoint"/></mxGeometry></mxCell>
+
+        <mxCell id="n_validate" value="ItemListModel internals: validate + insert + saveToFile()" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="760" y="310" width="300" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m6" value="6. true / false" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="830" y="360" as="sourcePoint"/><mxPoint x="450" y="360" as="targetPoint"/></mxGeometry></mxCell>
+
+        <mxCell id="n_invalid" value="[false] Reopen dialog and show input error toast" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="290" y="390" width="340" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m7" value="7. [true] model change -&gt; ListView refresh" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="450" as="sourcePoint"/><mxPoint x="1020" y="450" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m8" value="8. New row appears and list scrolls to end" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1020" y="490" as="sourcePoint"/><mxPoint x="100" y="490" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m9" value="9. Click an item card" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="100" y="540" as="sourcePoint"/><mxPoint x="1020" y="540" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m10" value="10. stackView.push(Detail_Page, item data)" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1020" y="580" as="sourcePoint"/><mxPoint x="1210" y="580" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m11" value="11. convertFromUSD(totalPrice)" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1210" y="620" as="sourcePoint"/><mxPoint x="640" y="620" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m12" value="12. bind totalExpense / passedDays / currencyCode" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1210" y="660" as="sourcePoint"/><mxPoint x="1400" y="660" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m13" value="13. calculateDailySeries()" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1400" y="700" as="sourcePoint"/><mxPoint x="1570" y="700" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m14" value="14. series data" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1570" y="740" as="sourcePoint"/><mxPoint x="1400" y="740" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m15" value="15. paint() and draw chart" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1400" y="780" as="sourcePoint"/><mxPoint x="1210" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m16" value="16. Detail page shown with dynamic graph" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1210" y="820" as="sourcePoint"/><mxPoint x="100" y="820" as="targetPoint"/></mxGeometry></mxCell>
+
+        <mxCell id="m17" value="17. Drag on chart" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="100" y="860" as="sourcePoint"/><mxPoint x="1400" y="860" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m18" value="18. updateCurrentPointByPosition(position)" style="edgeStyle=loopEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1" source="p_graph" target="p_graph"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="m19" value="19. currentPointChanged signal" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1400" y="940" as="sourcePoint"/><mxPoint x="1210" y="940" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m20" value="20. Show Current Date and Cost of Current Point" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=11;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1210" y="970" as="sourcePoint"/><mxPoint x="100" y="970" as="targetPoint"/></mxGeometry></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
