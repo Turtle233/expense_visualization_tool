@@ -1,53 +1,70 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram id="cpp-json-class-simple" name="Class Diagram Simple">
-    <mxGraphModel dx="1554" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="2391" dy="1406" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#F5F5F5" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="ItemListModel : QAbstractListModel&#xa;vars:&#xa;- m_dataFilePath&#xa;- m_items&#xa;- ItemRecord.itemName&#xa;- ItemRecord.totalExpense&#xa;- ItemRecord.purchaseDate&#xa;+ addItem()&#xa;+ updateItem()&#xa;+ deleteItem()&#xa;+ sortByDate/Name()" vertex="1">
-          <mxGeometry height="320" width="340" x="40" y="80" as="geometry" />
+        <mxCell id="c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;gradientColor=none;gradientDirection=north;fillStyle=auto;glass=1;shadow=1;" value="&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;ItemListModel : QAbstractListModel&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;——————————————————-&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;div&gt;&lt;u&gt;members&lt;br&gt;&lt;/u&gt;- m_dataFilePath&lt;br&gt;- m_items&lt;br&gt;- ItemRecord.itemName&lt;br&gt;- ItemRecord.totalExpense&lt;br&gt;- ItemRecord.purchaseDate&lt;/div&gt;&lt;div&gt;&lt;u style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;methods&lt;/u&gt;&lt;/div&gt;&lt;div&gt;+ addItem()&lt;br&gt;+ updateItem()&lt;br&gt;+ deleteItem()&lt;br&gt;+ sortByDate/Name()&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="320" width="340" x="80" y="139" as="geometry" />
         </mxCell>
-        <mxCell id="c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Cal : QObject&#xa;vars:&#xa;- d.currentDate&#xa;- d.purchaseDate&#xa;- sl.expensePerDay&#xa;- sl.expensePerWeek&#xa;- sl.expensePerMonth&#xa;- sl.expensePerYear&#xa;- vDates&#xa;- vDailyExpense&#xa;- totalExpense&#xa;+ calculateExpense()&#xa;+ calculateDailySeries()&#xa;+ validate()" vertex="1">
-          <mxGeometry height="320" width="300" x="420" y="80" as="geometry" />
+        <mxCell id="c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;glass=1;shadow=1;" value="&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;Cal : QObject&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;—————————————————————&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;div&gt;&lt;u&gt;members&lt;br&gt;&lt;/u&gt;- d.currentDate&lt;br&gt;- d.purchaseDate&lt;br&gt;- sl.expensePerDay&lt;br&gt;- sl.expensePerWeek&lt;br&gt;- sl.expensePerMonth&lt;br&gt;- sl.expensePerYear&lt;br&gt;- vDates&lt;br&gt;- vDailyExpense&lt;br&gt;- totalExpense&lt;div&gt;&lt;u&gt;methods&lt;br&gt;&lt;/u&gt;+ calculateExpense()&lt;br&gt;+ calculateDailySeries()&lt;br&gt;+ validate()&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="390" width="390" x="620" y="139" as="geometry" />
         </mxCell>
-        <mxCell id="c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Graph : QQuickPaintedItem&#xa;vars:&#xa;- m_calculation&#xa;- m_passedDays&#xa;- m_currencyCode&#xa;- m_cachedDates&#xa;- m_cachedExpenses&#xa;- m_cachedPoints&#xa;- m_cachedAxisRect&#xa;- m_cachedDataRect&#xa;- m_currentPointIndex&#xa;+ setTotalExpense()&#xa;+ setPassedDays()&#xa;+ setCurrencyCode()&#xa;+ paint()" vertex="1">
-          <mxGeometry height="360" width="420" x="760" y="80" as="geometry" />
+        <mxCell id="c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;glass=1;shadow=1;" value="&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;Graph : QQuickPaintedItem&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;———————————————————————&lt;br&gt;&lt;/b&gt;&lt;div&gt;&lt;u&gt;members&lt;br&gt;&lt;/u&gt;- m_calculation&lt;br&gt;- m_passedDays&lt;br&gt;- m_currencyCode&lt;br&gt;- m_cachedDates&lt;br&gt;- m_cachedExpenses&lt;br&gt;- m_cachedPoints&lt;br&gt;- m_cachedAxisRect&lt;br&gt;- m_cachedDataRect&lt;br&gt;- m_currentPointIndex&lt;/div&gt;&lt;div&gt;&lt;u&gt;methods&lt;br&gt;&lt;/u&gt;+ setTotalExpense()&lt;br&gt;+ setPassedDays()&lt;br&gt;+ setCurrencyCode()&lt;br&gt;+ paint()&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="420" width="420" x="1160" y="139" as="geometry" />
         </mxCell>
-        <mxCell id="c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#f5f5f5;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Sorting&#xa;vars: none&#xa;+ sortByDateAscending()&#xa;+ sortByDateDescending()&#xa;+ sortByNameAscending()&#xa;+ sortByNameDescending()" vertex="1">
-          <mxGeometry height="200" width="340" x="40" y="450" as="geometry" />
+        <mxCell id="c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#f5f5f5;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;glass=1;shadow=1;" value="&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;Sorting&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;——————————————————-&lt;br&gt;&lt;/b&gt;&lt;u&gt;methods&lt;br&gt;&lt;/u&gt;+ sortByDateAscending()&lt;br&gt;+ sortByDateDescending()&lt;br&gt;+ sortByNameAscending()&lt;br&gt;+ sortByNameDescending()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="340" x="80" y="659" as="geometry" />
         </mxCell>
-        <mxCell id="c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="Currency : QObject&#xa;vars:&#xa;- m_currentCurrency&#xa;+ convertFromUSD()&#xa;+ convertToUSD()&#xa;+ parseAmountToUSD()&#xa;+ formatFromUSD()&#xa;+ saveToFile()/readFromFile()" vertex="1">
-          <mxGeometry height="240" width="300" x="420" y="450" as="geometry" />
+        <mxCell id="c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;glass=1;shadow=1;" value="&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;Currency : QObject&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;————————————————-&lt;br&gt;&lt;/b&gt;&lt;u&gt;member&lt;/u&gt;&lt;br&gt;- m_currentCurrency&lt;div&gt;&lt;u&gt;methods&lt;/u&gt;&lt;br&gt;+ convertFromUSD()&lt;br&gt;+ convertToUSD()&lt;br&gt;+ parseAmountToUSD()&lt;br&gt;+ formatFromUSD()&lt;br&gt;+ saveToFile()/readFromFile()&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="300" x="665" y="649" as="geometry" />
         </mxCell>
-        <mxCell id="c6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="LanguageManager : QObject&#xa;vars:&#xa;- m_app&#xa;- m_translator&#xa;- m_currentLanguageCode&#xa;+ setCurrentLanguageIndex()&#xa;+ applyLanguage()&#xa;+ saveToFile()/readFromFile()" vertex="1">
-          <mxGeometry height="240" width="420" x="760" y="460" as="geometry" />
+        <mxCell id="c6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;glass=1;shadow=1;" value="&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;LanguageManager : QObject&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;b&gt;———————————————————————&lt;br&gt;&lt;/b&gt;&lt;u&gt;members&lt;/u&gt;&lt;br&gt;- m_app&lt;br&gt;- m_translator&lt;br&gt;- m_currentLanguageCode&lt;div&gt;&lt;u style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;methods&lt;/u&gt;&lt;/div&gt;&lt;div&gt;+ setCurrentLanguageIndex()&lt;br&gt;+ applyLanguage()&lt;br&gt;+ saveToFile()/readFromFile()&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="420" x="1160" y="649" as="geometry" />
         </mxCell>
-        <mxCell id="j1" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="itemData.json" vertex="1">
-          <mxGeometry height="70" width="180" x="110" y="780" as="geometry" />
+        <mxCell id="j1" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;shadow=1;" value="itemData.json" vertex="1">
+          <mxGeometry height="70" width="180" x="160" y="1045" as="geometry" />
         </mxCell>
-        <mxCell id="j2" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="currencySetting.json" vertex="1">
-          <mxGeometry height="70" width="220" x="430" y="780" as="geometry" />
+        <mxCell id="j2" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;shadow=1;" value="currencySetting.json" vertex="1">
+          <mxGeometry height="70" width="220" x="705" y="1045" as="geometry" />
         </mxCell>
-        <mxCell id="j3" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="languageSetting.json" vertex="1">
-          <mxGeometry height="70" width="220" x="840" y="780" as="geometry" />
+        <mxCell id="j3" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;shadow=1;" value="languageSetting.json" vertex="1">
+          <mxGeometry height="70" width="220" x="1260" y="1045" as="geometry" />
         </mxCell>
-        <mxCell id="e1" edge="1" parent="1" source="c1" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="c4" value="uses">
+        <mxCell id="e1" edge="1" parent="1" source="c1" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;" target="c4" value="&lt;span style=&quot;background-color: rgb(245, 245, 245);&quot;&gt;uses&lt;/span&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e2" edge="1" parent="1" source="c1" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="c2" value="uses date diff">
+        <mxCell id="e2" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;entryX=0;entryY=0.513;entryDx=0;entryDy=0;entryPerimeter=0;" target="c2" value="&lt;span style=&quot;background-color: rgb(245, 245, 245);&quot;&gt;uses date diff&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="420" y="339" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="c3" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;exitX=0.001;exitY=0.465;exitDx=0;exitDy=0;exitPerimeter=0;endFill=1;" target="c2" value="&lt;span style=&quot;background-color: rgb(245, 245, 245);&quot;&gt;has Cal&lt;/span&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e3" edge="1" parent="1" source="c3" style="endArrow=diamondThin;html=1;rounded=0;strokeColor=#666666;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="c2" value="has Cal">
+        <mxCell id="e4" edge="1" parent="1" source="c1" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="j1" value="&lt;span style=&quot;background-color: rgb(245, 245, 245);&quot;&gt;read/write&lt;/span&gt;">
+          <mxGeometry relative="1" x="0.4274" y="-18" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="460" y="459" />
+              <mxPoint x="470" y="1094" />
+            </Array>
+            <mxPoint x="470" y="459" as="sourcePoint" />
+            <mxPoint x="470" y="1059" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="c5" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;" target="j2" value="&lt;span style=&quot;background-color: rgb(245, 245, 245);&quot;&gt;read/write&lt;/span&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" edge="1" parent="1" source="c1" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="j1" value="read/write">
+        <mxCell id="e6" edge="1" parent="1" source="c6" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=18;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;autosizeText=0;" target="j3" value="&lt;span style=&quot;background-color: rgb(245, 245, 245);&quot;&gt;read/write&lt;/span&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" edge="1" parent="1" source="c5" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="j2" value="read/write">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="kFAB-GpL0Ea7aCVASJ_P-1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=1;glass=0;" value="&lt;font face=&quot;Noto Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 28px;&quot;&gt;See your Cost - Class Diagram&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="1210" x="230" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="e6" edge="1" parent="1" source="c6" style="endArrow=block;dashed=1;html=1;rounded=0;strokeColor=#999999;fontSize=17;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" target="j3" value="read/write">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="kFAB-GpL0Ea7aCVASJ_P-2" parent="1" style="whiteSpace=wrap;html=1;rounded=1;align=right;strokeColor=none;fillColor=none;" value="&lt;font face=&quot;Noto Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 15px;&quot;&gt;Ruixuan Zhang&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Noto Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 15px;&quot;&gt;2026-04-11&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="1534" y="1129" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
