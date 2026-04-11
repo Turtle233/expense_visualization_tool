@@ -69,10 +69,10 @@
 
 ## 6. プロジェクト構造設計（モデリング）
 
-- クラス図
-- ユースケース図
-- シーケンス図
-- ステートチャート
+- [Class Diagram](./modeling/class_diagram.xml)
+- [Use Case Diagram](./modeling/use_case_diagram.xml)
+- [Sequence Diagram](./modeling/sequence_diagram.xml)
+- [State Chart](./modeling/state_chart.xml)
 
 ## 7. テスト
 

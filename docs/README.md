@@ -69,10 +69,10 @@ This project is designed with low coupling and high cohesion:
 
 ## 6. Project Structure Design (Modeling)
 
-- Class Diagram
-- Use Case Diagram
-- Sequence Diagram
-- State Chart
+- [Class Diagram](./modeling/class_diagram.xml)
+- [Use Case Diagram](./modeling/use_case_diagram.xml)
+- [Sequence Diagram](./modeling/sequence_diagram.xml)
+- [State Chart](./modeling/state_chart.xml)
 
 ## 7. Testing
 
