@@ -22,37 +22,37 @@
         <translation>現在の項目を編集</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="21"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="24"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="22"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="25"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="58"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="61"/>
         <source>Item Name</source>
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="65"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="68"/>
         <source>Total Expense (%1)</source>
         <translation>合計支出（%1）</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="75"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="78"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="85"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="88"/>
         <source>Choose Purchase Date</source>
         <translation>購入日を選択</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="119"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="122"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
@@ -65,42 +65,57 @@
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="88"/>
+        <location filename="../ui/Detail_Page.qml" line="100"/>
         <source>← Home</source>
         <translation>← ホーム</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="119"/>
+        <location filename="../ui/Detail_Page.qml" line="131"/>
         <source>Edit</source>
         <translation>編集</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="153"/>
+        <location filename="../ui/Detail_Page.qml" line="165"/>
         <source>Daily Cost: %1</source>
         <translation>1日あたりの費用: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="175"/>
+        <location filename="../ui/Detail_Page.qml" line="187"/>
         <source>Current Date: %1 | Cost of Current Point: %2</source>
         <translation>現在日付: %1 | 現在ポイントの費用: %2</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="223"/>
+        <location filename="../ui/Detail_Page.qml" line="235"/>
         <source>Total Price</source>
         <translation>合計金額</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="257"/>
+        <location filename="../ui/Detail_Page.qml" line="269"/>
         <source>Purchase Date</source>
         <translation>購入日</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="289"/>
+        <location filename="../ui/Detail_Page.qml" line="301"/>
         <source>Passed Days</source>
         <translation>経過日数</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="322"/>
+        <location filename="../ui/Detail_Page.qml" line="331"/>
+        <source>Weekly Cost</source>
+        <translation>週間の支出</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="360"/>
+        <source>Monthly Cost</source>
+        <translation>月間の支出</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="389"/>
+        <source>Yearly Cost</source>
+        <translation>年間の支出</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="421"/>
         <source>Delete Item</source>
         <translation>項目を削除</translation>
     </message>
@@ -121,37 +136,37 @@
         <translation>新しい項目</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="22"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="25"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="23"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="26"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="40"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="43"/>
         <source>Item Name</source>
         <translation>項目名</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="47"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="50"/>
         <source>Total Expense (%1)</source>
         <translation>合計支出（%1）</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="57"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="60"/>
         <source>Purchase Date: %1</source>
         <translation>購入日: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="66"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="69"/>
         <source>Choose Purchase Date</source>
         <translation>購入日を選択</translation>
     </message>
     <message>
-        <location filename="../ui/Home_AddItemDialog.qml" line="99"/>
+        <location filename="../ui/Home_AddItemDialog.qml" line="102"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>

@@ -15,9 +15,18 @@ Page {
     property date purchaseDate
     property int passedDays: 0
     property int itemIndex: -1
+    property real weeklyCost: 0
+    property real monthlyCost: 0
+    property real yearlyCost: 0
 
     property StackView stackViewPass
     property var itemDelegateRef
+
+    function refreshCostScales() {
+        detailPage.weeklyCost = itemListModel.weeklyCostAt(detailPage.itemIndex);
+        detailPage.monthlyCost = itemListModel.monthlyCostAt(detailPage.itemIndex);
+        detailPage.yearlyCost = itemListModel.yearlyCostAt(detailPage.itemIndex);
+    }
 
     // connected to the edit dialog
     function applyEdit(itemNameText, expenseText, purchaseDateText) {
@@ -39,7 +48,10 @@ Page {
         detailPage.totalPrice = updatedExpense;
         detailPage.purchaseDate = updatedPurchaseDate;
         detailPage.passedDays = itemListModel.passedDaysAt(detailPage.itemIndex);
+        detailPage.refreshCostScales();
     }
+
+    Component.onCompleted: detailPage.refreshCostScales()
 
     // load the Detail_EditDialog
     Loader {
@@ -59,12 +71,12 @@ Page {
     // 详情页面主要元素
     ColumnLayout {
         anchors.fill: parent
-        spacing: 20
+        spacing: 12 // 所有详情页面元素的间隔
 
         // 顶部导航栏，包括返回和编辑按钮
         Rectangle {
             id: topNaviBar
-            height: 80
+            height: 80 // 导航栏高度，写固定值，与Home_Page统一
             Layout.fillWidth: true
             color: "transparent"
 
@@ -83,7 +95,9 @@ Page {
                     Material.background: "Transparent"
 
                     // 强制视觉位移偏左
-                    transform: Translate { x: -10 }
+                    transform: Translate {
+                        x: -10
+                    }
 
                     text: qsTr("\u2190 Home")
                     font.pointSize: 18
@@ -97,7 +111,7 @@ Page {
                     }
                 }
 
-                // 分隔空间
+                // 分隔空间（横向）
                 Item {
                     Layout.fillWidth: true
                 }
@@ -128,7 +142,7 @@ Page {
             }
         }
 
-        // 项目标题行，包括项目名称
+        // 项目标题行，显示项目名称
         Text {
             id: itemTitleText
             text: detailPage.itemName
@@ -136,12 +150,12 @@ Page {
             font.pointSize: 25
             font.letterSpacing: 0.4
             color: "#1F2D3D"
-            Layout.bottomMargin: -8
 
+            Layout.bottomMargin: -6
             Layout.alignment: Qt.AlignHCenter
         }
 
-        // 项目价格行，包括平均到每天的价格
+        // 项目价格行，显示Daily Cost
         Text {
             id: pricePerDayText
             text: {
@@ -156,8 +170,8 @@ Page {
             font.pointSize: 20
             font.letterSpacing: 0.2
             color: "#FB8C00"
-            Layout.topMargin: -4
 
+            Layout.topMargin: -4
             Layout.alignment: Qt.AlignHCenter
         }
 
@@ -203,6 +217,7 @@ Page {
             Layout.fillWidth: true
             Layout.leftMargin: 16
             Layout.rightMargin: 16
+            Layout.topMargin: -12
             Layout.preferredHeight: cardContnet.implicitHeight + 16 + 16 // content height + (top and bottom) margin
 
             radius: 16
@@ -308,7 +323,118 @@ Page {
 
         // 分隔空间
         Item {
-            Layout.fillHeight: true
+            Layout.preferredHeight: 0
+        }
+
+        // 项目支出Card，包括每周支出、每月支出、每年支出
+        Rectangle {
+            id: costDetailsCard
+            Layout.fillWidth: true
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+            Layout.topMargin: -10
+            Layout.preferredHeight: costCardContent.implicitHeight + 16 + 16
+
+            radius: 16
+            color: Window.window ? Window.window.panelColor : "#E3F2FD"
+
+            Column {
+                id: costCardContent
+                anchors.fill: costDetailsCard
+                anchors.margins: 16
+                spacing: 8
+
+                // 第一行：周均支出
+                RowLayout {
+                    width: parent.width
+
+                    // 文字左对齐
+                    Text {
+                        text: qsTr("Weekly Cost")
+                        font.pointSize: 17
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                    }
+
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    // 数据右对齐
+                    Text {
+                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.weeklyCost) : "$" + detailPage.weeklyCost.toFixed(2)
+                        font.pointSize: 17
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                        horizontalAlignment: Text.AlignRight
+                    }
+                }
+
+                // 浅灰色分割线
+                Rectangle {
+                    height: 1
+                    width: parent.width
+                    y: Math.round(y) // fix into int pixel point
+                    antialiasing: false
+                    color: "#B0BEC5"
+                }
+
+                // 第二行：周均支出
+                RowLayout {
+                    width: parent.width
+
+                    Text {
+                        text: qsTr("Monthly Cost")
+                        font.pointSize: 17
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                    }
+
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    Text {
+                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.monthlyCost) : "$" + detailPage.monthlyCost.toFixed(2)
+                        font.pointSize: 17
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                        horizontalAlignment: Text.AlignRight
+                    }
+                }
+
+                // 浅灰色分割线
+                Rectangle {
+                    height: 1
+                    width: parent.width
+                    y: Math.round(y) // fix into int pixel point
+                    antialiasing: false
+                    color: "#B0BEC5"
+                }
+
+                // 第三行：年均支出
+                RowLayout {
+                    width: parent.width
+
+                    Text {
+                        text: qsTr("Yearly Cost")
+                        font.pointSize: 17
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                    }
+
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    Text {
+                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.yearlyCost) : "$" + detailPage.yearlyCost.toFixed(2)
+                        font.pointSize: 17
+                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                        horizontalAlignment: Text.AlignRight
+                    }
+                }
+            }
+        }
+
+        // 分隔空间
+        Item {
+            Layout.preferredHeight: 0
         }
 
         // 删除按钮
@@ -343,7 +469,7 @@ Page {
 
         // 分隔空间
         Item {
-            height: 16
+            height: 18
         }
     }
 }

@@ -9,7 +9,7 @@ import QtQuick.Controls.Material
 Rectangle {
     id: header
     width: parent.width
-    height: 80
+    height: 80 // 标题栏高度写固定值，与Detail Page统一
     color: "transparent"
 
     property bool editMode: false // edit mode need to be triggered on by edit button

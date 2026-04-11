@@ -18,6 +18,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 
+// ---------------------------------------helper functions begins---------------------------------------
 namespace
 {
     // keep data in ./data/itemData.json under current project folder
@@ -55,14 +56,22 @@ namespace
         purchaseDate = QDate::fromString(purchaseDateText, Qt::ISODate);
         return purchaseDate.isValid();
     }
-} // namespace
+}
+// ---------------------------------------helper functions ends---------------------------------------
 
+
+// ---------------------------------------model lifecycle begins---------------------------------------
+// initialization
 ItemListModel::ItemListModel(QObject *parent)
     : QAbstractListModel(parent), m_dataFilePath(resolveDataFilePath())
 {
     loadFromFile();
 }
+// ---------------------------------------model lifecycle ends---------------------------------------
 
+
+// ---------------------------------------model data access begins---------------------------------------
+// check row count
 int ItemListModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid())
@@ -111,7 +120,10 @@ QHash<int, QByteArray> ItemListModel::roleNames() const
         {PurchaseDateTextRole, "purchaseDateText"},
         {PassedDaysRole, "passedDays"}};
 }
+// ---------------------------------------model data access ends---------------------------------------
 
+
+// ---------------------------------------item CRUD begins---------------------------------------
 bool ItemListModel::addItem(const QString &itemName,
                             const QString &expenseText,
                             const QString &purchaseDateText)
@@ -176,7 +188,10 @@ bool ItemListModel::deleteItem(int index)
     saveToFile();
     return true;
 }
+// ---------------------------------------item CRUD ends---------------------------------------
 
+
+// ---------------------------------------calculation helpers begins---------------------------------------
 int ItemListModel::passedDaysAt(int index) const
 {
     if (index < 0 || index >= m_items.size())
@@ -192,6 +207,39 @@ int ItemListModel::passedDaysAt(int index) const
     return days > 0 ? days : 0;
 }
 
+double ItemListModel::weeklyCostAt(int index) const
+{
+    Cal calculation;
+    calculation.totalExpense = m_items.at(index).totalExpense;
+    calculation.d.purchaseDate = m_items.at(index).purchaseDate;
+    calculation.d.currentDate = QDate::currentDate();
+    calculation.calculateExpense();
+    return calculation.sl.expensePerWeek;
+}
+
+double ItemListModel::monthlyCostAt(int index) const
+{
+    Cal calculation;
+    calculation.totalExpense = m_items.at(index).totalExpense;
+    calculation.d.purchaseDate = m_items.at(index).purchaseDate;
+    calculation.d.currentDate = QDate::currentDate();
+    calculation.calculateExpense();
+    return calculation.sl.expensePerMonth;
+}
+
+double ItemListModel::yearlyCostAt(int index) const
+{
+    Cal calculation;
+    calculation.totalExpense = m_items.at(index).totalExpense;
+    calculation.d.purchaseDate = m_items.at(index).purchaseDate;
+    calculation.d.currentDate = QDate::currentDate();
+    calculation.calculateExpense();
+    return calculation.sl.expensePerYear;
+}
+// ---------------------------------------calculation helpers ends---------------------------------------
+
+
+// ---------------------------------------model reset begins---------------------------------------
 void ItemListModel::clear()
 {
     if (m_items.isEmpty())
@@ -204,8 +252,10 @@ void ItemListModel::clear()
     endResetModel();
     saveToFile();
 }
+// ---------------------------------------model reset ends---------------------------------------
 
-// ---------------------------------------Sorting logic begins---------------------------------------
+
+// ---------------------------------------sorting logic begins---------------------------------------
 void ItemListModel::sortByDateAscending()
 {
     if (m_items.size() < 2)

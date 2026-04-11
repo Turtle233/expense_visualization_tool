@@ -14,7 +14,7 @@ Item {
         anchors.fill: parent
         anchors.margins: 16
         spacing: 12
-        // clip: true // 防止 ListView 超出 Item 的边界
+        clip: !homeItemList.editMode// 防止 ListView 超出边界，侵占标题栏和导航栏；在编辑模式进入抖动动画时禁止clip，防止抖动动画被其他元素遮挡。
         model: itemListModel
 
         // ———————————————————————————————————————————添加与删除的过渡效果—————————————————————————————————————————————————
@@ -133,7 +133,11 @@ Item {
                 opacity: itemMouseArea.pressed ? 0.5 : 0.0
                 z: 2
 
-                Behavior on opacity { NumberAnimation { duration: 80 } }
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 80
+                    }
+                }
             }
 
             // ————————————————red border highlight for newly added item————————————————
@@ -217,9 +221,7 @@ Item {
 
                 Text {
                     // 判断当前货币，并调用formatFromUSD 来显示当前的货币符号
-                    text: currencyManager.currentCurrencyIndex >= 0
-                          ? currencyManager.formatFromUSD(totalExpense)
-                          : totalExpenseText
+                    text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(totalExpense) : totalExpenseText
                     Layout.alignment: Qt.AlignRight
 
                     font.pointSize: 16

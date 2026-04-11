@@ -44,6 +44,9 @@ public:
                                 const QString &purchaseDateText);
     Q_INVOKABLE bool deleteItem(int index);
     Q_INVOKABLE int passedDaysAt(int index) const;
+    Q_INVOKABLE double weeklyCostAt(int index) const;
+    Q_INVOKABLE double monthlyCostAt(int index) const;
+    Q_INVOKABLE double yearlyCostAt(int index) const;
     Q_INVOKABLE void clear();
     Q_INVOKABLE void sortByDateAscending();
     Q_INVOKABLE void sortByDateDescending();
