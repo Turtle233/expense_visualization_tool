@@ -15,7 +15,7 @@ Compared to traditional expense tracking methods that only record the total cost
 - C++ (core logic)
 - JSON (configuration and data storage)
 
-## 3. [User Guide Demo](./instructions)
+## 3. User Guide Demo [![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
 
 - <demo video to be added>
 
@@ -65,14 +65,16 @@ This project is designed with low coupling and high cohesion:
 - Android 12+ sandbox ensures data isolation and security
 - Custom-built components (e.g., DateTimePicker) for better decoupling and future extensibility
 
-## 6. [System Design (Modeling)](./modeling)
+## 6. Project Structure Design (Modeling)
+
+[![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling)
 
 - Class Diagram
 - Use Case Diagram
 - Sequence Diagram
 - State Chart
 
-## 7. [Testing](./testing)
+## 7. Testing [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 This project has been tested through:
 
