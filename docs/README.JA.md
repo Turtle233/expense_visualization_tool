@@ -15,7 +15,9 @@
 - C++（コアロジック）
 - JSON（設定およびデータ保存）
 
-## 3. デモ
+## 3. ユーザーデモ
+
+[![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
 
 - <デモ動画を後で追加>
 
@@ -65,7 +67,9 @@
 - Android 12+ のサンドボックスによるデータ保護
 - DateTimePickerなどのコンポーネントを独自実装し、拡張性を確保
 
-## 6. システム設計（モデリング）
+## 6. プロジェクト構造設計（モデリング）
+
+[![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling)
 
 - クラス図
 - ユースケース図
@@ -73,6 +77,8 @@
 - ステートチャート
 
 ## 7. テスト
+
+[![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 本プロジェクトでは以下のテストを実施しています：
 

@@ -17,6 +17,8 @@
 
 ## 3. 使用演示
 
+[![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
+
 - <待插入演示视频>
 
 ## 4. 功能（功能性需求）
@@ -65,7 +67,9 @@
 - 安卓12+的沙箱环境将数据隔离，用户无法访问与操作
 - DateTimePicker等组件单独手写解耦合，适配未来多平台开发
 
-## 6. 系统设计 (Modeling)
+## 6. 项目结构设计 (Modeling)
+
+[![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling)
 
 - Class Diagram
 - Use Case Diagram
@@ -73,6 +77,8 @@
 - State Chart
 
 ## 7. 测试
+
+[![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 本项目已通过：
 

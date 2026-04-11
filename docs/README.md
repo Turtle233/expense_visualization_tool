@@ -15,7 +15,9 @@ Compared to traditional expense tracking methods that only record the total cost
 - C++ (core logic)
 - JSON (configuration and data storage)
 
-## 3. User Guide Demo [![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
+## 3. User Guide Demo
+
+[![User Guide](https://img.shields.io/badge/Demo-Demo)](./instructions)
 
 - <demo video to be added>
 
@@ -74,7 +76,9 @@ This project is designed with low coupling and high cohesion:
 - Sequence Diagram
 - State Chart
 
-## 7. Testing [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+## 7. Testing
+
+[![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 This project has been tested through:
 
