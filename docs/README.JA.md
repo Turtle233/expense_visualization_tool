@@ -2,7 +2,7 @@
 
 ### 🌐 README言語を選択
 
-| [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md) |
+### [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md)
 
 ## 1. 概要
 
