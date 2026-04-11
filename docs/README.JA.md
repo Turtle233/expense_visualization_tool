@@ -69,6 +69,8 @@
 
 ## 6. プロジェクト構造設計（モデリング）
 
+draw.ioを使って開くことをお勧めします
+
 - [Class Diagram](./modeling/class_diagram.xml)
 - [Use Case Diagram](./modeling/use_case_diagram.xml)
 - [Sequence Diagram](./modeling/sequence_diagram.xml)

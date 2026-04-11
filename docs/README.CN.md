@@ -69,6 +69,8 @@
 
 ## 6. 项目结构设计 (Modeling)
 
+推荐使用 draw.io 打开
+
 - [Class Diagram](./modeling/class_diagram.xml)
 - [Use Case Diagram](./modeling/use_case_diagram.xml)
 - [Sequence Diagram](./modeling/sequence_diagram.xml)
