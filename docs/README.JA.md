@@ -1,4 +1,4 @@
-# See Your Cost - 支出可視化ツール
+# See Your Cost (支出を洞察) - 支出可視化ツール
 
 #### 🌐切り替えて | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
