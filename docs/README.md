@@ -1,8 +1,6 @@
 # See Your Cost - Expense Visualization Tool
 
-### 🌐 Choose README Language
-
-### [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md)
+#### 🌐Switch to [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md)
 
 ## 1. Overview
 
