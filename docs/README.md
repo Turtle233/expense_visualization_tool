@@ -4,15 +4,11 @@
 
 | [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md) |
 
----
-
 ## 1. Overview
 
 This application is a cross-platform expense visualization tool built with the Qt6 framework (QML / Qt Quick Application). It helps users calculate the time-distributed cost of their expenses (e.g., daily cost) and presents the results through dynamic visual charts.
 
 Compared to traditional expense tracking methods that only record the total cost, this application improves users' perception of large expenses through time-based allocation and data visualization, helping them make more rational financial decisions.
-
----
 
 ## 2. Tech Stack
 
@@ -21,13 +17,9 @@ Compared to traditional expense tracking methods that only record the total cost
 - C++ (core logic)
 - JSON (configuration and data storage)
 
----
-
 ## 3. User Demo
 
 - <demo video to be added>
-
----
 
 ## 4. Features (Functional Requirements)
 
@@ -41,8 +33,6 @@ Compared to traditional expense tracking methods that only record the total cost
 - Compatibility with customized Android systems
 - Custom-built DateTimePicker (designed for cross-platform support)
 
----
-
 ## 5. Non-functional Requirements
 
 ### 🚀 Performance
@@ -50,8 +40,6 @@ Compared to traditional expense tracking methods that only record the total cost
 - List rendering based on QListView + QJsonDocument, capable of handling large-scale data
 - Currency conversion with precision up to 6 decimal places
 - Custom animation system to reduce dependency on native Android animations
-
----
 
 ### 👤 Usability
 
@@ -61,8 +49,6 @@ Compared to traditional expense tracking methods that only record the total cost
 - Input validation with bottom popup notifications
 - Support for theme switching
 - Dynamic DPI-based responsive layout
-
----
 
 ### 🧩 Maintainability
 
@@ -74,8 +60,6 @@ This project is designed with low coupling and high cohesion:
 - Functional separation (calculation, currency, graph, items, language, sorting)
 - Independent JSON configuration files
 
----
-
 ### 🔒 Reliability
 
 - Multi-layer input validation for add/edit dialogs
@@ -83,16 +67,12 @@ This project is designed with low coupling and high cohesion:
 - Android 12+ sandbox ensures data isolation and security
 - Custom-built components (e.g., DateTimePicker) for better decoupling and future extensibility
 
----
-
 ## 6. System Design (Modeling)
 
 - Class Diagram
 - Use Case Diagram
 - Sequence Diagram
 - State Chart
-
----
 
 ## 7. Testing
 
@@ -102,8 +82,6 @@ This project has been tested through:
 - ✅ Boundary testing (edge cases)
 - ✅ Black-box testing (distributed to users)
 - ✅ Multi-device testing (different resolutions / DPI)
-
----
 
 ## 8. Deployment & Development
 
@@ -120,8 +98,6 @@ This project has been tested through:
 - Recommended: Qt Creator
 - Alternative: VSCode with Qt extension
 - Deployment target: Android real device (recommended)
-
----
 
 ## 9. Future Plans
 
