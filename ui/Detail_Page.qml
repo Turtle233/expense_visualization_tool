@@ -71,7 +71,7 @@ Page {
     // 详情页面主要元素
     ColumnLayout {
         anchors.fill: parent
-        spacing: 12 // 所有详情页面元素的间隔
+        spacing: 14 // 所有详情页面元素的间隔
 
         // 顶部导航栏，包括返回和编辑按钮
         Rectangle {
@@ -79,6 +79,8 @@ Page {
             height: 80 // 导航栏高度，写固定值，与Home_Page统一
             Layout.fillWidth: true
             color: "transparent"
+
+            Layout.bottomMargin: -8 // 把下面的内容往上提
 
             RowLayout {
                 anchors.fill: parent
@@ -151,6 +153,7 @@ Page {
             font.letterSpacing: 0.4
             color: "#1F2D3D"
 
+            Layout.topMargin: -2 // 向上靠一些
             Layout.bottomMargin: -6
             Layout.alignment: Qt.AlignHCenter
         }
@@ -211,222 +214,247 @@ Page {
             Layout.preferredHeight: 0
         }
 
-        // 项目详情card，包括项目总价、项目购买日期、项目passed days
+        // 详情页的两个卡片包进同一个容器中，单独调整间距
         Rectangle {
-            id: itemDetailsCard
+            id: detailsCardsContainer
             Layout.fillWidth: true
             Layout.leftMargin: 16
             Layout.rightMargin: 16
             Layout.topMargin: -12
-            Layout.preferredHeight: cardContnet.implicitHeight + 16 + 16 // content height + (top and bottom) margin
+            Layout.preferredHeight: detailsCardsLayout.implicitHeight
+            color: "transparent"
 
-            radius: 16
-            color: Window.window ? Window.window.panelColor : "#E3F2FD" // light blue
+            ColumnLayout {
+                id: detailsCardsLayout
+                anchors.fill: parent
+                spacing: 0
 
-            Column {
-                id: cardContnet
-                anchors.fill: itemDetailsCard
-                anchors.margins: 16
-                spacing: 8
-
-                // 第一行：total price
-                RowLayout {
-                    width: parent.width
-
-                    // 名称左对齐
-                    Text {
-                        text: qsTr("Total Price")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                    }
-
-                    Item {
-                        Layout.fillWidth: true
-                    }
-
-                    // 数据右对齐
-                    Text {
-                        // 判断当前货币，并调用formatFromUSD 来显示当前的货币符号
-                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(totalPrice) : "$" + totalPrice
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                        horizontalAlignment: Text.AlignRight
-                    }
-                }
-
-                // 浅灰色分割线
+                // 项目详情card，包括项目总价、项目购买日期、项目passed days
                 Rectangle {
-                    height: 1
-                    width: parent.width
-                    y: Math.round(y) // fix into int pixel point
-                    antialiasing: false
-                    color: "#B0BEC5"
+                    id: itemDetailsCard
+                    Layout.fillWidth: true
+                    Layout.leftMargin: 0
+                    Layout.rightMargin: 0
+                    Layout.topMargin: 0
+                    Layout.preferredHeight: cardContnet.implicitHeight + 16 + 16 // content height + (top and bottom) margin
+
+                    radius: 16
+                    color: Window.window ? Window.window.panelColor : "#E3F2FD" // light blue
+
+                    // 边框
+                    border.color: "#CFD8DC"
+                    border.width: 1
+
+                    Column {
+                        id: cardContnet
+                        anchors.fill: itemDetailsCard
+                        anchors.margins: 16
+                        spacing: 8
+
+                        // 第一行：total price
+                        RowLayout {
+                            width: parent.width
+
+                            // 名称左对齐
+                            Text {
+                                text: qsTr("Total Price")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                            }
+
+                            Item {
+                                Layout.fillWidth: true
+                            }
+
+                            // 数据右对齐
+                            Text {
+                                // 判断当前货币，并调用formatFromUSD 来显示当前的货币符号
+                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(totalPrice) : "$" + totalPrice
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                                horizontalAlignment: Text.AlignRight
+                            }
+                        }
+
+                        // 浅灰色分割线
+                        Rectangle {
+                            height: 1
+                            width: parent.width
+                            y: Math.round(y) // fix into int pixel point
+                            antialiasing: false
+                            color: "#B0BEC5"
+                        }
+
+                        // 第二行：purchase date
+                        RowLayout {
+                            width: parent.width
+
+                            // 名称左对齐
+                            Text {
+                                text: qsTr("Purchase Date")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                            }
+
+                            Item {
+                                Layout.fillWidth: true
+                            }
+
+                            // 数据右对齐
+                            Text {
+                                text: Qt.formatDate(purchaseDate, "yyyy-MM-dd")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                                horizontalAlignment: Text.AlignRight
+                            }
+                        }
+                        // 浅灰色分割线
+                        Rectangle {
+                            height: 1
+                            width: parent.width
+                            y: Math.round(y) // fix into int pixel point
+                            antialiasing: false
+                            color: "#B0BEC5"
+                        }
+
+                        // 第三行：passed days
+                        RowLayout {
+                            width: parent.width
+
+                            // 名称左对齐
+                            Text {
+                                text: qsTr("Passed Days")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                            }
+
+                            Item {
+                                Layout.fillWidth: true
+                            }
+
+                            // 数据右对齐
+                            Text {
+                                text: passedDays
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                                horizontalAlignment: Text.AlignRight
+                            }
+                        }
+                    }
                 }
 
-                // 第二行：purchase date
-                RowLayout {
-                    width: parent.width
-
-                    // 名称左对齐
-                    Text {
-                        text: qsTr("Purchase Date")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                    }
-
-                    Item {
-                        Layout.fillWidth: true
-                    }
-
-                    // 数据右对齐
-                    Text {
-                        text: Qt.formatDate(purchaseDate, "yyyy-MM-dd")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                        horizontalAlignment: Text.AlignRight
-                    }
+                // 分隔空间，两个卡片之间的间隔固定
+                Item {
+                    height: 10
                 }
-                // 浅灰色分割线
+
+                // 项目支出Card，包括每周支出、每月支出、每年支出
                 Rectangle {
-                    height: 1
-                    width: parent.width
-                    y: Math.round(y) // fix into int pixel point
-                    antialiasing: false
-                    color: "#B0BEC5"
-                }
+                    id: costDetailsCard
+                    Layout.fillWidth: true
+                    Layout.leftMargin: 0
+                    Layout.rightMargin: 0
+                    Layout.topMargin: 0
+                    Layout.preferredHeight: costCardContent.implicitHeight + 16 + 16
 
-                // 第三行：passed days
-                RowLayout {
-                    width: parent.width
+                    radius: 16
+                    color: Window.window ? Window.window.panelColor : "#E3F2FD"
 
-                    // 名称左对齐
-                    Text {
-                        text: qsTr("Passed Days")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                    }
+                    // 边框
+                    border.color: "#CFD8DC"
+                    border.width: 1
 
-                    Item {
-                        Layout.fillWidth: true
-                    }
+                    Column {
+                        id: costCardContent
+                        anchors.fill: costDetailsCard
+                        anchors.margins: 16
+                        spacing: 8
 
-                    // 数据右对齐
-                    Text {
-                        text: passedDays
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                        horizontalAlignment: Text.AlignRight
-                    }
-                }
-            }
-        }
+                        // 第一行：周均支出
+                        RowLayout {
+                            width: parent.width
 
-        // 分隔空间
-        Item {
-            Layout.preferredHeight: 0
-        }
+                            // 文字左对齐
+                            Text {
+                                text: qsTr("Weekly Cost")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                            }
 
-        // 项目支出Card，包括每周支出、每月支出、每年支出
-        Rectangle {
-            id: costDetailsCard
-            Layout.fillWidth: true
-            Layout.leftMargin: 16
-            Layout.rightMargin: 16
-            Layout.topMargin: -10
-            Layout.preferredHeight: costCardContent.implicitHeight + 16 + 16
+                            Item {
+                                Layout.fillWidth: true
+                            }
 
-            radius: 16
-            color: Window.window ? Window.window.panelColor : "#E3F2FD"
+                            // 数据右对齐
+                            Text {
+                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.weeklyCost) : "$" + detailPage.weeklyCost.toFixed(2)
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                                horizontalAlignment: Text.AlignRight
+                            }
+                        }
 
-            Column {
-                id: costCardContent
-                anchors.fill: costDetailsCard
-                anchors.margins: 16
-                spacing: 8
+                        // 浅灰色分割线
+                        Rectangle {
+                            height: 1
+                            width: parent.width
+                            y: Math.round(y) // fix into int pixel point
+                            antialiasing: false
+                            color: "#B0BEC5"
+                        }
 
-                // 第一行：周均支出
-                RowLayout {
-                    width: parent.width
+                        // 第二行：周均支出
+                        RowLayout {
+                            width: parent.width
 
-                    // 文字左对齐
-                    Text {
-                        text: qsTr("Weekly Cost")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                    }
+                            Text {
+                                text: qsTr("Monthly Cost")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                            }
 
-                    Item {
-                        Layout.fillWidth: true
-                    }
+                            Item {
+                                Layout.fillWidth: true
+                            }
 
-                    // 数据右对齐
-                    Text {
-                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.weeklyCost) : "$" + detailPage.weeklyCost.toFixed(2)
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                        horizontalAlignment: Text.AlignRight
-                    }
-                }
+                            Text {
+                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.monthlyCost) : "$" + detailPage.monthlyCost.toFixed(2)
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                                horizontalAlignment: Text.AlignRight
+                            }
+                        }
 
-                // 浅灰色分割线
-                Rectangle {
-                    height: 1
-                    width: parent.width
-                    y: Math.round(y) // fix into int pixel point
-                    antialiasing: false
-                    color: "#B0BEC5"
-                }
+                        // 浅灰色分割线
+                        Rectangle {
+                            height: 1
+                            width: parent.width
+                            y: Math.round(y) // fix into int pixel point
+                            antialiasing: false
+                            color: "#B0BEC5"
+                        }
 
-                // 第二行：周均支出
-                RowLayout {
-                    width: parent.width
+                        // 第三行：年均支出
+                        RowLayout {
+                            width: parent.width
 
-                    Text {
-                        text: qsTr("Monthly Cost")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                    }
+                            Text {
+                                text: qsTr("Yearly Cost")
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                            }
 
-                    Item {
-                        Layout.fillWidth: true
-                    }
+                            Item {
+                                Layout.fillWidth: true
+                            }
 
-                    Text {
-                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.monthlyCost) : "$" + detailPage.monthlyCost.toFixed(2)
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                        horizontalAlignment: Text.AlignRight
-                    }
-                }
-
-                // 浅灰色分割线
-                Rectangle {
-                    height: 1
-                    width: parent.width
-                    y: Math.round(y) // fix into int pixel point
-                    antialiasing: false
-                    color: "#B0BEC5"
-                }
-
-                // 第三行：年均支出
-                RowLayout {
-                    width: parent.width
-
-                    Text {
-                        text: qsTr("Yearly Cost")
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                    }
-
-                    Item {
-                        Layout.fillWidth: true
-                    }
-
-                    Text {
-                        text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.yearlyCost) : "$" + detailPage.yearlyCost.toFixed(2)
-                        font.pointSize: 17
-                        color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
-                        horizontalAlignment: Text.AlignRight
+                            Text {
+                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.yearlyCost) : "$" + detailPage.yearlyCost.toFixed(2)
+                                font.pointSize: 17
+                                color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
+                                horizontalAlignment: Text.AlignRight
+                            }
+                        }
                     }
                 }
             }
