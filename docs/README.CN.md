@@ -1,6 +1,6 @@
 # See your Cost（支出洞察） - 支出可视化工具
 
-#### 🌐切换至 [English](./README.md) | [简体中文](./README.CN.md) | [日本語](./README.JA.md)
+#### 🌐 切换至 | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
 ## 1. 总览
 
