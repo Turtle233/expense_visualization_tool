@@ -71,10 +71,10 @@
 
 推荐使用 [draw.io](https://www.drawio.com/) 打开
 
-- [Class Diagram](./modeling/class_diagram.xml) [[Preview]](./modeling/class_diagram.drawio.png)
-- [Use Case Diagram](./modeling/use_case_diagram.xml) [[Preview]](./modeling/use_case_diagram.drawio.png)
-- [Sequence Diagram](./modeling/sequence_diagram.xml) [[Preview]](./modeling/sequence_diagram.drawio.png)
-- [State Chart](./modeling/state_chart.xml) [[Preview]](./modeling/state_chart.drawio.png)
+- [Class Diagram](./modeling/class_diagram.xml) [[预览]](./modeling/class_diagram.drawio.png)
+- [Use Case Diagram](./modeling/use_case_diagram.xml) [[预览]](./modeling/use_case_diagram.drawio.png)
+- [Sequence Diagram](./modeling/sequence_diagram.xml) [[预览]](./modeling/sequence_diagram.drawio.png)
+- [State Chart](./modeling/state_chart.xml) [[预览]](./modeling/state_chart.drawio.png)
 
 ## 7. 测试
 
