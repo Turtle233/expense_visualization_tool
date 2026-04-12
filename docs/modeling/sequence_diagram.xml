@@ -140,7 +140,7 @@
             <mxPoint x="180" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m9" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#f8cecc;" value="&lt;font style=&quot;color: rgb(234, 107, 102);&quot;&gt;9. User selects&lt;br&gt;an item card&lt;/font&gt;">
+        <mxCell id="m9" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#f8cecc;" value="&lt;font style=&quot;color: rgb(234, 107, 102);&quot;&gt;9. User selects and&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(234, 107, 102);&quot;&gt;enters an item card&lt;/font&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="180" y="805" as="sourcePoint" />
             <mxPoint x="1205" y="805" as="targetPoint" />
@@ -164,13 +164,13 @@
             <mxPoint x="1615" y="940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m13" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="13. Build the daily item&lt;br&gt;trend data">
+        <mxCell id="m13" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="13. Build the daily item&lt;br&gt;tendency data">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1615" y="985" as="sourcePoint" />
             <mxPoint x="1820" y="985" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m14" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="14. Return the daily&lt;br&gt;trend points">
+        <mxCell id="m14" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="14. Return the&amp;nbsp;&lt;div&gt;x,y position points&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1820" y="1030" as="sourcePoint" />
             <mxPoint x="1615" y="1030" as="targetPoint" />
@@ -182,7 +182,7 @@
             <mxPoint x="1410" y="1075" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m16" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#dae8fc;" value="&lt;font style=&quot;color: light-dark(rgb(126, 166, 224), rgb(126, 166, 224));&quot;&gt;16. Show the item detail page&lt;br&gt;with the updated graph&lt;/font&gt;">
+        <mxCell id="m16" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#dae8fc;" value="&lt;font style=&quot;color: light-dark(rgb(126, 166, 224), rgb(126, 166, 224));&quot;&gt;16. Show user the item detail page with the updated graph,&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(126, 166, 224), rgb(126, 166, 224));&quot;&gt;and avg cost per day/week/month/year&lt;/font&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1410" y="1120" as="sourcePoint" />
             <mxPoint x="180" y="1120" as="targetPoint" />
