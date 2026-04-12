@@ -71,10 +71,10 @@ This project is designed with low coupling and high cohesion:
 
 Recommended to open with [draw.io](https://www.drawio.com/)
 
-- [Class Diagram](./modeling/class_diagram.xml)
-- [Use Case Diagram](./modeling/use_case_diagram.xml)
-- [Sequence Diagram](./modeling/sequence_diagram.xml)
-- [State Chart](./modeling/state_chart.xml)
+- [Class Diagram](./modeling/class_diagram.xml) [[Preview]](./modeling/class_diagram.drawio.png)
+- [Use Case Diagram](./modeling/use_case_diagram.xml) [[Preview]](./modeling/use_case_diagram.drawio.png)
+- [Sequence Diagram](./modeling/sequence_diagram.xml) [[Preview]](./modeling/sequence_diagram.drawio.png)
+- [State Chart](./modeling/state_chart.xml) [[Preview]](./modeling/state_chart.drawio.png)
 
 ## 7. Testing
 
