@@ -1,218 +1,230 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram name="Sequence Diagram" id="0">
-    <mxGraphModel dx="1943" dy="1143" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+    <mxGraphModel dx="2220" dy="1306" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1480" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p_user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="User" vertex="1">
-          <mxGeometry height="50" width="120" x="230" y="210" as="geometry" />
+        <mxCell id="p_user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;align=center;glass=1;absoluteArcSize=0;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; User" vertex="1">
+          <mxGeometry height="60" width="150" x="105" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_add" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="Home_AddItemDialog.qml" vertex="1">
-          <mxGeometry height="50" width="120" x="390" y="210" as="geometry" />
+        <mxCell id="p_add" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Add Item&lt;br&gt;Dialog" vertex="1">
+          <mxGeometry height="60" width="150" x="310" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_home" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="Home_Page.qml" vertex="1">
-          <mxGeometry height="50" width="140" x="570" y="210" as="geometry" />
+        <mxCell id="p_home" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Home Page" vertex="1">
+          <mxGeometry height="60" width="150" x="515" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_currency" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="Currency" vertex="1">
-          <mxGeometry height="50" width="160" x="750" y="210" as="geometry" />
+        <mxCell id="p_currency" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Currency" vertex="1">
+          <mxGeometry height="60" width="150" x="720" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_item" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="ItemListModel" vertex="1">
-          <mxGeometry height="50" width="180" x="930" y="210" as="geometry" />
+        <mxCell id="p_item" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Item List&lt;br&gt;Model" vertex="1">
+          <mxGeometry height="60" width="150" x="925" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_list" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="Home_ItemList.qml" vertex="1">
-          <mxGeometry height="50" width="160" x="1130" y="210" as="geometry" />
+        <mxCell id="p_list" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Item List" vertex="1">
+          <mxGeometry height="60" width="150" x="1130" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_detail" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="Detail_Page.qml" vertex="1">
-          <mxGeometry height="50" width="170" x="1310" y="210" as="geometry" />
+        <mxCell id="p_detail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Item Detail&lt;br&gt;Page" vertex="1">
+          <mxGeometry height="60" width="150" x="1335" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_graph" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="ExpenseGraph" vertex="1">
-          <mxGeometry height="50" width="170" x="1500" y="210" as="geometry" />
+        <mxCell id="p_graph" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Item Detail&lt;br&gt;Graph" vertex="1">
+          <mxGeometry height="60" width="180" x="1525" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="p_cal" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="Cal" vertex="1">
-          <mxGeometry height="50" width="140" x="1690" y="210" as="geometry" />
+        <mxCell id="p_cal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=1;glass=0;shadowOffsetX=1;shadowOffsetY=2;shadowOpacity=20;shadowBlur=2;" value="Calculation" vertex="1">
+          <mxGeometry height="60" width="150" x="1745" y="155" as="geometry" />
         </mxCell>
-        <mxCell id="lf1" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf1" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#b85450;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;fillColor=#f8cecc;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="290" y="270" as="sourcePoint" />
-            <mxPoint x="290" y="1170" as="targetPoint" />
+            <mxPoint x="180" y="225" as="sourcePoint" />
+            <mxPoint x="180" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf2" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf2" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="270" as="sourcePoint" />
-            <mxPoint x="450" y="1170" as="targetPoint" />
+            <mxPoint x="385" y="225" as="sourcePoint" />
+            <mxPoint x="385" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf3" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf3" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" y="270" as="sourcePoint" />
-            <mxPoint x="640" y="1170" as="targetPoint" />
+            <mxPoint x="590" y="225" as="sourcePoint" />
+            <mxPoint x="590" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf4" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf4" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="830" y="270" as="sourcePoint" />
-            <mxPoint x="830" y="1170" as="targetPoint" />
+            <mxPoint x="795" y="225" as="sourcePoint" />
+            <mxPoint x="795" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf5" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf5" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1020" y="270" as="sourcePoint" />
-            <mxPoint x="1020" y="1170" as="targetPoint" />
+            <mxPoint x="1000" y="225" as="sourcePoint" />
+            <mxPoint x="1000" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf6" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf6" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1210" y="270" as="sourcePoint" />
-            <mxPoint x="1210" y="1170" as="targetPoint" />
+            <mxPoint x="1205" y="225" as="sourcePoint" />
+            <mxPoint x="1205" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf7" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf7" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1400" y="270" as="sourcePoint" />
-            <mxPoint x="1400" y="1170" as="targetPoint" />
+            <mxPoint x="1410" y="225" as="sourcePoint" />
+            <mxPoint x="1410" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf8" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf8" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1590" y="270" as="sourcePoint" />
-            <mxPoint x="1590" y="1170" as="targetPoint" />
+            <mxPoint x="1615" y="225" as="sourcePoint" />
+            <mxPoint x="1615" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lf9" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;">
+        <mxCell id="lf9" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#999999;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=20;labelBackgroundColor=none;shadow=0;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1760" y="270" as="sourcePoint" />
-            <mxPoint x="1760" y="1170" as="targetPoint" />
+            <mxPoint x="1820" y="225" as="sourcePoint" />
+            <mxPoint x="1820" y="1365" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m1" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="1. Click &#39;+&#39; and save">
+        <mxCell id="m1" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fontColor=#EA6B66;fillColor=#f8cecc;" value="1. User taps Add&lt;br&gt;and confirms the item">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="290" y="310" as="sourcePoint" />
-            <mxPoint x="450" y="310" as="targetPoint" />
+            <mxPoint x="180" y="280" as="sourcePoint" />
+            <mxPoint x="385" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m2" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="2. addItemRequested(name, expenseText, date)">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="350" as="sourcePoint" />
-            <mxPoint x="640" y="350" as="targetPoint" />
+        <mxCell id="m2" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="2. Send the item name,&lt;br&gt;amount, and date">
+          <mxGeometry relative="1" x="-0.0014" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="385" y="325" as="sourcePoint" />
+            <mxPoint x="590" y="325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m3" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="3. parseAmountToUSD(expenseText)">
+        <mxCell id="m3" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="3. Convert the typed amount&lt;br&gt;into USD (for calculation)">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" y="390" as="sourcePoint" />
-            <mxPoint x="830" y="390" as="targetPoint" />
+            <mxPoint x="590" y="370" as="sourcePoint" />
+            <mxPoint x="795" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m4" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="4. expenseUSD">
+        <mxCell id="m4" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#000000;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="4. Return the normalized&lt;br&gt;item amount">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="830" y="430" as="sourcePoint" />
-            <mxPoint x="640" y="430" as="targetPoint" />
+            <mxPoint x="790" y="430" as="sourcePoint" />
+            <mxPoint x="590" y="430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m5" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="5. addItem(name, expenseUSD, date)">
+        <mxCell id="m5" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="5. Save the normalized&lt;br&gt;item in the list model">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" y="470" as="sourcePoint" />
-            <mxPoint x="1020" y="470" as="targetPoint" />
+            <mxPoint x="590" y="480" as="sourcePoint" />
+            <mxPoint x="1000" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n_validate" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="ItemListModel internals: validate + insert + saveToFile()" vertex="1">
-          <mxGeometry height="55" width="300" x="950" y="500" as="geometry" />
+        <mxCell id="n_validate" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=18;labelBackgroundColor=none;shadow=0;sketch=1;curveFitting=1;jiggle=2;" value="The app checks the item,&lt;br&gt;adds it to the list model,&lt;br&gt;and saves it locally" vertex="1">
+          <mxGeometry height="72" width="270" x="920" y="490" as="geometry" />
         </mxCell>
-        <mxCell id="m6" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="6. true / false">
+        <mxCell id="m6" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#000000;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;6. Return no matter if&lt;br&gt;&quot;save&quot; executed&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1020" y="550" as="sourcePoint" />
-            <mxPoint x="640" y="550" as="targetPoint" />
+            <mxPoint x="1000" y="580" as="sourcePoint" />
+            <mxPoint x="590" y="580" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n_invalid" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=19;labelBackgroundColor=none;shadow=0;" value="[false] Reopen dialog and show input error toast" vertex="1">
-          <mxGeometry height="55" width="340" x="480" y="580" as="geometry" />
+        <mxCell id="n_invalid" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontSize=18;labelBackgroundColor=none;shadow=0;sketch=1;curveFitting=1;jiggle=2;" value="[If invalid] Keep the dialog open&lt;br&gt;and popup a hint message" vertex="1">
+          <mxGeometry height="72" width="330" x="390" y="600" as="geometry" />
         </mxCell>
-        <mxCell id="m7" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="7. [true] model change -&amp;gt; ListView refresh">
+        <mxCell id="m7" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="7. [If valid] Refresh the item list&lt;br&gt;with the new item">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" y="640" as="sourcePoint" />
-            <mxPoint x="1210" y="640" as="targetPoint" />
+            <mxPoint x="590" y="695" as="sourcePoint" />
+            <mxPoint x="1205" y="695" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m8" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="8. New row appears and list scrolls to end">
+        <mxCell id="m8" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#dae8fc;" value="&lt;font style=&quot;color: rgb(126, 166, 224);&quot;&gt;8. Show user the new item&lt;br&gt;and auto scroll to it&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1210" y="680" as="sourcePoint" />
-            <mxPoint x="290" y="680" as="targetPoint" />
+            <mxPoint x="1205" y="740" as="sourcePoint" />
+            <mxPoint x="180" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m9" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="9. Click an item card">
+        <mxCell id="m9" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#f8cecc;" value="&lt;font style=&quot;color: rgb(234, 107, 102);&quot;&gt;9. User selects&lt;br&gt;an item card&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="290" y="730" as="sourcePoint" />
-            <mxPoint x="1210" y="730" as="targetPoint" />
+            <mxPoint x="180" y="805" as="sourcePoint" />
+            <mxPoint x="1205" y="805" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m10" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="10. stackView.push(Detail_Page, item data)">
+        <mxCell id="m10" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="10. Open the item detail page&lt;br&gt;for that item">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1210" y="770" as="sourcePoint" />
-            <mxPoint x="1400" y="770" as="targetPoint" />
+            <mxPoint x="1205" y="850" as="sourcePoint" />
+            <mxPoint x="1410" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m11" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="11. convertFromUSD(totalPrice)">
+        <mxCell id="m11" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="11. Convert the total into&lt;br&gt;the selected currency">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1400" y="810" as="sourcePoint" />
-            <mxPoint x="830" y="810" as="targetPoint" />
+            <mxPoint x="1410" y="895" as="sourcePoint" />
+            <mxPoint x="795" y="895" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="12. bind totalExpense / passedDays / currencyCode">
+        <mxCell id="m12" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="12. Pass the total, days,&lt;br&gt;and currency to the graph">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1400" y="850" as="sourcePoint" />
-            <mxPoint x="1590" y="850" as="targetPoint" />
+            <mxPoint x="1410" y="940" as="sourcePoint" />
+            <mxPoint x="1615" y="940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m13" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="13. calculateDailySeries()">
+        <mxCell id="m13" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="13. Build the daily item&lt;br&gt;trend data">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1590" y="890" as="sourcePoint" />
-            <mxPoint x="1760" y="890" as="targetPoint" />
+            <mxPoint x="1615" y="985" as="sourcePoint" />
+            <mxPoint x="1820" y="985" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m14" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="14. series data">
+        <mxCell id="m14" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#666666;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="14. Return the daily&lt;br&gt;trend points">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1760" y="930" as="sourcePoint" />
-            <mxPoint x="1590" y="930" as="targetPoint" />
+            <mxPoint x="1820" y="1030" as="sourcePoint" />
+            <mxPoint x="1615" y="1030" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m15" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="15. paint() and draw chart">
+        <mxCell id="m15" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="15. Draw the item detail&lt;br&gt;graph">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1590" y="970" as="sourcePoint" />
-            <mxPoint x="1400" y="970" as="targetPoint" />
+            <mxPoint x="1615" y="1075" as="sourcePoint" />
+            <mxPoint x="1410" y="1075" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m16" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="16. Detail page shown with dynamic graph">
+        <mxCell id="m16" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#dae8fc;" value="&lt;font style=&quot;color: light-dark(rgb(126, 166, 224), rgb(126, 166, 224));&quot;&gt;16. Show the item detail page&lt;br&gt;with the updated graph&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1400" y="1010" as="sourcePoint" />
-            <mxPoint x="290" y="1010" as="targetPoint" />
+            <mxPoint x="1410" y="1120" as="sourcePoint" />
+            <mxPoint x="180" y="1120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m17" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="17. Drag on chart">
+        <mxCell id="m17" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#f8cecc;" value="&lt;font style=&quot;color: rgb(234, 107, 102);&quot;&gt;17. User drags&lt;br&gt;across the graph&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="290" y="1050" as="sourcePoint" />
-            <mxPoint x="1590" y="1050" as="targetPoint" />
+            <mxPoint x="180" y="1180" as="sourcePoint" />
+            <mxPoint x="1615" y="1180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m18" edge="1" parent="1" source="p_graph" style="edgeStyle=loopEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" target="p_graph" value="18. updateCurrentPointByPosition(position)">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="m19" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="19. currentPointChanged signal">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1590" y="1130" as="sourcePoint" />
-            <mxPoint x="1400" y="1130" as="targetPoint" />
+        <mxCell id="m18" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;align=left;" value="18. Highlight the trend point&lt;br&gt;closest to the drag">
+          <mxGeometry relative="1" x="0.4375" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1680" y="1220" />
+              <mxPoint x="1680" y="1250" />
+            </Array>
+            <mxPoint x="1615" y="1220" as="sourcePoint" />
+            <mxPoint x="1615" y="1250" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m20" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=19;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="20. Show Current Date and Cost of Current Point">
+        <mxCell id="m19" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#333333;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;" value="19. Tell the item detail page&lt;br&gt;which point is selected">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1400" y="1160" as="sourcePoint" />
-            <mxPoint x="290" y="1160" as="targetPoint" />
+            <mxPoint x="1615" y="1290" as="sourcePoint" />
+            <mxPoint x="1410" y="1290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PBLrg4OYykyqAJ2k1Gj_-2" parent="1" style="whiteSpace=wrap;html=1;rounded=1;align=right;strokeColor=none;fillColor=none;shadow=0;" value="&lt;font face=&quot;Noto Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 19px;&quot;&gt;Ruixuan Zhang&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Noto Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 19px;&quot;&gt;2026-04-11&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="50" width="140" x="2060" y="1350" as="geometry" />
+        <mxCell id="m20" edge="1" parent="1" style="edgeStyle=none;rounded=0;html=1;endArrow=block;strokeColor=#6c8ebf;fontSize=18;fontFamily=Noto Sans;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;labelBackgroundColor=none;shadow=0;fillColor=#dae8fc;" value="&lt;font style=&quot;color: rgb(126, 166, 224);&quot;&gt;20. Show the selected date&lt;br&gt;and cost&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1410" y="1330" as="sourcePoint" />
+            <mxPoint x="180" y="1330" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="PBLrg4OYykyqAJ2k1Gj_-3" parent="1" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=1;glass=0;shadow=0;" value="&lt;font face=&quot;Noto Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 28px;&quot;&gt;See your Cost - Sequence Diagram&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="1555" x="323" y="40" as="geometry" />
+        <mxCell id="PBLrg4OYykyqAJ2k1Gj_-2" parent="1" style="whiteSpace=wrap;html=1;rounded=1;align=right;strokeColor=none;fillColor=none;shadow=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 18px;&quot;&gt;Ruixuan Zhang&lt;/font&gt;&lt;div&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 18px;&quot;&gt;2026-04-11&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="150" x="1850" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="PBLrg4OYykyqAJ2k1Gj_-3" parent="1" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=1;glass=0;shadow=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Noto+Sans&quot; style=&quot;font-size: 30px;&quot;&gt;See your Cost - Sequence Diagram&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="1760" x="120" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fmJbejHgUa82eysEZ9-A-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" value="" vertex="1">
+          <mxGeometry height="60" width="30" x="130" y="155" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
