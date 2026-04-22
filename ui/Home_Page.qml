@@ -41,6 +41,22 @@ Page {
             }
         }
 
+        Home_ItemList {
+            id: homeItemList
+            visible: !homePage.settingsMode // make invisible when entering settings_page
+
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: header.bottom
+            anchors.bottom: naviBar.top
+
+            // 往上填充一些，也往下填充一些，避免被大块切割
+            anchors.topMargin: -8
+            anchors.bottomMargin: -12
+            stackViewPass: homePage.stackViewPass
+            editMode: homePage.editMode
+        }
+
         Home_NaviBar {
             id: naviBar
             addItemDialog: addItemDialog
@@ -67,18 +83,6 @@ Page {
                     addItemDialog.open();
                 }
             }
-        }
-
-        Home_ItemList {
-            id: homeItemList
-            visible: !homePage.settingsMode // make invisible when entering settings_page
-            anchors.top: header.bottom
-            anchors.topMargin: -8
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: naviBar.top
-            stackViewPass: homePage.stackViewPass
-            editMode: homePage.editMode
         }
 
         Settings_Page {
