@@ -1,4 +1,5 @@
 ﻿import QtQuick
+import QtQuick.Window
 import QtQuick.Layouts
 import QtQuick.Controls
 import QtQuick.Controls.Material
@@ -144,15 +145,15 @@ Item {
                     property bool isCurrentMonthCell: model.date.getMonth() === dateGrid.month
                                                       && model.date.getFullYear() === dateGrid.year
 
-                    // 选中时有蓝色圆圈
+                    // 选中时有填充圆圈
                     Rectangle {
                         anchors.centerIn: parent
                         width: 34
                         height: 34
                         radius: 17
-                        color: isSelected ? "#D8ECFF" : "transparent"
+                        color: isSelected ? Window.window.buttonColor : "transparent"
                         border.width: isSelected ? 1 : 0
-                        border.color: isSelected ? "#90CAF9" : "transparent"
+                        border.color: isSelected ? (Window.window ? Window.window.borderColor : "#90CAF9") : "transparent"
                     }
 
                     Text {

@@ -107,7 +107,7 @@ Item {
             width: itemListView.width
             radius: 14
             color: Window.window ? Window.window.panelColor : "#E3F2FD"
-            border.color: "#CFD8DC"
+            border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
             border.width: 1
             implicitHeight: 96
 

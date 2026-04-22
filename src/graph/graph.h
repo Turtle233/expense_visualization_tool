@@ -29,6 +29,7 @@ class QTouchEvent;
 
 class Graph : public QQuickPaintedItem
 {
+    // properties
     Q_OBJECT
     Q_PROPERTY(double totalExpense
                    READ getTotalExpense
@@ -59,6 +60,12 @@ class Graph : public QQuickPaintedItem
                        NOTIFY currentPointChanged
                            FINAL)
 
+    // for dynamic QPen color syncing Android Material Foreground
+    Q_PROPERTY(QColor axisColor
+                   READ axisColor
+                       WRITE setAxisColor
+                           NOTIFY axisColorChanged)
+
     QML_NAMED_ELEMENT(ExpenseGraph) // used in qml/Detail_Page.qml
 
 public:
@@ -71,12 +78,13 @@ public:
     QString currentPointDate() const;
     QString currentPointCost() const;
     bool hasCurrentPoint() const;
+    QColor axisColor() const;
 
     // setter
     void setTotalExpense(double value);
     void setPassedDays(int value);
     void setCurrencyCode(const QString &value);
-
+    void setAxisColor(const QColor &color);
     void paint(QPainter *painter) override;
 
     // events
@@ -91,6 +99,7 @@ signals:
     void passedDaysChanged();
     void currencyCodeChanged();
     void currentPointChanged();
+    void axisColorChanged();
 
 private:
     void updateCurrentPointByPosition(const QPointF &position);
@@ -106,4 +115,7 @@ private:
     QRectF m_cachedAxisRect;
     QRectF m_cachedDataRect;
     int m_currentPointIndex = -1;
+
+    // default QPen color for axis
+    QColor m_axisColor = Qt::black;
 };

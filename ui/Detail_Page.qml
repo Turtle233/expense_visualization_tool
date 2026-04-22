@@ -103,6 +103,7 @@ Page {
 
                     text: qsTr("\u2190 Home")
                     font.pointSize: 18
+                    font.bold: true
 
                     onClicked: {
                         console.log("[User Click] Back Button Clicked");
@@ -134,6 +135,7 @@ Page {
                         anchors.verticalCenter: topEditButton.verticalCenter
                         text: qsTr("Edit")
                         font.pointSize: 18
+                        color: Material.foreground
                     }
                 }
 
@@ -151,7 +153,7 @@ Page {
             font.bold: true
             font.pointSize: 25
             font.letterSpacing: 0.4
-            color: "#1F2D3D"
+            color: Material.foreground // 原color: "#1F2D3D"
 
             Layout.topMargin: -2 // 向上靠一些
             Layout.bottomMargin: -6
@@ -207,6 +209,8 @@ Page {
             totalExpense: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.convertFromUSD(detailPage.totalPrice) : detailPage.totalPrice
             passedDays: detailPage.passedDays
             currencyCode: currencyManager.currentCurrencyCode
+
+            axisColor: Material.foreground // 传当前主题颜色，让坐标轴绘制时更新
         }
 
         // 分隔空间
@@ -242,7 +246,7 @@ Page {
                     color: Window.window ? Window.window.panelColor : "#E3F2FD" // light blue
 
                     // 边框
-                    border.color: "#CFD8DC"
+                    border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
                     border.width: 1
 
                     Column {
@@ -282,7 +286,7 @@ Page {
                             width: parent.width
                             y: Math.round(y) // fix into int pixel point
                             antialiasing: false
-                            color: "#B0BEC5"
+                            color: Window.window ? Window.window.lineColor : "#B0BEC5"
                         }
 
                         // 第二行：purchase date
@@ -314,7 +318,7 @@ Page {
                             width: parent.width
                             y: Math.round(y) // fix into int pixel point
                             antialiasing: false
-                            color: "#B0BEC5"
+                            color: Window.window ? Window.window.lineColor : "#B0BEC5"
                         }
 
                         // 第三行：passed days
@@ -361,7 +365,7 @@ Page {
                     color: Window.window ? Window.window.panelColor : "#E3F2FD"
 
                     // 边框
-                    border.color: "#CFD8DC"
+                    border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
                     border.width: 1
 
                     Column {
@@ -400,7 +404,7 @@ Page {
                             width: parent.width
                             y: Math.round(y) // fix into int pixel point
                             antialiasing: false
-                            color: "#B0BEC5"
+                            color: Window.window ? Window.window.lineColor : "#B0BEC5"
                         }
 
                         // 第二行：周均支出
@@ -431,7 +435,7 @@ Page {
                             width: parent.width
                             y: Math.round(y) // fix into int pixel point
                             antialiasing: false
-                            color: "#B0BEC5"
+                            color: Window.window ? Window.window.lineColor : "#B0BEC5"
                         }
 
                         // 第三行：年均支出

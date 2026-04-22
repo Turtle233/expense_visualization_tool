@@ -44,7 +44,7 @@ Rectangle {
                 anchors.verticalCenter: parent.verticalCenter
                 font.pointSize: 20
                 font.bold: true
-                color: homeButton.selected ? "black" : "gray"
+                color: homeButton.selected ? Material.foreground : "gray"
             }
 
             // animation on click
@@ -78,7 +78,7 @@ Rectangle {
                 anchors.verticalCenter: parent.verticalCenter
                 font.pointSize: 20
                 font.bold: true
-                color: settingButton.selected ? "black" : "gray"
+                color: settingButton.selected ? Material.foreground : "gray"
             }
 
             // animation on click

@@ -93,7 +93,6 @@ Dialog {
                 detailEditDialog.selectedDate = date
             }
         }
-
     }
 
     // toast information popup for invalid input

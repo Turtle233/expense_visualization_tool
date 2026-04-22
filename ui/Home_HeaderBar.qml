@@ -25,7 +25,7 @@ Rectangle {
         anchors.leftMargin: 16
         font.pointSize: 22
         font.bold: true
-        color: "black"
+        color: Material.foreground
     }
 
     // sort button with drop down menu
@@ -41,6 +41,7 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
             font.pointSize: 18
+            color: Material.foreground
         }
 
         // drop down menu for sorting
@@ -98,6 +99,7 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
             font.pointSize: 18
+            color: Material.foreground
         }
 
         onClicked: {

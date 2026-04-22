@@ -9,20 +9,13 @@ Item {
     property string projectLink: "https://github.com/Turtle233/expense_visualization_tool"
 
     // color 彩蛋，基于Android Material Design Color Sets
-    readonly property var accentValues: [Material.Blue, Material.Teal, Material.DeepOrange,
-        Material.Pink, Material.Green, Material.Grey,
-        Material.Cyan, Material.DeepPurple, Material.DeepPurple,
-        Material.Dark, Material.Indigo, Material.Orange,
-        Material.Red, Material.Teal, Material.Yellow]
+    readonly property var accentValues: [Material.Blue, Material.Teal, Material.DeepOrange, Material.Pink, Material.Green, Material.Grey, Material.Cyan, Material.DeepPurple, Material.DeepPurple, Material.Dark, Material.Indigo, Material.Orange, Material.Red, Material.Teal, Material.Yellow]
 
     // Color 色块预览色
-    readonly property var accentPreviewColors: ["#2196F3", "#009688", "#FF5722",
-        "#E91E63", "#4CAF50", "#9E9E9E",
-        "#00BCD4", "#673AB7", "#673AB7",
-        "#212121", "#3F51B5", "#FF9800",
-        "#F44336", "#009688", "#FFEB3B"]
+    readonly property var accentPreviewColors: ["#2196F3", "#009688", "#FF5722", "#E91E63", "#4CAF50", "#9E9E9E", "#00BCD4", "#673AB7", "#673AB7", "#212121", "#3F51B5", "#FF9800", "#F44336", "#009688", "#FFEB3B"]
     property int currentAccentIndex: 0
     property real colorTileOpacity: 0.0
+    readonly property var colorOptions: [qsTr("Default color"), qsTr("Yellow"), qsTr("Sea blue (Dark Mode)"), qsTr("Green (Dark Mode)"), qsTr("Pink (Dark Mode)"), qsTr("Orange (Dark Mode)")]
 
     // 为 combobox 下拉菜单的字体文本单独配置，因为使用了Material foreground
 
@@ -52,7 +45,7 @@ Item {
             Layout.fillWidth: true
             radius: 12
             color: Window.window ? Window.window.panelColor : "#E3F2FD"
-            border.color: "#CFD8DC"
+            border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
             border.width: 1
             implicitHeight: currencyColumn.implicitHeight + 24
 
@@ -66,7 +59,7 @@ Item {
                     text: qsTr("Currency")
                     font.pointSize: 16
                     font.bold: true
-                    color: Window.window.panelTitleTextColor;
+                    color: Window.window.panelTitleTextColor
                 }
 
                 // 下拉菜单
@@ -75,12 +68,7 @@ Item {
                     model: currencyManager.currencyOptions()
 
                     // 我没有能成功让combox的文字颜色也根据对比度luma值动态切换，因为它与Material深度绑定。
-                    // contentItem: Text {
-                    //     text: control.displayText
-                    //     color: "skyblue"  // 仅动态切换combo box的文字颜色（黑或白）
-                    //     verticalAlignment: Text.AlignVCenter
-                    //     elide: Text.ElideRight
-                    // }
+                    // color: Window.window ? Window.window.borderColor : Material.foreground
 
                     currentIndex: currencyManager.currentCurrencyIndex
                     onActivated: function (index) {
@@ -95,7 +83,7 @@ Item {
             Layout.fillWidth: true
             radius: 12
             color: Window.window ? Window.window.panelColor : "#E3F2FD"
-            border.color: "#CFD8DC"
+            border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
             border.width: 1
             implicitHeight: languageColumn.implicitHeight + 24
 
@@ -109,7 +97,7 @@ Item {
                     text: qsTr("Language")
                     font.pointSize: 16
                     font.bold: true
-                    color: Window.window.panelTitleTextColor;
+                    color: Window.window.panelTitleTextColor
                 }
 
                 // 下拉菜单
@@ -124,19 +112,57 @@ Item {
             }
         }
 
-        // Color 色块框框
+        // 一个大的隐形矩形，包含ColumnLayout（内包含Color方块）
         Rectangle {
             Layout.fillWidth: true
             radius: 12
             color: Window.window ? Window.window.panelColor : "#E3F2FD"
-            border.color: "#CFD8DC"
+            border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
+            border.width: 1
+            implicitHeight: colorColumn.implicitHeight + 24
+
+            ColumnLayout {
+                id: colorColumn
+                anchors.fill: parent
+                anchors.margins: 12
+                spacing: 10
+
+                Text {
+                    text: qsTr("Theme Color")
+                    font.pointSize: 16
+                    font.bold: true
+                    color: Window.window.panelTitleTextColor
+                }
+
+                ComboBox {
+                    Layout.fillWidth: true
+                    model: settingsRoot.colorOptions
+                    currentIndex: Window.window ? Window.window.selectedColorIndex : 0
+                    onActivated: function (index) {
+                        const hostWindow = settingsRoot.Window.window;
+                        if (hostWindow) {
+                            hostWindow.themeColor.setSelectedColorIndex(index); // 连接color.qml
+                        }
+                    }
+                }
+            }
+        }
+
+        // Color 彩蛋色块框框
+        Rectangle {
+            Layout.fillWidth: true
+            radius: 12
+            color: Window.window ? Window.window.panelColor : "#E3F2FD"
+            border.color: Window.window ? Window.window.borderColor : "#CFD8DC"
             border.width: 1
             implicitHeight: 64
             opacity: settingsRoot.colorTileOpacity
 
             // 默认隐藏喵
             Behavior on opacity {
-                NumberAnimation { duration: 220 }
+                NumberAnimation {
+                    duration: 220
+                }
             }
 
             Text {
@@ -147,6 +173,7 @@ Item {
                 color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
             }
 
+            // This part was coded with help of Codex
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -169,7 +196,7 @@ Item {
                     hostWindow.buttonColor = settingsRoot.accentPreviewColors[nextIndex];
                     hostWindow.linkColor = settingsRoot.accentPreviewColors[nextIndex];
                     settingsRoot.colorTileOpacity = 1.0;
-                    
+
                     colorTileFadeTimer.restart();
                 }
             }

@@ -30,6 +30,7 @@ qt_add_qml_module(${APP_TARGET}
         QML_FILES ui/DateTimePicker.qml
         QML_FILES ui/Home_Page.qml
         QML_FILES ui/Settings_Page.qml
+        QML_FILES ui/Color.qml
     SOURCES src/calculation/calculation.h
     SOURCES src/calculation/calculation.cpp
     SOURCES src/items/item.h

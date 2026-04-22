@@ -4,13 +4,13 @@
 <context>
     <name>DateTimePicker</name>
     <message>
-        <location filename="../ui/DateTimePicker.qml" line="12"/>
+        <location filename="../ui/DateTimePicker.qml" line="13"/>
         <source>Choose Purchase Date</source>
         <translatorcomment>选择购买日期</translatorcomment>
         <translation>选择购买日期</translation>
     </message>
     <message>
-        <location filename="../ui/DateTimePicker.qml" line="183"/>
+        <location filename="../ui/DateTimePicker.qml" line="184"/>
         <source>Confirm</source>
         <translatorcomment>确认</translatorcomment>
         <translation>确认</translation>
@@ -54,7 +54,7 @@
         <translation>选择购买日期</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_EditDialog.qml" line="122"/>
+        <location filename="../ui/Detail_EditDialog.qml" line="121"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>请输入正确的项目名称、项目开支与购买日期</translation>
     </message>
@@ -67,57 +67,57 @@
         <translation>项目名称</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="100"/>
+        <location filename="../ui/Detail_Page.qml" line="104"/>
         <source>← Home</source>
         <translation>← 主页</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="131"/>
+        <location filename="../ui/Detail_Page.qml" line="136"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="165"/>
+        <location filename="../ui/Detail_Page.qml" line="172"/>
         <source>Daily Cost: %1</source>
         <translation>每日开支: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="187"/>
+        <location filename="../ui/Detail_Page.qml" line="194"/>
         <source>Current Date: %1 | Cost of Current Point: %2</source>
         <translation>当前日期: %1 | 当天开支: %2</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="235"/>
+        <location filename="../ui/Detail_Page.qml" line="262"/>
         <source>Total Price</source>
         <translation>总价格</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="269"/>
+        <location filename="../ui/Detail_Page.qml" line="296"/>
         <source>Purchase Date</source>
         <translation>购买日期</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="301"/>
+        <location filename="../ui/Detail_Page.qml" line="328"/>
         <source>Passed Days</source>
         <translation>经过天数</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="331"/>
+        <location filename="../ui/Detail_Page.qml" line="381"/>
         <source>Weekly Cost</source>
         <translation>周均支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="360"/>
+        <location filename="../ui/Detail_Page.qml" line="413"/>
         <source>Monthly Cost</source>
         <translation>月均支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="389"/>
+        <location filename="../ui/Detail_Page.qml" line="444"/>
         <source>Yearly Cost</source>
         <translation>年均支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="421"/>
+        <location filename="../ui/Detail_Page.qml" line="478"/>
         <source>Delete Item</source>
         <translation>删除该记录</translation>
     </message>
@@ -125,7 +125,7 @@
 <context>
     <name>Graph</name>
     <message>
-        <location filename="../src/graph/graph.cpp" line="446"/>
+        <location filename="../src/graph/graph.cpp" line="461"/>
         <source>Today (%1)</source>
         <translation>今天 (%1)</translation>
     </message>
@@ -186,32 +186,32 @@
         <translation>排序</translation>
     </message>
     <message>
-        <location filename="../ui/Home_HeaderBar.qml" line="52"/>
+        <location filename="../ui/Home_HeaderBar.qml" line="53"/>
         <source>Sort By Date Asc ⬆️</source>
         <translation>依据日期排序 升序</translation>
     </message>
     <message>
-        <location filename="../ui/Home_HeaderBar.qml" line="60"/>
+        <location filename="../ui/Home_HeaderBar.qml" line="61"/>
         <source>Sort By Date Dsc ⬇️</source>
         <translation>依据日期排序 降序</translation>
     </message>
     <message>
-        <location filename="../ui/Home_HeaderBar.qml" line="68"/>
+        <location filename="../ui/Home_HeaderBar.qml" line="69"/>
         <source>Sort By Name Asc ⬆️</source>
         <translation>依据名称排序 升序</translation>
     </message>
     <message>
-        <location filename="../ui/Home_HeaderBar.qml" line="76"/>
+        <location filename="../ui/Home_HeaderBar.qml" line="77"/>
         <source>Sort By Name Dsc ⬇️</source>
         <translation>依据名称排序 降序</translation>
     </message>
     <message>
-        <location filename="../ui/Home_HeaderBar.qml" line="96"/>
+        <location filename="../ui/Home_HeaderBar.qml" line="97"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../ui/Home_HeaderBar.qml" line="96"/>
+        <location filename="../ui/Home_HeaderBar.qml" line="97"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
@@ -219,17 +219,17 @@
 <context>
     <name>Home_ItemList</name>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="204"/>
+        <location filename="../ui/Home_ItemList.qml" line="208"/>
         <source>Purchase Date: %1</source>
         <translation>购买日期: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="211"/>
+        <location filename="../ui/Home_ItemList.qml" line="215"/>
         <source>Passed Days: %1</source>
         <translation>经过天数: %1</translation>
     </message>
     <message>
-        <location filename="../ui/Home_ItemList.qml" line="373"/>
+        <location filename="../ui/Home_ItemList.qml" line="375"/>
         <source>No item yet. Click + to add one</source>
         <translation>什么项目都没添加喵~</translation>
     </message>
@@ -263,7 +263,7 @@
 <context>
     <name>Main</name>
     <message>
-        <location filename="../ui/Main.qml" line="12"/>
+        <location filename="../ui/Main.qml" line="13"/>
         <source>See your Cost</source>
         <translation>支出洞察</translation>
     </message>
@@ -271,27 +271,58 @@
 <context>
     <name>Settings_Page</name>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="44"/>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
+        <source>Default color</source>
+        <translation>默认</translation>
+    </message>
+    <message>
+        <source>Sea blue (Dark Mode)</source>
+        <translation>海蓝色（深色模式）</translation>
+    </message>
+    <message>
+        <source>Green (Dark Mode)</source>
+        <translation>绿色（深色模式）</translation>
+    </message>
+    <message>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
+        <source>Yellow</source>
+        <translation>黄色</translation>
+    </message>
+    <message>
+        <source>Pink (Dark Mode)</source>
+        <translation>粉色（深色模式）</translation>
+    </message>
+    <message>
+        <source>Orange (Dark Mode)</source>
+        <translation>橙色（深色模式）</translation>
+    </message>
+    <message>
+        <location filename="../ui/Settings_Page.qml" line="37"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="66"/>
+        <location filename="../ui/Settings_Page.qml" line="59"/>
         <source>Currency</source>
         <translation>货币</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="109"/>
+        <location filename="../ui/Settings_Page.qml" line="97"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="144"/>
+        <location filename="../ui/Settings_Page.qml" line="131"/>
+        <source>Theme Color</source>
+        <translation>主题色</translation>
+    </message>
+    <message>
+        <location filename="../ui/Settings_Page.qml" line="170"/>
         <source>color?!</source>
         <translation>我怎么变色了？</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="190"/>
+        <location filename="../ui/Settings_Page.qml" line="217"/>
         <source>See your Cost
 NSU CapStone Project App
 Ruixuan Zhang
@@ -302,7 +333,7 @@ NSU毕设项目
 2026年1月 - 2026年4月</translation>
     </message>
     <message>
-        <location filename="../ui/Settings_Page.qml" line="200"/>
+        <location filename="../ui/Settings_Page.qml" line="227"/>
         <source>Project Link</source>
         <translation>项目 Github 链接</translation>
     </message>

@@ -223,6 +223,21 @@ void Graph::touchEvent(QTouchEvent *event)
     event->accept();
 }
 
+// QPen for dynamic axis color syncing Android Material Foreground
+QColor Graph::axisColor() const
+{
+    return m_axisColor;
+}
+void Graph::setAxisColor(const QColor &color)
+{
+    if (m_axisColor == color)
+        return;
+
+    m_axisColor = color;
+    emit axisColorChanged();
+    update();
+}
+
 // main painter
 void Graph::paint(QPainter *painter)
 {
@@ -273,7 +288,7 @@ void Graph::paint(QPainter *painter)
         dataRect.setHeight(1.0);
     }
 
-    QPen axisPen(Qt::black);
+    QPen axisPen(m_axisColor); // dynamic pen color
     axisPen.setWidthF(1.5);
     painter->setPen(axisPen);
     painter->drawLine(axisRect.bottomLeft(), axisRect.bottomRight());
@@ -429,7 +444,7 @@ void Graph::paint(QPainter *painter)
     }
 
     // label texts
-    painter->setPen(Qt::black);
+    painter->setPen(m_axisColor); // dynamic pen color
     QFont labelFont = painter->font();
     labelFont.setPointSizeF(12.0);
     painter->setFont(labelFont);
