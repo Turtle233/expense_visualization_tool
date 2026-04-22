@@ -48,6 +48,7 @@ Compared to traditional expense tracking methods that only record the total cost
 - Automatic navigation to newly added items with red border feedback
 - Input validation with bottom popup notifications
 - Support for theme switching
+- Automatically calculate font color based on the contrast threshold value
 - Dynamic DPI-based responsive layout
 
 ### 🧩 Maintainability
