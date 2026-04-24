@@ -87,37 +87,52 @@
         <translation>当前日期: %1 | 当天开支: %2</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="262"/>
+        <location filename="../ui/Detail_Page.qml" line="264"/>
         <source>Total Price</source>
         <translation>总价格</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="296"/>
+        <location filename="../ui/Detail_Page.qml" line="298"/>
         <source>Purchase Date</source>
         <translation>购买日期</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="328"/>
+        <location filename="../ui/Detail_Page.qml" line="330"/>
         <source>Passed Days</source>
         <translation>经过天数</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="381"/>
+        <location filename="../ui/Detail_Page.qml" line="383"/>
         <source>Weekly Cost</source>
         <translation>周均支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="413"/>
+        <location filename="../ui/Detail_Page.qml" line="394"/>
+        <source>come back next week~</source>
+        <translation>下周再来哦~</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="416"/>
         <source>Monthly Cost</source>
         <translation>月均支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="444"/>
+        <location filename="../ui/Detail_Page.qml" line="426"/>
+        <source>come back next month~</source>
+        <translation>下个月再来哦~</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="447"/>
         <source>Yearly Cost</source>
         <translation>年均支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="478"/>
+        <location filename="../ui/Detail_Page.qml" line="457"/>
+        <source>come back next year~</source>
+        <translation>明年再来哦~</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="481"/>
         <source>Delete Item</source>
         <translation>删除该记录</translation>
     </message>
@@ -250,12 +265,12 @@
 <context>
     <name>Home_Page</name>
     <message>
-        <location filename="../ui/Home_Page.qml" line="93"/>
+        <location filename="../ui/Home_Page.qml" line="97"/>
         <source>Input Error</source>
         <translation>输入错误</translation>
     </message>
     <message>
-        <location filename="../ui/Home_Page.qml" line="94"/>
+        <location filename="../ui/Home_Page.qml" line="98"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>请输入正确的项目名称、项目开支与购买日期</translation>
     </message>
@@ -276,10 +291,12 @@
         <translation>默认</translation>
     </message>
     <message>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
         <source>Sea blue (Dark Mode)</source>
         <translation>海蓝色（深色模式）</translation>
     </message>
     <message>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
         <source>Green (Dark Mode)</source>
         <translation>绿色（深色模式）</translation>
     </message>
@@ -289,10 +306,12 @@
         <translation>黄色</translation>
     </message>
     <message>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
         <source>Pink (Dark Mode)</source>
         <translation>粉色（深色模式）</translation>
     </message>
     <message>
+        <location filename="../ui/Settings_Page.qml" line="18"/>
         <source>Orange (Dark Mode)</source>
         <translation>橙色（深色模式）</translation>
     </message>

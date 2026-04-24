@@ -391,7 +391,8 @@ Page {
 
                             // 数据右对齐
                             Text {
-                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.weeklyCost) : "$" + detailPage.weeklyCost.toFixed(2)
+                                text: detailPage.passedDays < 7 ? qsTr("come back next week~") : (currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.weeklyCost) : "$" + detailPage.weeklyCost.toFixed(2))
+
                                 font.pointSize: 17
                                 color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                                 horizontalAlignment: Text.AlignRight
@@ -422,7 +423,7 @@ Page {
                             }
 
                             Text {
-                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.monthlyCost) : "$" + detailPage.monthlyCost.toFixed(2)
+                                text: detailPage.passedDays < 30 ? qsTr("come back next month~") : (currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.monthlyCost) : "$" + detailPage.monthlyCost.toFixed(2))
                                 font.pointSize: 17
                                 color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                                 horizontalAlignment: Text.AlignRight
@@ -453,7 +454,7 @@ Page {
                             }
 
                             Text {
-                                text: currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.yearlyCost) : "$" + detailPage.yearlyCost.toFixed(2)
+                                text: detailPage.passedDays < 365 ? qsTr("come back next year~") : (currencyManager.currentCurrencyIndex >= 0 ? currencyManager.formatFromUSD(detailPage.yearlyCost) : "$" + detailPage.yearlyCost.toFixed(2))
                                 font.pointSize: 17
                                 color: Window.window ? Window.window.panelTitleTextColor : Material.foreground
                                 horizontalAlignment: Text.AlignRight

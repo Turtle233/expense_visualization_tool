@@ -21,16 +21,16 @@ qt_add_executable(${APP_TARGET}
 qt_add_qml_module(${APP_TARGET}
     URI expense_visualization_tool_v03
     QML_FILES ui/Main.qml
-        QML_FILES ui/Home_HeaderBar.qml
-        QML_FILES ui/Home_NaviBar.qml
-        QML_FILES ui/Home_AddItemDialog.qml
-        QML_FILES ui/Home_ItemList.qml
-        QML_FILES ui/Detail_Page.qml
-        QML_FILES ui/Detail_EditDialog.qml
-        QML_FILES ui/DateTimePicker.qml
-        QML_FILES ui/Home_Page.qml
-        QML_FILES ui/Settings_Page.qml
-        QML_FILES ui/Color.qml
+    QML_FILES ui/Home_HeaderBar.qml
+    QML_FILES ui/Home_NaviBar.qml
+    QML_FILES ui/Home_AddItemDialog.qml
+    QML_FILES ui/Home_ItemList.qml
+    QML_FILES ui/Detail_Page.qml
+    QML_FILES ui/Detail_EditDialog.qml
+    QML_FILES ui/DateTimePicker.qml
+    QML_FILES ui/Home_Page.qml
+    QML_FILES ui/Settings_Page.qml
+    QML_FILES ui/Color.qml
     SOURCES src/calculation/calculation.h
     SOURCES src/calculation/calculation.cpp
     SOURCES src/items/item.h
@@ -46,7 +46,6 @@ qt_add_qml_module(${APP_TARGET}
     RESOURCES ui/icons/resources.qrc
     RESOURCES docs/README.CN.md docs/README.JA.md docs/README.md
     RESOURCES docs/modeling/class_diagram.xml docs/modeling/sequence_diagram.xml docs/modeling/state_chart.xml docs/modeling/use_case_diagram.xml
-    RESOURCES docs/testing/black_box_testing.txt
 )
 
 # Translation files add as application resource

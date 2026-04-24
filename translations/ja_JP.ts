@@ -85,37 +85,52 @@
         <translation>現在日付: %1 | 現在ポイントの費用: %2</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="262"/>
+        <location filename="../ui/Detail_Page.qml" line="264"/>
         <source>Total Price</source>
         <translation>合計金額</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="296"/>
+        <location filename="../ui/Detail_Page.qml" line="298"/>
         <source>Purchase Date</source>
         <translation>購入日</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="328"/>
+        <location filename="../ui/Detail_Page.qml" line="330"/>
         <source>Passed Days</source>
         <translation>経過日数</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="381"/>
+        <location filename="../ui/Detail_Page.qml" line="383"/>
         <source>Weekly Cost</source>
         <translation>週間の支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="413"/>
+        <location filename="../ui/Detail_Page.qml" line="394"/>
+        <source>come back next week~</source>
+        <translation>次週に戻る~</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="416"/>
         <source>Monthly Cost</source>
         <translation>月間の支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="444"/>
+        <location filename="../ui/Detail_Page.qml" line="426"/>
+        <source>come back next month~</source>
+        <translation>次月に戻る~</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="447"/>
         <source>Yearly Cost</source>
         <translation>年間の支出</translation>
     </message>
     <message>
-        <location filename="../ui/Detail_Page.qml" line="478"/>
+        <location filename="../ui/Detail_Page.qml" line="457"/>
+        <source>come back next year~</source>
+        <translation>次年に戻る~</translation>
+    </message>
+    <message>
+        <location filename="../ui/Detail_Page.qml" line="481"/>
         <source>Delete Item</source>
         <translation>項目を削除</translation>
     </message>
@@ -248,12 +263,12 @@
 <context>
     <name>Home_Page</name>
     <message>
-        <location filename="../ui/Home_Page.qml" line="93"/>
+        <location filename="../ui/Home_Page.qml" line="97"/>
         <source>Input Error</source>
         <translation>入力エラー</translation>
     </message>
     <message>
-        <location filename="../ui/Home_Page.qml" line="94"/>
+        <location filename="../ui/Home_Page.qml" line="98"/>
         <source>Please type in valid item name, item expense, and purchase date.</source>
         <translation>有効な項目名、支出金額、購入日を入力してください</translation>
     </message>
