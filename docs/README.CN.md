@@ -100,7 +100,7 @@
 
 - 推荐使用 Qt Creator，或 VSCode Qt 插件部署到安卓真机进行开发
 
-[📘查看安装说明](./docs/instructions/installation.md)
+📘 [查看安装说明](./docs/instructions/installation.md)
 
 ## 9. 未来规划
 

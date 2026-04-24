@@ -102,7 +102,7 @@ This project has been tested through:
 - Alternative: VSCode with Qt extension
 - Deployment target: Android real device (recommended)
 
-[📘 View Installation Guide](./docs/instructions/installation.md)
+📘 [View Installation Guide](./docs/instructions/installation.md)
 
 ## 9. Future Plans
 

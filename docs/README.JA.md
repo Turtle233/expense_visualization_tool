@@ -102,7 +102,7 @@
 - または VSCode + Qt拡張
 - Android実機でのテストを推奨
 
-[📘インストールガイドを表示する](./docs/instructions/installation.md)
+📘 [インストールガイドを表示する](./docs/instructions/installation.md)
 
 ## 9. 今後の計画
 
