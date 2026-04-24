@@ -4,13 +4,18 @@
 
 ## Platform: Android (Multiple Devices and Android Systems)
 
----
-
 ## Overview
 
 This report summarizes user-reported issues and externally observable behavior discovered during black box testing. Testing includes application functionality, localization behavior, navigation consistency, and cross-device compatibility without referencing internal source code implementation. The test cases listed in this report represent only selected typical examples rather than a complete issue log. Most issues identified in **v0.30 beta** were addressed in later updates. For detailed version history and fixes, please refer to the [release page](https://github.com/Turtle233/expense_visualization_tool/releases).
 
----
+## Summary Table
+
+| Test Case   | Category             | Status                                             |
+| ----------- | -------------------- | -------------------------------------------------- |
+| Test Case 1 | Settings Persistence | Failed (Passed on v0.31 beta)                      |
+| Test Case 2 | Localization         | Failed (Passed on v0.32 beta)                      |
+| Test Case 3 | Navigation Behavior  | Failed - Qt Framework Limitation                   |
+| Test Case 4 | Device Compatibility | Partial Pass - Device-Specific Compatibility Issue |
 
 ## Test Case 1 – Settings Persistence After Restart
 
@@ -38,8 +43,6 @@ Users reported that the application reverted to the default configuration (USD a
 
 Failed (Passed on v0.31 beta)
 
----
-
 ## Test Case 2 – Localization of System Dialog Buttons
 
 ### Objective
@@ -65,8 +68,6 @@ Users reported that in the system dialogs for adding and editing items, the “C
 ### Status
 
 Failed (Passed on v0.32 beta)
-
----
 
 ## Test Case 3 – Android Back Action Navigation Behavior
 
@@ -96,8 +97,6 @@ This behavior appears related to a limitation of Qt’s cross-platform behavior,
 
 Failed - Qt Framework Limitation
 
----
-
 ## Test Case 4 – Cross-Device UI Compatibility Testing
 
 ### Objective
@@ -126,19 +125,6 @@ Examples:
 ### Status
 
 Partial Pass - Device-Specific Compatibility Issue
-
----
-
-## Summary
-
-| Test Case   | Category             | Status                                             |
-| ----------- | -------------------- | -------------------------------------------------- |
-| Test Case 1 | Settings Persistence | Failed (Passed on v0.31 beta)                      |
-| Test Case 2 | Localization         | Failed (Passed on v0.32 beta)                      |
-| Test Case 3 | Navigation Behavior  | Failed - Qt Framework Limitation                   |
-| Test Case 4 | Device Compatibility | Partial Pass - Device-Specific Compatibility Issue |
-
----
 
 ## Conclusion
 
