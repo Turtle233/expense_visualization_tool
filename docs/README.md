@@ -21,7 +21,7 @@ Compared to traditional expense tracking methods that only record the total cost
 
 User Guide [▶ Play on Google Drive](https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing)
 
-Non-functional [▶ Play on Google Drive](https://drive.google.com/file/d/1BMhZ3RSx4o-MP9WdKWcrlhwqDsApw6U3/view?usp=sharing)
+Non-functional Requirements [▶ Play on Google Drive](https://drive.google.com/file/d/1BMhZ3RSx4o-MP9WdKWcrlhwqDsApw6U3/view?usp=sharing)
 
 ## 4. Features (Functional Requirements)
 
