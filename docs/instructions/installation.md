@@ -23,6 +23,45 @@ git clone https://github.com/Turtle233/expense_visualization_tool.git
 cd expense_visualization_tool
 ```
 
+## Android Development Setup
+
+### Environment Configuration
+
+Configure the following paths in Qt Creator:
+
+#### Required Paths
+
+Replace the paths below with your actual installation directories:
+
+- **Android SDK**: `<ANDROID_SDK_ROOT>` (e.g., `D:\Android_SDK`)
+- **Android SDK Platform-Tools**: `<ANDROID_SDK_ROOT>\platform-tools`
+- **Android NDK**: `<ANDROID_SDK_ROOT>\ndk\<NDK_VERSION>` (e.g., `D:\Android_SDK\ndk\27.2.12479018`)
+- **OpenSSL**: `%USERPROFILE%\AppData\Local\Android\Sdk\android_openssl`
+- **Qt for Android (arm64-v8a)**: `<QT_HOME>\6.10.1\android_arm64_v8a\bin` (e.g., `D:\Qt\6.10.1\android_arm64_v8a\bin`)
+
+#### Qt Creator Configuration
+
+Go to **Preferences → Kits** and **Preferences → SDKs** to configure:
+
+**Kit Configuration Example:**
+
+- Select the appropriate Android Kit: "Qt 6.10.1 for Android arm64-v8a"
+- CMake Tool: CMake 3.30+ (Qt)
+- CMake Generator: Ninja
+- Compiler: Android Clang (arch64, NDK 27.2+)
+- Debugger: Android's gdb
+
+![Qt Creator Kit Configuration](./images/qt_creator_kits.png)
+
+**SDK Configuration Example:**
+
+- **JDK**: `<ANDROID_STUDIO_HOME>\jbr` (Usually auto-detected)
+- **Android SDK**: `<ANDROID_SDK_ROOT>` (e.g., `D:\Android_SDK`)
+- **Android NDK**: `<ANDROID_SDK_ROOT>\ndk\<NDK_VERSION>` (e.g., `D:\Android_SDK\ndk\27.2.12479018`)
+- **OpenSSL**: `%USERPROFILE%\AppData\Local\Android\Sdk\android_openssl`
+
+![Qt Creator SDK Configuration](./images/qt_creator_sdks.png)
+
 ## Build Methods
 
 ### Method 1: Using Qt Creator (Recommended)
@@ -77,50 +116,20 @@ Replace:
 - `<QT_HOME>` with your Qt installation path (e.g., `C:/Qt` or `D:/Qt`)
 - Adjust the path if using a different Android ABI (e.g., `android_armv7a` instead of `android_arm64_v8a`)
 
-## Android Development Setup
-
-### Environment Configuration
-
-Configure the following paths in Qt Creator:
-
-#### Required Paths
-
-Replace the paths below with your actual installation directories:
-
-- **Android SDK**: `<ANDROID_SDK_ROOT>` (e.g., `D:\Android_SDK`)
-- **Android SDK Platform-Tools**: `<ANDROID_SDK_ROOT>\platform-tools`
-- **Android NDK**: `<ANDROID_SDK_ROOT>\ndk\<NDK_VERSION>` (e.g., `D:\Android_SDK\ndk\27.2.12479018`)
-- **OpenSSL**: `%USERPROFILE%\AppData\Local\Android\Sdk\android_openssl`
-- **Qt for Android (arm64-v8a)**: `<QT_HOME>\6.10.1\android_arm64_v8a\bin` (e.g., `D:\Qt\6.10.1\android_arm64_v8a\bin`)
-
-#### Qt Creator Configuration
-
-Go to **Preferences → Kits** and **Preferences → SDKs** to configure:
-
-**Kit Configuration Example:**
-
-- Select the appropriate Android Kit: "Qt 6.10.1 for Android arm64-v8a"
-- CMake Tool: CMake 3.30+ (Qt)
-- CMake Generator: Ninja
-- Compiler: Android Clang (arch64, NDK 27.2+)
-- Debugger: Android's gdb
-
-![Qt Creator Kit Configuration](./images/qt_creator_kits.png)
-
-**SDK Configuration Example:**
-
-- **JDK**: `<ANDROID_STUDIO_HOME>\jbr` (Usually auto-detected)
-- **Android SDK**: `<ANDROID_SDK_ROOT>` (e.g., `D:\Android_SDK`)
-- **Android NDK**: `<ANDROID_SDK_ROOT>\ndk\<NDK_VERSION>` (e.g., `D:\Android_SDK\ndk\27.2.12479018`)
-- **OpenSSL**: `%USERPROFILE%\AppData\Local\Android\Sdk\android_openssl`
-
-![Qt Creator SDK Configuration](./images/qt_creator_sdks.png)
-
 ### Real Device Development (Recommended)
+
+**Development Environment:**
+
+This application has been tested and verified on the following devices:
+
+- **Primary Dev Device**: Google Pixel 4 XL (Android 13)
+- **Tested Devices**:
+  - Xiaomi Mi 10 Pro (Android 11)
+  - Xiaomi 13 Pro (Android 16)
 
 **System Requirements:**
 
-- Android 10 or higher
+- Android 10 or higher (Android 13+ recommended for best experience)
 - USB debugging enabled
 
 **Setup Steps:**
