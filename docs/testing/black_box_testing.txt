@@ -1,9 +1,0 @@
-1. Users reported that after configuring language and currency settings, the app reverted to the default (USD and English) upon the next launch.
-
-2. Users reported that in the system dialogs for adding and editing items, the “Cancel” and “Save” buttons did not follow the selected language translation.
-
-3. On secondary pages, triggering the Android back action would exit directly to the home screen instead of navigating back within the app; users could only return via the top-left back button (a limitation of Qt’s cross-platform behavior, which does not fully follow native Android back handling).
-
-4. Testing across multiple devices and customized Android systems revealed that some vendors modify scrollbar and font APIs; for example, certain systems enforce heavier font weights (e.g., HyperOS overriding default fonts), while others prevent scrollbars from being hidden (e.g., ColorOS forcing scrollbar visibility despite internal overrides).
-
-5. During add/edit operations, extreme values were tested, including boundary cases for year, month, and numerical inputs.
