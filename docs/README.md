@@ -19,7 +19,7 @@ Compared to traditional expense tracking methods that only record the total cost
 
 ## 3. User Guide Demo
 
-[▶ Play on Google Drive](https://drive.google.com/file/d/1xs46iDOSsz5AmxW9QV3Yg1wLogBMcu1a/view?usp=sharing)
+[▶ Play on Google Drive](https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing)
 
 ## 4. Features (Functional Requirements)
 
