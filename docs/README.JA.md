@@ -72,10 +72,10 @@
 
 [draw.io](https://www.drawio.com/)を使って開くことをお勧めします
 
-- [Class Diagram](./modeling/class_diagram.xml) [[プレビュー]](./modeling/class_diagram.drawio.png)
-- [Use Case Diagram](./modeling/use_case_diagram.xml) [[プレビュー]](./modeling/use_case_diagram.drawio.png)
-- [Sequence Diagram](./modeling/sequence_diagram.xml) [[プレビュー]](./modeling/sequence_diagram.drawio.png)
-- [State Chart](./modeling/state_chart.xml) [[プレビュー]](./modeling/state_chart.drawio.png)
+- [Class Diagram](./modeling/class_diagram.xml) [[プレビュー]](./modeling/preview/class_diagram.drawio.png)
+- [Use Case Diagram](./modeling/use_case_diagram.xml) [[プレビュー]](./modeling/preview/use_case_diagram.drawio.png)
+- [Sequence Diagram](./modeling/sequence_diagram.xml) [[プレビュー]](./modeling/preview/sequence_diagram.drawio.png)
+- [State Chart](./modeling/state_chart.xml) [[プレビュー]](./modeling/preview/state_chart.drawio.png)
 
 ## 7. テスト
 
