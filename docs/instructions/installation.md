@@ -58,6 +58,8 @@ cmake --build .
 
 Replace `<QT_HOME>` with your actual Qt installation path (e.g., `C:/Qt` or `D:/Qt`).
 
+![Desktop Build in Qt Creator](./images/qt_creator_desktop_build.png)
+
 #### Android Build
 
 ```bash
@@ -73,6 +75,8 @@ Replace:
 
 - `<QT_HOME>` with your Qt installation path (e.g., `C:/Qt` or `D:/Qt`)
 - Adjust the path if using a different Android ABI (e.g., `android_armv7a` instead of `android_arm64_v8a`)
+
+![Android Build in Qt Creator](./images/qt_creator_android_build.png)
 
 ## Android Development Setup
 
