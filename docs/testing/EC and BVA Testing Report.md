@@ -85,7 +85,7 @@
 - 1900-01-01 (valid extreme past)
 - 2099-12-31 (valid but extreme future - should be invalid)
 
-# Test ID | Test Inputs | EC/BVA | Expected QDebug Output | Pass Condition
+# EC/BVA Testing Table Sets
 
 ## Set 1: Item Name
 
