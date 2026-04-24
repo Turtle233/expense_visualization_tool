@@ -116,6 +116,8 @@ Replace:
 - `<QT_HOME>` with your Qt installation path (e.g., `C:/Qt` or `D:/Qt`)
 - Adjust the path if using a different Android ABI (e.g., `android_armv7a` instead of `android_arm64_v8a`)
 
+## Development Device
+
 ### Real Device Development (Recommended)
 
 **Development Environment:**
@@ -126,6 +128,12 @@ This application has been tested and verified on the following devices:
 - **Tested Devices**:
   - Xiaomi Mi 10 Pro (Android 11)
   - Xiaomi 13 Pro (Android 16)
+
+**Advantages:**
+
+- Ready-to-use out of the box - no additional debugging needed
+- Test with actual device hardware and real-world performance
+- Immediate verification of UI/UX on actual screen sizes and resolutions
 
 **System Requirements:**
 
@@ -146,6 +154,12 @@ This application has been tested and verified on the following devices:
 - Press `Ctrl+R` or click the Run button to build and deploy
 
 ### Android Emulator Development
+
+**Advantages:**
+
+- **Fast deployment** - Quicker build and deploy cycle
+- **Easy UI debugging** - Test UI layouts and interactions quickly without device constraints
+- **Repeatability** - Consistent testing environment across development iterations
 
 **Recommendation:**
 
