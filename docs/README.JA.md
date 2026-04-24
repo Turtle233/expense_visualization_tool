@@ -17,9 +17,11 @@
 - C++（コアロジック）
 - JSON（設定およびデータ保存）
 
-## 3. ユーザーデモ
+## 3. デモ
 
-[▶ Googleドライブで再生](https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing)
+ユーザーガイド [▶ Google Driveで再生](https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing)
+
+非機能要件 [▶ Google Driveで再生](https://drive.google.com/file/d/1BMhZ3RSx4o-MP9WdKWcrlhwqDsApw6U3/view?usp=sharing)
 
 ## 4. 機能（機能要件）
 

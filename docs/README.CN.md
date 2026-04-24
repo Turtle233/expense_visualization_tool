@@ -19,7 +19,9 @@
 
 ## 3. 使用演示
 
-[▶ 在Google云端硬盘上播放](https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing)
+用户导览演示 [▶ 在Google云端硬盘上播放](https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing)
+
+非功能性需求演示 [▶ 在Google云端硬盘上播放](https://drive.google.com/file/d/1BMhZ3RSx4o-MP9WdKWcrlhwqDsApw6U3/view?usp=sharing)
 
 ## 4. 功能（功能性需求）
 
