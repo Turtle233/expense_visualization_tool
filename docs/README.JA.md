@@ -2,7 +2,7 @@
 
 #### 🌐切り替えて | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
-[![User Guide](https://img.shields.io/badge/Instructions%20Media-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+[![User Guide](https://img.shields.io/badge/Instructions-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 ## 1. 概要
 
@@ -101,6 +101,8 @@
 - Qt Creator（推奨）
 - または VSCode + Qt拡張
 - Android実機でのテストを推奨
+
+[📘インストールガイドを表示する](./docs/instructions/installation.md)
 
 ## 9. 今後の計画
 

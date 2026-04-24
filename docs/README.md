@@ -2,7 +2,7 @@
 
 #### 🌐 Switch to | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
-[![User Guide](https://img.shields.io/badge/Instructions%20Media-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+[![User Guide](https://img.shields.io/badge/Instructions-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 ## 1. Overview
 
@@ -101,6 +101,8 @@ This project has been tested through:
 - Recommended: Qt Creator
 - Alternative: VSCode with Qt extension
 - Deployment target: Android real device (recommended)
+
+[📘 View Installation Guide](./docs/instructions/installation.md)
 
 ## 9. Future Plans
 

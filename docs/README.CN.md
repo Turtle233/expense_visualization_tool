@@ -2,7 +2,7 @@
 
 #### 🌐 切换至 | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
-[![User Guide](https://img.shields.io/badge/Instructions%20Media-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+[![User Guide](https://img.shields.io/badge/Instructions-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 ## 1. 总览
 
@@ -99,6 +99,8 @@
 ### 开发平台
 
 - 推荐使用 Qt Creator，或 VSCode Qt 插件部署到安卓真机进行开发
+
+[📘查看安装说明](./docs/instructions/installation.md)
 
 ## 9. 未来规划
 
