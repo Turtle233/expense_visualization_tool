@@ -2,7 +2,7 @@
 
 #### 🌐 Switch to | [🇺🇸 English](./README.md) | [🇨🇳 简体中文](./README.CN.md) | [🇯🇵 日本語](./README.JA.md) |
 
-[![User Guide](https://img.shields.io/badge/User%20Guide%20Demo-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
+[![User Guide](https://img.shields.io/badge/Instructions%20Media-Demo)](./instructions) [![Project Structure Design](https://img.shields.io/badge/UML%20Diagrams-orange)](./modeling) [![Testing](https://img.shields.io/badge/Testing%20Report-blue)](./testing)
 
 ## 1. Overview
 
@@ -19,7 +19,7 @@ Compared to traditional expense tracking methods that only record the total cost
 
 ## 3. User Guide Demo
 
-- <demo video to be added>
+[▶ Play on Google Drive](https://drive.google.com/file/d/1bbQ_jALd3Z6sv7HKFcPu8w4gb86D6IBE/view?usp=sharing)
 
 ## 4. Features (Functional Requirements)
 
