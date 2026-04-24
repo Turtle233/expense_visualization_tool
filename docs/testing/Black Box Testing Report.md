@@ -4,9 +4,9 @@
 
 ## Platform: Android (Multiple Devices and Android Systems)
 
-## Overview
+## Notice
 
-This report summarizes user-reported issues and externally observable behavior discovered during black box testing. Testing includes application functionality, localization behavior, navigation consistency, and cross-device compatibility without referencing internal source code implementation. The test cases listed in this report represent only selected typical examples rather than a complete issue log. Most issues identified in **v0.30 beta** were addressed in later updates. For detailed version history and fixes, please refer to the [release page](https://github.com/Turtle233/expense_visualization_tool/releases).
+This black box testing report focused specifically on **v0.30 beta** and documented representative issues observed from an end-user perspective during functional and compatibility testing. The listed test cases are typical examples only and do not represent every test scenario performed. Most issues identified in **v0.30 beta** were addressed in later updates. For detailed version history and fixes, please refer to the [release page](https://github.com/Turtle233/expense_visualization_tool/releases).
 
 ## Summary Table
 
@@ -128,7 +128,7 @@ Partial Pass - Device-Specific Compatibility Issue
 
 ## Conclusion
 
-This black box testing report focused specifically on **v0.30 beta** and documented representative issues observed from an end-user perspective during functional and compatibility testing. The listed test cases are typical examples only and do not represent every test scenario performed.
+This report summarizes user-reported issues and externally observable behavior discovered during black box testing. Testing includes application functionality, localization behavior, navigation consistency, and cross-device compatibility without referencing internal source code implementation. The test cases listed in this report represent only selected typical examples rather than a complete issue log.
 
 Results showed that the primary issues in v0.30 beta involved settings persistence, localization consistency, Android navigation behavior, and vendor-specific UI rendering differences. Most problems identified in this version were resolved through subsequent updates and refinements.
 
