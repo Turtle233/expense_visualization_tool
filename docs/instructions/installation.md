@@ -34,18 +34,21 @@ cd expense_visualization_tool
    - Qt Creator will auto-configure the project
 
 2. **Select a Kit**
-   - For Desktop: Choose "Desktop Qt 6.10.1" with your compiler (MinGW/MSVC/GCC)
    - For Android: Choose "Qt 6.10.1 for Android arm64-v8a"
+     ![Android Build in Qt Creator](./images/qt_creator_android_build.png)
+
+   - For Desktop: Choose "Desktop Qt 6.10.1" with your compiler (MinGW/MSVC/GCC)
+     ![Desktop Build in Qt Creator](./images/qt_creator_desktop_build.png)
 
 3. **Build the Project**
    - Click `Build` → `Build Project "see_your_cost"`
    - Or press `Ctrl+B`
 
 4. **Run**
-   - For Desktop: Click the Run button (▶)
    - For Android: Connect a device/emulator and click Run
+   - For Desktop: Click the Run button (▶)
 
-### Method 2: Command Line Build
+### Method 2: Command Line Build (VSCode and other IDEs)
 
 #### Desktop Build
 
@@ -57,8 +60,6 @@ cmake --build .
 ```
 
 Replace `<QT_HOME>` with your actual Qt installation path (e.g., `C:/Qt` or `D:/Qt`).
-
-![Desktop Build in Qt Creator](./images/qt_creator_desktop_build.png)
 
 #### Android Build
 
@@ -75,8 +76,6 @@ Replace:
 
 - `<QT_HOME>` with your Qt installation path (e.g., `C:/Qt` or `D:/Qt`)
 - Adjust the path if using a different Android ABI (e.g., `android_armv7a` instead of `android_arm64_v8a`)
-
-![Android Build in Qt Creator](./images/qt_creator_android_build.png)
 
 ## Android Development Setup
 
