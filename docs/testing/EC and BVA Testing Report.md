@@ -3,7 +3,7 @@
 ## Validation Point 1: Item Name Input Validation
 
 - Item name cannot be empty after trimming whitespace.
-- MaxLength: 100 characters (reasonable limit for item descriptions).
+- MaxLength: 30 characters (reasonable limit for item descriptions).
 - Item name must contain only valid characters (no null or invalid Unicode characters).
 
 ## Validation Point 2: Expense Amount Validation
