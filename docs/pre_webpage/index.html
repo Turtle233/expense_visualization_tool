@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See your Cost - Expense Visualization Tool</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0099cc',
+                        secondary: '#4dd2ff',
+                        light: '#f8f9fa',
+                        dark: '#343a40',
+                        gray: {
+                            100: '#f8f9fa',
+                            200: '#e9ecef',
+                            300: '#dee2e6',
+                            400: '#ced4da',
+                            500: '#adb5bd',
+                            600: '#6c757d',
+                            700: '#495057',
+                            800: '#343a40',
+                            900: '#212529'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'hover': '0 8px 30px rgba(0, 0, 0, 0.12)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(135deg, #0066cc 0%, #4d94ff 100%);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .slide-in {
+                animation: slideIn 0.6s ease-out forwards;
+            }
+            .fade-in {
+                animation: fadeIn 0.8s ease-out forwards;
+            }
+            .scale-in {
+                animation: scaleIn 0.5s ease-out forwards;
+            }
+            @keyframes slideIn {
+                from { transform: translateX(-100px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes scaleIn {
+                from { transform: scale(0.9); opacity: 0; }
+                to { transform: scale(1); opacity: 1; }
+            }
+            .reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s ease;
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .slide {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .slide-container {
+            max-width: 900px;
+            /* limit main content width to ~900px for wide screens */
+            width: 100%;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .hero-title {
+            line-height: 1.15;
+            /* increased line height to prevent descender clipping */
+            display: inline-block;
+            overflow: visible;
+            padding-bottom: 0.5rem;
+            /* extra space below for letters like 'y' */
+        }
+
+        .slide-indicator {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #adb5bd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator-dot.active {
+            background-color: #0066cc;
+            transform: scale(1.3);
+        }
+
+        .nav-buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            left: auto;
+            transform: none;
+            z-index: 100;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            background-color: white;
+            border: 2px solid #0066cc;
+            color: #0066cc;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+        }
+
+        .nav-btn:hover {
+            background-color: #0066cc;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.25);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+
+        .phone-mockup {
+            position: relative;
+            max-width: 300px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .phone-mockup:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .scene-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .scene-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .ui-showcase {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ui-phone {
+            max-width: 280px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .ui-phone:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .challenge-item {
+            background-color: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .challenge-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .challenge-icon i {
+            color: #0066cc;
+            font-size: 1.25rem;
+        }
+
+        .future-item {
+            background: linear-gradient(135deg, #0066cc 0%, #4d94ff 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .future-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Slide Indicator -->
+    <div class="slide-indicator">
+        <div class="indicator-dot active" data-slide="0"></div>
+        <div class="indicator-dot" data-slide="1"></div>
+        <div class="indicator-dot" data-slide="2"></div>
+        <div class="indicator-dot" data-slide="3"></div>
+        <div class="indicator-dot" data-slide="4"></div>
+        <div class="indicator-dot" data-slide="5"></div>
+        <div class="indicator-dot" data-slide="6"></div>
+        <div class="indicator-dot" data-slide="7"></div>
+        <div class="indicator-dot" data-slide="8"></div>
+        <div class="indicator-dot" data-slide="9"></div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prevBtn">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+        <button class="nav-btn" id="nextBtn">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <!-- Slide 1: Cover Page -->
+    <section class="slide bg-gradient-to-br from-white to-gray-100">
+        <div class="slide-container text-center">
+            <div class="reveal">
+                <h1 class="text-6xl md:text-8xl font-bold mt-8 mb-4 text-gradient hero-title">See your Cost</h1>
+                <h2 class="text-2xl md:text-3xl text-gray-600 mb-8">Expense Visualization Tool</h2>
+                <div class="mb-12">
+                    <div class="mb-4 -mt-4">
+                        <p class="text-gray-500 text-lg">NSU Capstone Project</p>
+                        <p class="text-gray-500 text-lg">Ruixuan Zhang</p>
+                        <p class="text-gray-500 text-lg">Spring 2026</p>
+                        <div class="flex justify-center items-center gap-2 mt-4">
+
+                            <div class="phone-mockup mt-2">
+                                <img src="./assets/main_interface.png" alt="Main UI"
+                                    class="w-70 rounded-3xl shadow-2xl border-1 border-white">
+                            </div>
+
+                            <div class="phone-mockup mt-2">
+                                <img src="./assets/detailed_expense_view.png" alt="Detail UI"
+                                    class="w-70 rounded-3xl shadow-2xl border-1 border-white">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Slide 2: Modeling & Demo Links -->
+    <section class="slide bg-white">
+        <div class="slide-container text-center">
+            <div class="reveal">
+                <h2 class="text-5xl font-bold mb-6 text-gray-800">Resources & Demos</h2>
+                <p class="text-gray-600 mb-6">UML preview and demo videos for the project</p>
+
+                <div class="space-y-4 max-w-2xl mx-auto text-left">
+
+                    <!-- User Guide -->
+                    <div
+                        class="p-4 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg shadow-sm flex items-center justify-between">
+                        <div>
+                            <h3 class="font-semibold mb-0">User Guide (Video)</h3>
+                        </div>
+                        <a href="https://drive.google.com/file/d/14gI1bkY6-aEDMejWkN1L42muPtAqP1vr/view?usp=sharing"
+                            target="_blank" class="nav-btn inline-flex items-center">Play on Google Drive</a>
+                    </div>
+
+                    <!-- Non-functional -->
+                    <div
+                        class="p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-lg shadow-sm flex items-center justify-between">
+                        <div>
+                            <h3 class="font-semibold mb-0">Non-functional Demo (Video)</h3>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1BMhZ3RSx4o-MP9WdKWcrlhwqDsApw6U3/view?usp=sharing"
+                            target="_blank" class="nav-btn inline-flex items-center">Play on Google Drive</a>
+                    </div>
+
+                    <!-- Modeling moved to bottom -->
+                    <div
+                        class="p-4 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg shadow-sm flex items-center justify-between">
+                        <h3 class="font-semibold mb-0">Modeling (UML Graph)</h3>
+                        <a href="https://github.com/Turtle233/expense_visualization_tool/tree/main/docs/modeling/preview"
+                            target="_blank" class="nav-btn inline-flex items-center">View in Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Why This App? -->
+    <section class="slide bg-gradient-to-br from-white to-blue-50">
+        <div class="slide-container max-w-[1200px]">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="reveal">
+                    <h2 class="text-5xl font-bold mb-8 text-gray-800">Why Did I Dev This?</h2>
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 bg-primary rounded-full"></div>
+                            <p class="text-gray-600 text-lg">Traditional expense tracking only records total price</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 bg-primary rounded-full"></div>
+                            <p class="text-gray-600 text-lg">Users still need paper notes + calculator</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 bg-primary rounded-full"></div>
+                            <p class="text-gray-600 text-lg">Hard to review past purchases later</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 bg-primary rounded-full"></div>
+                            <p class="text-gray-600 text-lg">No portability when outside</p>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <p class="text-3xl font-semibold text-primary italic">
+                            "Turn messy records into instant insights."
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <!-- <img src="https://p5-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/f8c27d3f497e4bce963c2a3cd2366cff~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=202604251125425EC3E9F8F9A2CF25D8A1&rrcfp=f06b921b&x-expires=1779679594&x-signature=vrQ%2FqVD7o9Q%2BQnAhAsIKKxeX5Wo%3D" -->
+                    <img src="./assets/before_and_after.png" alt="Before vs After"
+                        class="w-full rounded-2xl shadow-soft">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Why Mobile? -->
+    <section class="slide bg-gray-50">
+        <div class="slide-container">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-5xl font-bold mt-6 mb-4 text-gray-800">Why Android?</h2>
+                <p class="text-xl text-gray-600">Anytime Anywhere</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 -mt-4">
+                <div class="scene-card reveal">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-subway"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Train / Subway</h3>
+                    <p class="text-gray-600">Review purchases when no network</p>
+                </div>
+                <div class="scene-card reveal">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Car</h3>
+                    <p class="text-gray-600">Track expenses between appointments</p>
+                </div>
+                <div class="scene-card reveal">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Room</h3>
+                    <p class="text-gray-600">You don't need to be in front of a computer</p>
+                </div>
+            </div>
+            <div class="mt-10 text-center reveal">
+                <img src="https://p5-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/fc05472193824dd08bb30031d49ed9eb~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=202604251125425EC3E9F8F9A2CF25D8A1&rrcfp=f06b921b&x-expires=1779679624&x-signature=T7ELf63t8Jo2usfFCwkjgxQiiUM%3D"
+                    alt="Mobile Usage Scenarios" class="max-w-2xl mx-auto rounded-2xl shadow-soft">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Core Features -->
+    <section class="slide bg-white">
+        <div class="slide-container max-w-[950px]">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-5xl font-bold mb-8 text-gray-800">Core Features</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Left column: Key features -->
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-mobile text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Portable</h3>
+                        </div>
+                        <p class="text-gray-700">Take your expense tracking anywhere with you</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div
+                                class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-pie-chart text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Cost Breakdown</h3>
+                        </div>
+                        <p class="text-gray-700">Daily/Weekly/Monthly/Yearly breakdown</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div
+                                class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-bar-chart text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Visualized</h3>
+                        </div>
+                        <p class="text-gray-700">Interactive charts and graphs for better insights</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div
+                                class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-history text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Expense Tracking</h3>
+                        </div>
+                        <p class="text-gray-700">Record and manage all your past purchases</p>
+                    </div>
+                </div>
+
+                <!-- Right column: Multi-features showcase -->
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-red-50 to-pink-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-globe text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Multi-language</h3>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">English</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">中文</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">日本語</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-money text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Multi-currency</h3>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 mt-4">
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">$ USD</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">¥ CNY</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">€ EUR</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                                <p class="font-medium">¥ JPY</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-violet-50 to-purple-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div
+                                class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-paint-brush text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Multi-theme</h3>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 mt-4">
+                            <div class="bg-blue-400 p-3 rounded-lg shadow-sm" title="Default Blue"></div>
+                            <div class="bg-yellow-400 p-3 rounded-lg shadow-sm" title="Yellow"></div>
+                            <div class="bg-green-700 p-3 rounded-lg shadow-sm" title="Green Dark"></div>
+                            <div class="bg-pink-700 p-3 rounded-lg shadow-sm" title="Pink Dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-gray-50 to-slate-50 p-6 rounded-2xl shadow-soft reveal">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fa fa-leaf text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Lightweight & Simple</h3>
+                        </div>
+                        <p class="text-gray-700">Clean interface with focus on essential features</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Why Qt? -->
+    <section class="slide bg-gradient-to-br from-white to-green-50">
+        <div class="slide-container max-w-[1000px]">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl font-bold mb-6 text-gray-800">Why Qt?&nbsp;Why not Android Studio?</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div
+                        class="bg-gradient-to-br from-white-300 to-green-600 rounded-2xl p-12 text-center text-white shadow-soft">
+                        <div class="mb-8 flex justify-center">
+                            <img src="./assets/qt.svg" alt="Qt Logo" class="w-28 h-28 object-contain">
+                        </div>
+                        <h3 class="text-3xl text-green-700 font-bold mb-6">Qt Quick Framework</h3>
+                        <p class="text-lg text-green-700 font-medium">Cross-platform C++ & QML framework</p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-4 h-4 bg-green-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <p class="text-lg text-gray-700 font-bold">I already had Qt coding experience</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-4 h-4 bg-green-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <p class="text-lg text-gray-700 font-medium">Faster learning curve with AI</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-4 h-4 bg-green-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <p class="text-lg text-gray-700 font-medium">QML UI implementation</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-4 h-4 bg-green-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <p class="text-lg text-gray-700 font-medium">One codebase for Android / Windows / macOS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Challenges -->
+    <section class="slide bg-gray-50">
+        <div class="slide-container">
+
+            <!-- Title -->
+            <div class="text-center mb-10 reveal">
+                <h2 class="text-5xl font-bold text-gray-800">
+                    Qt Also Brings Trouble
+                </h2>
+            </div>
+
+            <!-- Horizontal Bar Layout -->
+            <div class="space-y-5 max-w-5xl mx-auto">
+
+                <div class="reveal">
+                    <div class="flex items-center gap-5 bg-white rounded-2xl shadow-soft p-5">
+                        <div class="text-green-500 text-3xl w-12 text-center">
+                            <i class="fa fa-th-large"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">No native Android widgets</h3>
+                            <p class="text-gray-600">Built custom components from scratch.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="flex items-center gap-5 bg-white rounded-2xl shadow-soft p-5">
+                        <div class="text-green-500 text-3xl w-12 text-center">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Custom DateTimePicker</h3>
+                            <p class="text-gray-600">Manually implemented date selection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="flex items-center gap-5 bg-white rounded-2xl shadow-soft p-5">
+                        <div class="text-green-500 text-3xl w-12 text-center">
+                            <i class="fa fa-caret-square-o-down"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Custom dropdown menus</h3>
+                            <p class="text-gray-600">Created interactive select components.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="flex items-center gap-5 bg-white rounded-2xl shadow-soft p-5">
+                        <div class="text-green-500 text-3xl w-12 text-center">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">QML UI required manual design</h3>
+                            <p class="text-gray-600">No Designer. Need to each screen and component individually.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="flex items-center gap-5 bg-white rounded-2xl shadow-soft p-5">
+                        <div class="text-green-500 text-3xl w-12 text-center">
+                            <i class="fa fa-bug"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Coding Agent support wasn't great</h3>
+                            <p class="text-gray-600">Needed multiple corrections to hit the mark.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Slide 8: Known Limitations -->
+    <section class="slide bg-white">
+        <div class="slide-container">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-5xl font-bold -mt-4 mb-8 text-gray-800">Current Drawbacks</h2>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-soft reveal">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fa fa-exchange text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Fixed Exchange Rates</h3>
+                        <p class="text-gray-600">Manual update required</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-soft reveal">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fa fa-android text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Only Android Released</h3>
+                        <p class="text-gray-600">Other platforms in development</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-soft reveal">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fa fa-language text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Only Three Languages Imported</h3>
+                        <p class="text-gray-600">Currently only en-US, zh-CN, and ja-JP</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-soft reveal">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fa fa-money text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Only Four Currencies Imported</h3>
+                        <p class="text-gray-600">Currently only USD, CNY, JPY, EUR</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-soft reveal">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fa fa-search text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">No Search Functionality</h3>
+                        <p class="text-gray-600">Hard to deal with large numbers of items</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center reveal">
+                    <div class="inline-block bg-primary/10 rounded-full px-6 py-3">
+                        <p class="text-primary font-medium">
+                            Coding is fun, and even more fun and flexible with agents.<br>
+                            So I have some plans for the future...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: Future Work -->
+    <section class="slide bg-gradient-to-br from-primary/5 to-primary/10">
+        <div class="slide-container flex flex-col justify-start pt-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-6xl font-bold mb-8 text-gray-800">Future Plans</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="reveal">
+                    <div class="future-item">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa fa-comments"></i>
+                            <h3 class="text-xl font-semibold">More Languages</h3>
+                        </div>
+                        <p class="opacity-90">Expanding global accessibility</p>
+                    </div>
+                    <div class="future-item">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa fa-refresh"></i>
+                            <h3 class="text-xl font-semibold">Real-time Exchange Rate API</h3>
+                        </div>
+                        <p class="opacity-90">Automatic currency conversion updates</p>
+                    </div>
+                    <div class="future-item">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa fa-apple"></i>
+                            <h3 class="text-xl font-semibold">macOS Version</h3>
+                        </div>
+                        <p class="opacity-90">Complete cross-platform experience</p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="future-item">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa fa-money"></i>
+                            <h3 class="text-xl font-semibold">More Currencies</h3>
+                        </div>
+                        <p class="opacity-90">Support for additional global currencies</p>
+                    </div>
+                    <div class="future-item">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa fa-search"></i>
+                            <h3 class="text-xl font-semibold">Searching</h3>
+                        </div>
+                        <p class="opacity-90">Search from all items</p>
+                    </div>
+                    <div class="future-item">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa fa-windows"></i>
+                            <h3 class="text-xl font-semibold">Windows Version</h3>
+                        </div>
+                        <p class="opacity-90">Complete cross-platform experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 10: Ending -->
+    <section class="slide bg-gradient-to-br from-primary to-cyan-600 text-white">
+        <div class="slide-container text-center">
+            <div class="reveal">
+                <div class="flex flex-col items-center mb-8">
+                    <img src="https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/691286f1570b47ac86e53037cb7380f5.png~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604251134178A58A1986FFFD1257EF5&rrcfp=8a172a1a&x-expires=1777692857&x-signature=OF1TXwoPTryjsmxbupajwCP6ews%3D"
+                        alt="See Your Cost Icon" class="w-32 h-32 mb-4">
+                    <h1 class="text-6xl md:text-7xl font-bold mb-6">See your Cost</h1>
+                </div>
+                <div class="flex justify-center gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <p class="text-white/90 font-medium">Portable</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <p class="text-white/90 font-medium">Visualized</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">
+                            <i class="fa fa-lightbulb-o"></i>
+                        </div>
+                        <p class="text-white/90 font-medium">Smart</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                        <p class="text-white/90 font-medium">Simple</p>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <a href="https://github.com/Turtle233/expense_visualization_tool/" target="_blank"
+                        class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full text-xl font-semibold shadow-lg hover:shadow-xl transition-all-300 transform hover:-translate-y-1">
+                        <i class="fa fa-github text-2xl"></i>
+                        <span>GitHub Repository</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize slides
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.indicator-dot');
+        const totalSlides = slides.length;
+
+        // Initialize reveal animations
+        function checkReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+
+            reveals.forEach(element => {
+                const revealTop = element.getBoundingClientRect().top;
+                if (revealTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Show specific slide
+        function showSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+
+            currentSlide = index;
+
+            // Update slide indicators
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+
+            // Scroll to slide when navigation is used
+            slides[currentSlide].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            // Reset reveal animations
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(element => {
+                element.classList.remove('active');
+            });
+
+            // Trigger reveal animations for current slide
+            setTimeout(checkReveal, 300);
+        }
+
+        // Next slide
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Previous slide
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Event listeners
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+        // Slide indicator clicks
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Touch gestures for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextSlide(); // Swipe left
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+                prevSlide(); // Swipe right
+            }
+        }
+
+        // Wheel navigation
+        let lastWheelTime = 0;
+        const wheelThrottle = 800; // Throttle wheel events to 800ms
+
+        document.addEventListener('wheel', (e) => {
+            const now = Date.now();
+            if (now - lastWheelTime > wheelThrottle) {
+                lastWheelTime = now;
+                if (e.deltaY > 0) {
+                    nextSlide(); // Scroll down
+                } else if (e.deltaY < 0) {
+                    prevSlide(); // Scroll up
+                }
+            }
+        }, { passive: true });
+
+        // Scroll event for reveal animations
+        window.addEventListener('scroll', checkReveal);
+
+        // Initialize
+        showSlide(0);
+        window.addEventListener('load', checkReveal);
+
+        // Auto-advance removed (manual navigation only)
+
+
+        // Initialize GSAP animations for extra polish
+        if (typeof gsap !== 'undefined') {
+            // Add entrance animations to slides
+            gsap.utils.toArray('.slide').forEach((slide, i) => {
+                gsap.from(slide.querySelector('h2, h1'), {
+                    scrollTrigger: {
+                        trigger: slide,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
